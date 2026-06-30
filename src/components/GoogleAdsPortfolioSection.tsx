@@ -597,11 +597,11 @@ const GoogleAdsPortfolioSection = () => {
    Q-COMMERCE — premium light SaaS hero (2026)
 ============================================================ */
 const marketplaceLogos = [
-  { name: "Blinkit", color: "#F8CB46" },
-  { name: "Zepto", color: "#7C3AED" },
-  { name: "BigBasket", color: "#84C341" },
-  { name: "Instamart", color: "#FC8019" },
-  { name: "Swiggy", color: "#FC8019" },
+  { name: "Blinkit", color: "#F8CB46", domain: "blinkit.com" },
+  { name: "Zepto", color: "#7C3AED", domain: "zeptonow.com" },
+  { name: "BigBasket", color: "#84C341", domain: "bigbasket.com" },
+  { name: "Instamart", color: "#FC8019", domain: "swiggy.com" },
+  { name: "Swiggy", color: "#FC8019", domain: "swiggy.com" },
 ];
 
 const checklistItems = [
@@ -855,9 +855,14 @@ const QCommerceScene = () => {
                       style={{ boxShadow: `0 12px 30px -8px ${l.color}55` }}
                     />
                     <span className="flex items-center gap-2">
-                      <span
-                        className="w-2 h-2 rounded-full"
-                        style={{ background: l.color, boxShadow: `0 0 10px ${l.color}` }}
+                      <img
+                        src={`https://logo.clearbit.com/${l.domain}`}
+                        alt={`${l.name} logo`}
+                        loading="lazy"
+                        className="w-5 h-5 rounded-sm object-contain"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).style.display = "none";
+                        }}
                       />
                       {l.name}
                     </span>
