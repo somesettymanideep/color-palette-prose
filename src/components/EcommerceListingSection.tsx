@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 import {
-  CheckCircle2,
   Search,
   TrendingUp,
-  Star,
   Package,
   Sparkles,
   ArrowUpRight,
@@ -11,6 +9,7 @@ import {
   Eye,
   ShoppingCart,
 } from "lucide-react";
+import ecommerceHeroAsset from "@/assets/ecommerce-listing-hero.webp.asset.json";
 
 const ORANGE = "#F36E2B";
 
