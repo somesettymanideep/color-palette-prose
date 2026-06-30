@@ -32,6 +32,7 @@ import {
 import rasrinShoppingAds from "@/assets/rasrin-shopping-ads.png";
 import qcommerceRasrinAsset from "@/assets/qcommerce-rasrin.png.asset.json";
 import qcommerceHeroAsset from "@/assets/qcommerce-hero-v3.webp.asset.json";
+import qcommerceResultAsset from "@/assets/qcommerce-result.jpg.asset.json";
 import logoBlinkit from "@/assets/qcommerce/blinkit.png";
 import logoZepto from "@/assets/qcommerce/zepto.png";
 import logoBigbasket from "@/assets/qcommerce/bigbasket.jpg";
