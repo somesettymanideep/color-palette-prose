@@ -864,48 +864,6 @@ const QCommerceScene = () => {
 
         </div>
 
-        {/* ===== Bottom benefits — premium glass cards ===== */}
-        <div className="mt-24 md:mt-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {qcFeatures.map((f, i) => {
-            const Icon = f.icon;
-            return (
-              <motion.div
-                key={f.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="group relative border border-[#ECECEC] bg-white/70 backdrop-blur-xl p-7 overflow-hidden transition-colors hover:border-[#FF7A00]/50"
-                style={{
-                  borderRadius: "24px",
-                  boxShadow: "0 20px 60px rgba(0,0,0,0.06)",
-                }}
-              >
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute -top-20 -right-10 w-60 h-60 rounded-full bg-[#FF7A00]/15 blur-3xl" />
-                </div>
-
-                <div className="relative">
-                  <div className="relative w-14 h-14 rounded-full flex items-center justify-center">
-                    <div className="absolute inset-0 rounded-full bg-[#FF7A00]/12 border border-[#FF7A00]/40 shadow-[0_0_30px_-4px_rgba(255,122,0,0.5)]" />
-                    <Icon className="relative w-6 h-6 text-[#FF7A00]" strokeWidth={2} />
-                  </div>
-                  <h4 className="mt-5 text-[20px] font-700 text-[#111111] tracking-[-0.02em]">
-                    {f.title}
-                  </h4>
-                  <p className="mt-2 text-[14px] leading-relaxed text-[#6B7280] font-500">
-                    {f.desc}
-                  </p>
-                  <div className="mt-5 inline-flex items-center gap-1.5 text-[12px] font-600 text-[#FF7A00] uppercase tracking-wider">
-                    Learn more
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
       </div>
     </section>
   );
