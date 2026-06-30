@@ -859,15 +859,11 @@ const QCommerceScene = () => {
                     />
                     <span className="flex items-center gap-2">
                       <img
-                        src={`https://logo.clearbit.com/${l.domain}`}
+                        src={l.logo}
                         alt={`${l.name} logo`}
                         loading="lazy"
-                        className="w-5 h-5 rounded-sm object-contain"
-                        onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).style.display = "none";
-                        }}
+                        className="h-6 w-auto max-w-[80px] object-contain"
                       />
-                      {l.name}
                     </span>
                   </motion.div>
                 ))}
