@@ -785,47 +785,6 @@ const QCommerceScene = () => {
               })}
             </motion.ul>
 
-            {/* CTAs */}
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="mt-10 flex flex-wrap items-center gap-3.5"
-            >
-              <motion.a
-                href="#contact"
-                whileHover={{ y: -3, scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-                transition={{ type: "spring", stiffness: 320, damping: 18 }}
-                className="group relative inline-flex items-center gap-2.5 bg-[#FF7A00] px-7 py-4 text-[16px] font-600 text-white overflow-hidden"
-                style={{
-                  borderRadius: "18px",
-                  boxShadow: "0 20px 50px -10px rgba(255,122,0,0.55), 0 8px 20px -6px rgba(255,122,0,0.4)",
-                }}
-              >
-                <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-full transition-transform duration-700" />
-                <span className="relative">Get Started</span>
-                <ArrowRight className="relative w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </motion.a>
-
-              <motion.a
-                href="#demo"
-                whileHover={{ y: -3, scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-                transition={{ type: "spring", stiffness: 320, damping: 18 }}
-                className="group inline-flex items-center gap-2.5 border border-[#ECECEC] bg-white/70 px-7 py-4 text-[16px] font-600 text-[#111111] backdrop-blur-xl hover:bg-white hover:border-[#FF7A00]/40 transition-colors"
-                style={{
-                  borderRadius: "18px",
-                  boxShadow: "0 12px 30px -10px rgba(0,0,0,0.08)",
-                }}
-              >
-                <div className="w-6 h-6 rounded-full bg-[#FF7A00]/10 flex items-center justify-center">
-                  <Play className="w-3 h-3 fill-[#FF7A00] text-[#FF7A00]" />
-                </div>
-                Book Demo
-              </motion.a>
-            </motion.div>
 
             {/* Marketplace cards */}
             <motion.div
