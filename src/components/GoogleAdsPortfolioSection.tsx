@@ -856,14 +856,15 @@ const QCommerceScene = () => {
                       className="absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
                       style={{ boxShadow: `0 14px 36px -10px ${l.color}55` }}
                     />
-                    <div className="absolute inset-0 flex items-center justify-center p-3 sm:p-4">
+                    <div className="absolute inset-0 flex items-center justify-center">
                       <img
                         src={l.logo}
                         alt={`${l.name} logo`}
                         loading="lazy"
                         decoding="async"
-                        className="max-h-full max-w-full w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                        style={{ imageRendering: "auto" }}
+                        width={160}
+                        height={96}
+                        className="block h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
                   </motion.div>
