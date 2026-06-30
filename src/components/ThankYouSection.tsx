@@ -48,13 +48,13 @@ const ThankYouSection = () => {
             {/* Contact info */}
             <div className="space-y-3">
               <a
-                href="https://www.ayrondigitalsolutions.in"
+                href="https://www.ayrondigitalsolutions.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 justify-center font-body text-sm text-foreground hover:text-primary transition-colors"
               >
                 <Globe className="w-4 h-4 text-primary" />
-                www.ayrondigitalsolutions.in
+                www.ayrondigitalsolutions.com
               </a>
               <a
                 href="mailto:info@ayrondigitalsolutions.in"
