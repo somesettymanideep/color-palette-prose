@@ -31,6 +31,10 @@ import {
 } from "lucide-react";
 import rasrinShoppingAds from "@/assets/rasrin-shopping-ads.png";
 import qcommerceRasrinAsset from "@/assets/qcommerce-rasrin.png.asset.json";
+import logoBlinkit from "@/assets/qcommerce/blinkit.png";
+import logoZepto from "@/assets/qcommerce/zepto.png";
+import logoBigbasket from "@/assets/qcommerce/bigbasket.jpg";
+import logoSwiggy from "@/assets/qcommerce/swiggy.png";
 
 const qcommerceRasrin = qcommerceRasrinAsset.url;
 
