@@ -40,7 +40,6 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <ServicesSection />
-      <EcommerceListingSection />
       <PortfolioSection />
       <ContentCreationSection />
       {/* <SocialMediaSection /> */}
@@ -48,6 +47,7 @@ const Index = () => {
       <SeoSection />
       <SeoPortfolioSection />
       <GoogleAdsSection />
+      <EcommerceListingSection />
       <GoogleAdsPortfolioSection />
       <CaseStudySection />
       <IndustriesSection />
