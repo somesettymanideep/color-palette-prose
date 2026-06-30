@@ -32,6 +32,7 @@ import {
 import rasrinShoppingAds from "@/assets/rasrin-shopping-ads.png";
 import qcommerceRasrinAsset from "@/assets/qcommerce-rasrin.png.asset.json";
 import qcommerceHeroAsset from "@/assets/qcommerce-hero-v3.webp.asset.json";
+import qcommerceResultAsset from "@/assets/qcommerce-result.jpg.asset.json";
 import logoBlinkit from "@/assets/qcommerce/blinkit.png";
 import logoZepto from "@/assets/qcommerce/zepto.png";
 import logoBigbasket from "@/assets/qcommerce/bigbasket.jpg";
@@ -863,6 +864,36 @@ const QCommerceScene = () => {
           </div>
 
         </div>
+
+        {/* ===== Client Result ===== */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-20 md:mt-28"
+        >
+          <div className="text-center mb-8 md:mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF7A00]/10 border border-[#FF7A00]/30 text-[#FF7A00] text-xs font-600 uppercase tracking-wider">
+              Client Result
+            </div>
+            <h3 className="mt-4 text-3xl md:text-4xl font-800 text-[#111111] tracking-[-0.02em]">
+              Real Q-Commerce Performance
+            </h3>
+          </div>
+          <div
+            className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-[#ECECEC] bg-white"
+            style={{ boxShadow: "0 30px 80px rgba(0,0,0,0.12)" }}
+          >
+            <img
+              src={qcommerceResultAsset.url}
+              alt="Q-Commerce client performance result"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </motion.div>
 
       </div>
     </section>
