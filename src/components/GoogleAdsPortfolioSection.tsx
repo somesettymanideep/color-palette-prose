@@ -838,7 +838,7 @@ const QCommerceScene = () => {
               <div className="text-[11px] uppercase tracking-[0.2em] text-[#6B7280] font-600">
                 Integrated with leading marketplaces
               </div>
-              <div className="mt-4 flex flex-wrap gap-3">
+              <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
                 {marketplaceLogos.map((l, i) => (
                   <motion.div
                     key={l.name}
@@ -846,28 +846,30 @@ const QCommerceScene = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.55, delay: 0.95 + i * 0.08 }}
-                    whileHover={{ y: -5, scale: 1.05 }}
-                    className="relative rounded-2xl border border-[#ECECEC] bg-white/80 backdrop-blur-md px-4 py-2.5 text-[13px] font-700 text-[#111111] transition-all hover:border-[#FF7A00]/40"
+                    whileHover={{ y: -4, scale: 1.03 }}
+                    className="group relative aspect-[5/3] rounded-2xl border border-[#ECECEC] bg-white/90 backdrop-blur-md transition-all hover:border-[#FF7A00]/40 overflow-hidden"
                     style={{
-                      boxShadow: `0 12px 30px -12px rgba(0,0,0,0.08), 0 0 0 0 ${l.color}00`,
-                      transform: `translateY(${(i % 2) * -4}px)`,
+                      boxShadow: "0 12px 30px -12px rgba(0,0,0,0.08)",
                     }}
                   >
                     <span
-                      className="absolute -inset-px rounded-2xl opacity-0 hover:opacity-100 transition-opacity pointer-events-none"
-                      style={{ boxShadow: `0 12px 30px -8px ${l.color}55` }}
+                      className="absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                      style={{ boxShadow: `0 14px 36px -10px ${l.color}55` }}
                     />
-                    <span className="flex items-center gap-2">
+                    <div className="absolute inset-0 flex items-center justify-center p-3 sm:p-4">
                       <img
                         src={l.logo}
                         alt={`${l.name} logo`}
                         loading="lazy"
-                        className="h-6 w-auto max-w-[80px] object-contain"
+                        decoding="async"
+                        className="max-h-full max-w-full w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                        style={{ imageRendering: "auto" }}
                       />
-                    </span>
+                    </div>
                   </motion.div>
                 ))}
               </div>
+
             </motion.div>
           </div>
 
