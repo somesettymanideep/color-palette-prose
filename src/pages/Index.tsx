@@ -47,8 +47,8 @@ const Index = () => {
       <SeoSection />
       <SeoPortfolioSection />
       <GoogleAdsSection />
-      <EcommerceListingSection />
       <GoogleAdsPortfolioSection />
+      <EcommerceListingSection />
       <CaseStudySection />
       <IndustriesSection />
       <ClientsSection />
