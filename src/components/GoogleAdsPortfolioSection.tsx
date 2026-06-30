@@ -570,30 +570,6 @@ const GoogleAdsPortfolioSection = () => {
 
 
 
-        {/* Bottom stats strip */}
-        <motion.div
-          className="mt-28 pt-12 border-t border-off-white/10 grid grid-cols-2 md:grid-cols-4 gap-8"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          {[
-            { value: "₹2.4Cr+", label: "Ad Spend Managed" },
-            { value: "60+", label: "Campaigns Live" },
-            { value: "8.4×", label: "Avg. ROAS" },
-            { value: "−45%", label: "Avg. CPC Cut" },
-          ].map((m) => (
-            <div key={m.label}>
-              <div className="font-heading text-3xl md:text-4xl font-600 text-primary leading-none">
-                {m.value}
-              </div>
-              <div className="font-body text-[11px] md:text-xs uppercase tracking-[0.2em] text-off-white/50 mt-3">
-                {m.label}
-              </div>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );
