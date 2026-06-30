@@ -677,7 +677,7 @@ const QCommerceScene = () => {
 
       <div className="relative z-10 mx-auto max-w-[1320px] px-6 md:px-10 py-[80px] md:py-[110px]" style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
         {/* ===== Two-column hero ===== */}
-        <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center min-h-[820px]">
+        <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
           {/* ---------- LEFT ---------- */}
           <div className="relative">
             {/* Badge */}
