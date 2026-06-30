@@ -856,6 +856,13 @@ const QCommerceScene = () => {
                 decoding="async"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                style={{
+                  mixBlendMode: "multiply",
+                  WebkitMaskImage:
+                    "radial-gradient(ellipse 70% 70% at 50% 50%, #000 55%, rgba(0,0,0,0.85) 70%, rgba(0,0,0,0) 100%)",
+                  maskImage:
+                    "radial-gradient(ellipse 70% 70% at 50% 50%, #000 55%, rgba(0,0,0,0.85) 70%, rgba(0,0,0,0) 100%)",
+                }}
                 className="relative w-full h-full max-w-[640px] object-contain drop-shadow-[0_40px_60px_rgba(255,122,0,0.25)]"
               />
             </motion.div>
