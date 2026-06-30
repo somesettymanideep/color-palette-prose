@@ -234,34 +234,6 @@ const EcommerceListingSection = () => {
 
         </div>
 
-        {/* Stats strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.7 }}
-          className="mt-20 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-px rounded-3xl overflow-hidden backdrop-blur-xl"
-          style={{
-            backgroundColor: "rgba(255,255,255,0.06)",
-            border: "1px solid rgba(255,255,255,0.08)",
-          }}
-        >
-          {stats.map((s) => (
-            <div
-              key={s.label}
-              className="p-6 md:p-8 flex flex-col gap-3"
-              style={{ backgroundColor: "rgba(10,10,10,0.6)" }}
-            >
-              <s.icon className="w-5 h-5" style={{ color: ORANGE }} />
-              <div className="font-heading text-3xl md:text-4xl font-700 text-white tracking-tight">
-                {s.value}
-              </div>
-              <div className="font-body text-xs uppercase tracking-[0.18em] text-white/50 font-700">
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );
