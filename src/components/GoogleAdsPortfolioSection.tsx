@@ -834,200 +834,30 @@ const QCommerceScene = () => {
             </motion.div>
           </div>
 
-          {/* ---------- RIGHT — premium phone composition ---------- */}
+          {/* ---------- RIGHT — hero illustration ---------- */}
           <div className="relative h-[640px] md:h-[760px] flex items-center justify-center">
-            {/* radial backdrop behind phone */}
+            {/* radial backdrop */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-[480px] h-[480px] rounded-full bg-gradient-to-br from-[#FF7A00]/35 via-[#FF7A00]/12 to-transparent blur-3xl" />
+              <div className="w-[520px] h-[520px] rounded-full bg-gradient-to-br from-[#FF7A00]/35 via-[#FF7A00]/12 to-transparent blur-3xl" />
             </div>
 
-            {/* large arcing dotted delivery path */}
-            <svg
-              className="absolute inset-0 w-full h-full pointer-events-none"
-              viewBox="0 0 500 700"
-              fill="none"
-            >
-              <motion.path
-                d="M 40 580 Q 200 420, 280 460 T 480 140"
-                stroke="#FF7A00"
-                strokeWidth="2"
-                strokeDasharray="3 8"
-                strokeLinecap="round"
-                initial={{ pathLength: 0, opacity: 0 }}
-                whileInView={{ pathLength: 1, opacity: 0.85 }}
-                viewport={{ once: true }}
-                transition={{ duration: 2.4, ease: "easeInOut" }}
-                style={{ filter: "drop-shadow(0 0 8px rgba(255,122,0,0.55))" }}
-              />
-            </svg>
-
+            {/* Hero image */}
             <motion.div
-              className="absolute w-3.5 h-3.5 rounded-full bg-[#FF7A00] shadow-[0_0_22px_rgba(255,122,0,0.95)]"
-              animate={{ offsetDistance: ["0%", "100%"] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
-              style={{
-                offsetPath: "path('M 40 580 Q 200 420, 280 460 T 480 140')",
-                top: 0,
-                left: 0,
-              }}
-            />
-
-            {/* Phone — perspective floating */}
-            <motion.div
-              initial={{ opacity: 0, y: 50, rotateY: 30 }}
-              whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+              initial={{ opacity: 0, y: 40, scale: 0.96 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-              className="relative z-10"
-              style={{ perspective: 1200 }}
+              className="relative z-10 w-full h-full flex items-center justify-center"
             >
-              <motion.div
-                animate={{ y: [0, -6, 0] }}
+              <motion.img
+                src={qcommerceHeroAsset.url}
+                alt="Q-Commerce delivery illustration"
+                loading="lazy"
+                decoding="async"
+                animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="relative w-[300px] md:w-[340px] aspect-[9/19] rounded-[2.8rem] p-[3px]"
-                style={{
-                  transform: "rotateY(-12deg) rotateX(6deg) rotateZ(-3deg)",
-                  background: "linear-gradient(160deg, rgba(255,255,255,0.95), rgba(255,255,255,0.4) 40%, rgba(255,122,0,0.15))",
-                  boxShadow:
-                    "0 60px 120px -20px rgba(255,122,0,0.4), 0 40px 80px -30px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.6)",
-                }}
-              >
-                <div className="relative w-full h-full rounded-[2.6rem] bg-[#0A0A0A] p-2 overflow-hidden">
-                  {/* dynamic island */}
-                  <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-full z-20" />
-
-                  <div className="relative w-full h-full rounded-[2.2rem] overflow-hidden bg-gradient-to-b from-[#0F0F0F] via-[#161616] to-[#1c1c1c] flex flex-col">
-                    {/* status header */}
-                    <div className="flex items-center justify-between px-4 pt-7 pb-3 text-white">
-                      <div>
-                        <div className="text-[8px] text-white/40 leading-none uppercase tracking-wider">
-                          Live Tracking
-                        </div>
-                        <div className="text-[12px] font-700 flex items-center gap-1.5 mt-1">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                          Order #A8421
-                        </div>
-                      </div>
-                      <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center">
-                        <Bell className="w-3.5 h-3.5 text-white/80" />
-                      </div>
-                    </div>
-
-                    {/* Map */}
-                    <div className="mx-3 rounded-2xl relative overflow-hidden h-[200px] bg-gradient-to-br from-[#1c1c1c] to-[#0f0f0f] border border-white/5">
-                      <div
-                        className="absolute inset-0 opacity-30"
-                        style={{
-                          backgroundImage:
-                            "linear-gradient(rgba(255,122,0,0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(255,122,0,0.3) 1px,transparent 1px)",
-                          backgroundSize: "22px 22px",
-                        }}
-                      />
-                      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 200" fill="none">
-                        <motion.path
-                          d="M 20 170 Q 70 100, 110 110 T 180 30"
-                          stroke="#FF7A00"
-                          strokeWidth="2.5"
-                          strokeLinecap="round"
-                          strokeDasharray="3 5"
-                          initial={{ pathLength: 0 }}
-                          animate={{ pathLength: 1 }}
-                          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                        />
-                      </svg>
-                      <motion.div
-                        animate={{ scale: [1, 1.6, 1], opacity: [0.9, 0.3, 0.9] }}
-                        transition={{ duration: 1.8, repeat: Infinity }}
-                        className="absolute bottom-4 left-3 w-3 h-3 rounded-full bg-[#FF7A00] shadow-[0_0_14px_rgba(255,122,0,0.95)]"
-                      />
-                      <div className="absolute top-3 right-4">
-                        <Navigation className="w-5 h-5 text-[#FF7A00]" fill="#FF7A00" />
-                      </div>
-                      <div className="absolute top-2 left-2 rounded-md bg-black/60 backdrop-blur-md border border-white/10 px-2 py-1 text-[8px] text-white font-700 flex items-center gap-1">
-                        <Truck className="w-2.5 h-2.5 text-[#FF7A00]" />
-                        ETA · 8 min
-                      </div>
-                    </div>
-
-                    {/* widgets */}
-                    <div className="px-3 mt-3 grid grid-cols-2 gap-2">
-                      {[
-                        { label: "Orders", value: "2,418", icon: ShoppingCart },
-                        { label: "Revenue", value: "₹1.2L", icon: TrendingUp },
-                      ].map((w) => {
-                        const Icon = w.icon;
-                        return (
-                          <div
-                            key={w.label}
-                            className="rounded-xl bg-white/[0.05] border border-white/10 p-2.5"
-                          >
-                            <div className="flex items-center gap-1.5">
-                              <Icon className="w-3 h-3 text-[#FF7A00]" />
-                              <span className="text-[8px] text-white/50 uppercase tracking-wider">
-                                {w.label}
-                              </span>
-                            </div>
-                            <div className="text-[14px] font-700 text-white mt-1">
-                              {w.value}
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-
-                    {/* live activity */}
-                    <div className="mx-3 mt-3 rounded-xl bg-gradient-to-r from-[#FF7A00]/25 to-transparent border border-[#FF7A00]/30 p-2.5">
-                      <div className="flex items-center gap-2">
-                        <Activity className="w-3.5 h-3.5 text-[#FF7A00]" />
-                        <div className="text-[9px] text-white font-700">
-                          Rider Arjun · 1.2 km away
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* CTA bar */}
-                    <div className="mx-3 mt-auto mb-4 rounded-full bg-[#FF7A00] text-white text-[10px] font-700 py-2.5 text-center shadow-[0_10px_28px_-6px_rgba(255,122,0,0.7)]">
-                      Track Live →
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
-
-            {/* Scooter rider chip — bottom left */}
-            <motion.div
-              initial={{ opacity: 0, x: -60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.9, delay: 0.5 }}
-              className="absolute bottom-8 left-2 md:left-0 z-20"
-            >
-              <motion.div
-                animate={{ x: [0, 4, 0], y: [0, -4, 0] }}
-                transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
-                className="relative"
-              >
-                <div className="absolute right-full top-1/2 -translate-y-1/2 mr-1 w-20 h-[2px] bg-gradient-to-l from-[#FF7A00] to-transparent blur-[1px]" />
-                <div className="absolute right-full top-1/2 -translate-y-1/2 mr-1 mt-2 w-12 h-[2px] bg-gradient-to-l from-[#FF7A00]/60 to-transparent" />
-                <div
-                  className="relative flex items-center gap-3 rounded-2xl bg-white/80 backdrop-blur-xl border border-white/60 px-4 py-3"
-                  style={{ boxShadow: "0 20px 60px -10px rgba(0,0,0,0.15)" }}
-                >
-                  <motion.div
-                    animate={{ rotate: [0, 6, -6, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                    className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#FF7A00] to-[#d85812] flex items-center justify-center shadow-[0_10px_24px_-4px_rgba(255,122,0,0.7)]"
-                  >
-                    <Bike className="w-6 h-6 text-white" strokeWidth={2.2} />
-                  </motion.div>
-                  <div>
-                    <div className="text-[9px] text-[#6B7280] leading-none uppercase tracking-wider font-600">
-                      En route
-                    </div>
-                    <div className="text-[12px] font-700 text-[#111111] mt-1">Arjun · 2.4 km</div>
-                  </div>
-                </div>
-              </motion.div>
+                className="relative w-full h-full max-w-[640px] object-contain drop-shadow-[0_40px_60px_rgba(255,122,0,0.25)]"
+              />
             </motion.div>
 
             {/* Floating dashboard widget cards */}
@@ -1070,6 +900,7 @@ const QCommerceScene = () => {
               );
             })}
           </div>
+
         </div>
 
         {/* ===== Bottom benefits — premium glass cards ===== */}
