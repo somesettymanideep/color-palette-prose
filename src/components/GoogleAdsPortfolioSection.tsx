@@ -597,11 +597,11 @@ const GoogleAdsPortfolioSection = () => {
    Q-COMMERCE — premium light SaaS hero (2026)
 ============================================================ */
 const marketplaceLogos = [
-  { name: "Blinkit", color: "#F8CB46" },
-  { name: "Zepto", color: "#7C3AED" },
-  { name: "BigBasket", color: "#84C341" },
-  { name: "Instamart", color: "#FC8019" },
-  { name: "Swiggy", color: "#FC8019" },
+  { name: "Blinkit", color: "#F8CB46", domain: "blinkit.com" },
+  { name: "Zepto", color: "#7C3AED", domain: "zeptonow.com" },
+  { name: "BigBasket", color: "#84C341", domain: "bigbasket.com" },
+  { name: "Instamart", color: "#FC8019", domain: "swiggy.com" },
+  { name: "Swiggy", color: "#FC8019", domain: "swiggy.com" },
 ];
 
 const checklistItems = [
