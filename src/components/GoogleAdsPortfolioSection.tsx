@@ -31,7 +31,7 @@ import {
 } from "lucide-react";
 import rasrinShoppingAds from "@/assets/rasrin-shopping-ads.png";
 import qcommerceRasrinAsset from "@/assets/qcommerce-rasrin.png.asset.json";
-import qcommerceHeroAsset from "@/assets/qcommerce-hero-v2.webp.asset.json";
+import qcommerceHeroAsset from "@/assets/qcommerce-hero-v3.webp.asset.json";
 import logoBlinkit from "@/assets/qcommerce/blinkit.png";
 import logoZepto from "@/assets/qcommerce/zepto.png";
 import logoBigbasket from "@/assets/qcommerce/bigbasket.jpg";
@@ -860,45 +860,6 @@ const QCommerceScene = () => {
               />
             </motion.div>
 
-            {/* Floating dashboard widget cards */}
-            {widgetCards.map((c) => {
-              const Icon = c.icon;
-              return (
-                <motion.div
-                  key={c.label}
-                  initial={{ opacity: 0, y: 24, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7, delay: 0.6 + c.delay * 0.15, ease: [0.22, 1, 0.36, 1] }}
-                  className={`hidden md:block absolute ${c.pos} z-20`}
-                >
-                  <motion.div
-                    animate={{ y: [0, -12, 0] }}
-                    transition={{
-                      duration: 4.5 + c.delay,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: c.delay,
-                    }}
-                    whileHover={{ scale: 1.08, y: -6, rotate: 1 }}
-                    className="flex items-center gap-3 rounded-[20px] border border-[#FF7A00]/20 bg-white/75 backdrop-blur-2xl px-4 py-3"
-                    style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.5) inset" }}
-                  >
-                    <div className="w-9 h-9 rounded-xl bg-[#FF7A00]/12 border border-[#FF7A00]/30 flex items-center justify-center">
-                      <Icon className="w-4 h-4 text-[#FF7A00]" strokeWidth={2.2} />
-                    </div>
-                    <div className="pr-1">
-                      <div className="text-[9px] text-[#6B7280] leading-none font-600 uppercase tracking-wider">
-                        {c.label}
-                      </div>
-                      <div className="text-[14px] text-[#111111] font-700 mt-1 leading-none">
-                        {c.value}
-                      </div>
-                    </div>
-                  </motion.div>
-                </motion.div>
-              );
-            })}
           </div>
 
         </div>
