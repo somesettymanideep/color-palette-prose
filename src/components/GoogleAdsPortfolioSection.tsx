@@ -10,6 +10,7 @@ import {
   MousePointerClick,
   Target,
   ArrowUpRight,
+  ArrowRight,
   Play,
   ShoppingBag,
   CheckCircle2,
@@ -19,7 +20,14 @@ import {
   MapPin,
   Zap,
   BarChart3,
-
+  Rocket,
+  Store,
+  Package,
+  Truck,
+  CreditCard,
+  Bike,
+  Activity,
+  Navigation,
 } from "lucide-react";
 import rasrinShoppingAds from "@/assets/rasrin-shopping-ads.png";
 import qcommerceRasrinAsset from "@/assets/qcommerce-rasrin.png.asset.json";
