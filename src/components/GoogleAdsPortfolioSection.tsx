@@ -640,7 +640,7 @@ const qcFeatures = [
 
 const QCommerceScene = () => {
   return (
-    <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen my-16 md:my-24 overflow-hidden bg-[#F8F8F8] text-[#111111]">
+    <section className="relative left-1/2 -translate-x-1/2 w-[100vw] max-w-[100vw] my-16 md:my-24 overflow-hidden bg-[#F8F8F8] text-[#111111]">
       {/* ===== Premium light background layers ===== */}
       {/* soft white-to-cream gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-[#FDFAF6] to-[#F4F1EC]" />
