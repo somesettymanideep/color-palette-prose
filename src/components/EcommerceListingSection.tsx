@@ -204,205 +204,34 @@ const EcommerceListingSection = () => {
             </div>
           </div>
 
-          {/* RIGHT — Premium product card */}
+          {/* RIGHT — Hero illustration */}
           <div className="lg:col-span-6">
-            <div className="relative mx-auto max-w-[540px]">
-              {/* glow */}
+            <div className="relative mx-auto max-w-[560px]">
               <div
-                className="absolute -inset-16 rounded-[60px] blur-3xl pointer-events-none"
+                className="absolute -inset-10 rounded-[60px] blur-3xl pointer-events-none"
                 style={{ backgroundColor: "rgba(243,110,43,0.22)" }}
               />
-
-              {/* Main glass card */}
-              <motion.div
+              <motion.img
+                src={ecommerceHeroAsset.url}
+                alt="E-commerce listing optimization showcase across Amazon, Flipkart, Myntra and D2C"
+                loading="lazy"
+                decoding="async"
+                width={1040}
+                height={1280}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="relative rounded-[28px] p-6 md:p-7 backdrop-blur-2xl overflow-hidden"
+                animate={{ y: [0, -8, 0] }}
                 style={{
-                  backgroundColor: "rgba(20,20,20,0.7)",
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  boxShadow:
-                    "0 30px 80px -20px rgba(0,0,0,0.7), 0 0 0 1px rgba(243,110,43,0.08) inset",
+                  animationDuration: "6s",
+                  filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.45))",
                 }}
-              >
-                {/* Top: search bar */}
-                <div
-                  className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl mb-5"
-                  style={{
-                    backgroundColor: "rgba(255,255,255,0.05)",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                  }}
-                >
-                  <Search className="w-4 h-4 text-white/50" />
-                  <span className="font-body text-xs text-white/70 truncate">
-                    organic cold-pressed almond oil
-                  </span>
-                  <span
-                    className="ml-auto text-[10px] font-700 px-2 py-0.5 rounded text-white"
-                    style={{
-                      backgroundColor: ORANGE,
-                      boxShadow: "0 0 14px rgba(243,110,43,0.6)",
-                    }}
-                  >
-                    #1 RANK
-                  </span>
-                </div>
-
-                {/* Product row */}
-                <div className="flex gap-4">
-                  <div
-                    className="w-28 h-28 rounded-2xl flex items-center justify-center shrink-0 relative overflow-hidden"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, #F36E2B 0%, #c9531c 100%)",
-                      boxShadow: "0 12px 30px -8px rgba(243,110,43,0.6)",
-                    }}
-                  >
-                    <Package className="w-12 h-12 text-white relative z-10" strokeWidth={1.5} />
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="font-heading text-sm font-700 text-white leading-snug mb-1.5 line-clamp-2">
-                      Premium Cold-Pressed Almond Oil 500ml — A+ Listing
-                    </div>
-                    <div className="flex items-center gap-1 mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-3 h-3"
-                          style={{ color: ORANGE, fill: ORANGE }}
-                        />
-                      ))}
-                      <span className="text-[10px] text-white/50 ml-1">4.8 (2,431)</span>
-                    </div>
-                    <div className="flex items-baseline gap-2 mb-2.5">
-                      <span className="font-heading text-lg font-700 text-white">₹649</span>
-                      <span className="text-xs text-white/40 line-through">₹999</span>
-                      <span
-                        className="text-[10px] font-700 px-1.5 py-0.5 rounded"
-                        style={{
-                          color: ORANGE,
-                          backgroundColor: "rgba(243,110,43,0.15)",
-                        }}
-                      >
-                        −35%
-                      </span>
-                    </div>
-                    <button
-                      type="button"
-                      className="w-full text-xs font-600 text-white py-2 rounded-lg transition-all hover:scale-[1.02]"
-                      style={{
-                        backgroundColor: ORANGE,
-                        boxShadow: "0 8px 20px -6px rgba(243,110,43,0.6)",
-                      }}
-                    >
-                      Add to cart
-                    </button>
-                  </div>
-                </div>
-
-                {/* Growth chart */}
-                <div
-                  className="mt-5 pt-5"
-                  style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="font-body text-[10px] uppercase tracking-[0.18em] text-white/40 font-700">
-                      Sales · Last 30 days
-                    </span>
-                    <span
-                      className="inline-flex items-center gap-1 text-xs font-700"
-                      style={{ color: ORANGE }}
-                    >
-                      <TrendingUp className="w-3.5 h-3.5" />
-                      +212%
-                    </span>
-                  </div>
-                  <svg viewBox="0 0 200 50" className="w-full h-14" preserveAspectRatio="none">
-                    <defs>
-                      <linearGradient id="ecomChartDark" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0%" stopColor={ORANGE} stopOpacity="0.45" />
-                        <stop offset="100%" stopColor={ORANGE} stopOpacity="0" />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M0 40 L20 36 L40 38 L60 30 L80 26 L100 28 L120 18 L140 14 L160 16 L180 8 L200 4 L200 50 L0 50 Z"
-                      fill="url(#ecomChartDark)"
-                    />
-                    <path
-                      d="M0 40 L20 36 L40 38 L60 30 L80 26 L100 28 L120 18 L140 14 L160 16 L180 8 L200 4"
-                      fill="none"
-                      stroke={ORANGE}
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              </motion.div>
-
-              {/* Floating marketplace pills */}
-              {marketplaces.map((m, i) => {
-                const positions = [
-                  "-top-5 -left-5",
-                  "-top-7 right-4",
-                  "bottom-16 -left-8",
-                  "-bottom-5 right-2",
-                ];
-                return (
-                  <motion.div
-                    key={m.name}
-                    initial={{ opacity: 0, scale: 0.5, y: 10 }}
-                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.4 + i * 0.1, type: "spring" }}
-                    animate={{ y: [0, -6, 0] }}
-                    style={{
-                      backgroundColor: "rgba(20,20,20,0.85)",
-                      border: "1px solid rgba(255,255,255,0.12)",
-                      boxShadow: "0 16px 40px -10px rgba(0,0,0,0.6)",
-                    }}
-                    className={`absolute ${positions[i]} rounded-2xl backdrop-blur-xl px-3 py-2 flex items-center gap-2`}
-                  >
-                    <span
-                      className="w-7 h-7 rounded-lg flex items-center justify-center font-heading text-xs font-700 text-white"
-                      style={{ backgroundColor: m.color }}
-                    >
-                      {m.initial}
-                    </span>
-                    <span className="font-body text-[11px] font-700 text-white">
-                      {m.name}
-                    </span>
-                  </motion.div>
-                );
-              })}
-
-              {/* SEO badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.8, type: "spring" }}
-                className="absolute top-1/2 -right-6 -translate-y-1/2 rounded-2xl px-3.5 py-2.5 flex items-center gap-2.5 backdrop-blur-xl"
-                style={{
-                  backgroundColor: "rgba(243,110,43,0.95)",
-                  boxShadow: "0 20px 50px -10px rgba(243,110,43,0.6)",
-                }}
-              >
-                <Sparkles className="w-4 h-4 text-white" />
-                <div>
-                  <div className="font-heading text-sm font-700 leading-none text-white">
-                    SEO Ranked
-                  </div>
-                  <div className="font-body text-[9px] uppercase tracking-wider text-white/80 mt-0.5">
-                    Page 1 · #1
-                  </div>
-                </div>
-              </motion.div>
+                className="relative w-full h-auto object-contain"
+              />
             </div>
           </div>
+
         </div>
 
         {/* Stats strip */}
