@@ -31,6 +31,10 @@ import {
 } from "lucide-react";
 import rasrinShoppingAds from "@/assets/rasrin-shopping-ads.png";
 import qcommerceRasrinAsset from "@/assets/qcommerce-rasrin.png.asset.json";
+import logoBlinkit from "@/assets/qcommerce/blinkit.png";
+import logoZepto from "@/assets/qcommerce/zepto.png";
+import logoBigbasket from "@/assets/qcommerce/bigbasket.jpg";
+import logoSwiggy from "@/assets/qcommerce/swiggy.png";
 
 const qcommerceRasrin = qcommerceRasrinAsset.url;
 
@@ -597,11 +601,10 @@ const GoogleAdsPortfolioSection = () => {
    Q-COMMERCE — premium light SaaS hero (2026)
 ============================================================ */
 const marketplaceLogos = [
-  { name: "Blinkit", color: "#F8CB46", domain: "blinkit.com" },
-  { name: "Zepto", color: "#7C3AED", domain: "zeptonow.com" },
-  { name: "BigBasket", color: "#84C341", domain: "bigbasket.com" },
-  { name: "Instamart", color: "#FC8019", domain: "swiggy.com" },
-  { name: "Swiggy", color: "#FC8019", domain: "swiggy.com" },
+  { name: "Blinkit", color: "#F8CB46", logo: logoBlinkit },
+  { name: "Zepto", color: "#7C3AED", logo: logoZepto },
+  { name: "BigBasket", color: "#84C341", logo: logoBigbasket },
+  { name: "Swiggy", color: "#FC8019", logo: logoSwiggy },
 ];
 
 const checklistItems = [
@@ -856,15 +859,11 @@ const QCommerceScene = () => {
                     />
                     <span className="flex items-center gap-2">
                       <img
-                        src={`https://logo.clearbit.com/${l.domain}`}
+                        src={l.logo}
                         alt={`${l.name} logo`}
                         loading="lazy"
-                        className="w-5 h-5 rounded-sm object-contain"
-                        onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).style.display = "none";
-                        }}
+                        className="h-6 w-auto max-w-[80px] object-contain"
                       />
-                      {l.name}
                     </span>
                   </motion.div>
                 ))}
