@@ -57,11 +57,11 @@ const ThankYouSection = () => {
                 www.ayrondigitalsolutions.com
               </a>
               <a
-                href="mailto:info@ayrondigitalsolutions.in"
+                href="mailto:info@ayrondigitalsolutions.com"
                 className="flex items-center gap-2 justify-center font-body text-sm text-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4 text-primary" />
-                info@ayrondigitalsolutions.in
+                info@ayrondigitalsolutions.com
               </a>
               <a
                 href="tel:+919550860545"
