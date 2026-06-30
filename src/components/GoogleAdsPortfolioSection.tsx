@@ -594,142 +594,212 @@ const GoogleAdsPortfolioSection = () => {
 };
 
 /* ============================================================
-   Q-COMMERCE animated scene
-   6-second looping animations — pure framer-motion, no video
+   Q-COMMERCE — premium light SaaS hero (2026)
 ============================================================ */
-const trustLogos = ["Blinkit", "Zepto", "BigBasket", "Instamart", "Dunzo"];
+const marketplaceLogos = [
+  { name: "Blinkit", color: "#F8CB46" },
+  { name: "Zepto", color: "#7C3AED" },
+  { name: "BigBasket", color: "#84C341" },
+  { name: "Instamart", color: "#FC8019" },
+  { name: "Swiggy", color: "#FC8019" },
+];
 
-const floatingCards: {
+const checklistItems = [
+  { icon: Store, label: "Store Onboarding & Setup" },
+  { icon: Package, label: "Product & Inventory Sync" },
+  { icon: Zap, label: "Lightning Fast Delivery" },
+  { icon: TrendingUp, label: "Boost Revenue & Orders" },
+];
+
+const widgetCards: {
   label: string;
   value: string;
   icon: typeof CheckCircle2;
   pos: string;
   delay: number;
 }[] = [
-  { label: "Order Received", value: "#A8421", icon: CheckCircle2, pos: "top-[6%] -left-4 md:-left-10", delay: 0 },
-  { label: "Delivery in", value: "8 min", icon: Truck, pos: "top-[22%] -right-4 md:-right-12", delay: 0.4 },
-  { label: "Inventory Synced", value: "1,284 SKUs", icon: Package, pos: "top-[52%] -left-6 md:-left-14", delay: 0.8 },
-  { label: "Payment", value: "Successful", icon: CreditCard, pos: "bottom-[18%] -right-2 md:-right-10", delay: 1.2 },
-  { label: "Online Riders", value: "342", icon: Bike, pos: "bottom-[4%] left-2 md:left-0", delay: 1.6 },
+  { label: "Inventory", value: "98%", icon: Package, pos: "top-[4%] -left-6 md:-left-16", delay: 0 },
+  { label: "Live Riders", value: "35", icon: Bike, pos: "top-[22%] -right-4 md:-right-20", delay: 0.4 },
+  { label: "Orders", value: "120+", icon: ShoppingCart, pos: "top-[48%] -left-8 md:-left-24", delay: 0.8 },
+  { label: "Delivery Time", value: "12 min", icon: Truck, pos: "bottom-[22%] -right-6 md:-right-24", delay: 1.2 },
+  { label: "Revenue", value: "₹1.2L", icon: TrendingUp, pos: "bottom-[6%] -left-4 md:-left-10", delay: 1.6 },
+  { label: "Rating", value: "4.9★", icon: Star, pos: "bottom-[40%] -right-2 md:-right-10", delay: 2.0 },
 ];
 
 const qcFeatures = [
-  { icon: Store, title: "Store Setup", desc: "Launch your digital storefront in minutes with zero friction." },
-  { icon: Package, title: "Inventory Sync", desc: "Real-time stock sync across every channel and warehouse." },
-  { icon: Truck, title: "Fast Delivery", desc: "10-minute dispatch powered by smart routing and live ETA." },
-  { icon: TrendingUp, title: "Revenue Growth", desc: "Data-driven insights that compound orders into outcomes." },
+  { icon: Store, title: "Store Setup", desc: "Quick onboarding with zero technical hassle." },
+  { icon: Package, title: "Inventory Sync", desc: "Connect POS and stock automatically." },
+  { icon: Truck, title: "Fast Delivery", desc: "Route optimization with live tracking." },
+  { icon: TrendingUp, title: "Revenue Growth", desc: "Increase repeat orders using automation." },
 ];
 
 const QCommerceScene = () => {
   return (
-    <section className="relative -mx-4 md:-mx-8 lg:-mx-12 overflow-hidden rounded-[2rem] bg-[#0A0A0A] text-white">
-      {/* ===== Premium background layers ===== */}
-      {/* base gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#0E0E0E] to-[#141414]" />
-      {/* radial orange glow */}
-      <div className="absolute right-[-10%] top-[10%] w-[720px] h-[720px] rounded-full bg-[#FF7A00]/25 blur-[140px] pointer-events-none" />
-      <div className="absolute -left-40 -top-32 w-[520px] h-[520px] rounded-full bg-[#FF7A00]/10 blur-[120px] pointer-events-none" />
-      <div className="absolute left-1/3 bottom-[-20%] w-[600px] h-[600px] rounded-full bg-[#FF7A00]/[0.07] blur-[160px] pointer-events-none" />
-      {/* subtle grid */}
+    <section className="relative -mx-4 md:-mx-8 lg:-mx-12 overflow-hidden rounded-[2rem] bg-[#F8F8F8] text-[#111111]">
+      {/* ===== Premium light background layers ===== */}
+      {/* soft white-to-cream gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-[#FDFAF6] to-[#F4F1EC]" />
+
+      {/* light mesh gradient */}
       <div
-        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        className="absolute inset-0 opacity-60 pointer-events-none"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
-          backgroundSize: "56px 56px",
-          maskImage: "radial-gradient(ellipse at center, black 40%, transparent 80%)",
+            "radial-gradient(at 20% 20%, rgba(255,122,0,0.06) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(255,122,0,0.08) 0px, transparent 45%), radial-gradient(at 60% 100%, rgba(255,122,0,0.05) 0px, transparent 50%)",
         }}
-      />
-      {/* noise */}
-      <div
-        className="absolute inset-0 opacity-[0.05] mix-blend-overlay pointer-events-none"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.55'/></svg>\")",
-        }}
-      />
-      {/* floating blurred circles */}
-      <motion.div
-        animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
-        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[20%] left-[18%] w-40 h-40 rounded-full bg-[#FF7A00]/20 blur-3xl pointer-events-none"
-      />
-      <motion.div
-        animate={{ y: [0, 25, 0], x: [0, -15, 0] }}
-        transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-[15%] right-[25%] w-52 h-52 rounded-full bg-[#FF7A00]/15 blur-3xl pointer-events-none"
       />
 
-      <div className="relative z-10 mx-auto max-w-[1320px] px-6 md:px-10 py-[72px] md:py-[100px]">
+      {/* orange radial glow behind phone */}
+      <div className="absolute right-[5%] top-[20%] w-[640px] h-[640px] rounded-full bg-[#FF7A00]/20 blur-[160px] pointer-events-none" />
+      <div className="absolute right-[10%] top-[30%] w-[420px] h-[420px] rounded-full bg-[#FF7A00]/15 blur-[120px] pointer-events-none" />
+
+      {/* dot grid texture */}
+      <div
+        className="absolute inset-0 opacity-[0.35] pointer-events-none"
+        style={{
+          backgroundImage: "radial-gradient(rgba(17,17,17,0.18) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+          maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+          WebkitMaskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+        }}
+      />
+
+      {/* abstract curved lines */}
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none opacity-40"
+        viewBox="0 0 1920 900"
+        fill="none"
+        preserveAspectRatio="none"
+      >
+        <path d="M -100 720 Q 480 540, 960 660 T 2020 480" stroke="url(#cgrad1)" strokeWidth="1.5" />
+        <path d="M -100 820 Q 600 600, 1100 760 T 2020 560" stroke="url(#cgrad1)" strokeWidth="1" />
+        <defs>
+          <linearGradient id="cgrad1" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="#FF7A00" stopOpacity="0" />
+            <stop offset="50%" stopColor="#FF7A00" stopOpacity="0.5" />
+            <stop offset="100%" stopColor="#FF7A00" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      {/* floating blurred circles */}
+      <motion.div
+        animate={{ y: [0, -22, 0], x: [0, 14, 0] }}
+        transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-[12%] left-[8%] w-44 h-44 rounded-full bg-[#FF7A00]/15 blur-3xl pointer-events-none"
+      />
+      <motion.div
+        animate={{ y: [0, 26, 0], x: [0, -18, 0] }}
+        transition={{ duration: 13, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-[10%] left-[35%] w-56 h-56 rounded-full bg-[#FF7A00]/10 blur-3xl pointer-events-none"
+      />
+
+      <div className="relative z-10 mx-auto max-w-[1320px] px-6 md:px-10 py-[80px] md:py-[110px]" style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
         {/* ===== Two-column hero ===== */}
-        <div className="grid lg:grid-cols-[45fr_55fr] gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center min-h-[820px]">
           {/* ---------- LEFT ---------- */}
           <div className="relative">
             {/* Badge */}
             <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 14, filter: "blur(6px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-flex items-center gap-2 rounded-full border border-[#FF7A00]/60 bg-[#FF7A00]/[0.15] px-4 py-1.5 backdrop-blur-md shadow-[0_0_30px_-8px_rgba(255,122,0,0.6)]"
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              className="inline-flex items-center gap-2 rounded-full border border-[#FF7A00]/40 bg-[#FF7A00]/[0.08] px-4 py-2 backdrop-blur-md shadow-[0_8px_24px_-8px_rgba(255,122,0,0.35)]"
             >
-              <Rocket className="w-3.5 h-3.5 text-[#FF7A00]" />
-              <span className="text-[12px] font-600 tracking-wide text-white/90">
-                Q-Commerce Technology
+              <span className="text-base leading-none">🛵</span>
+              <span className="text-[12px] font-600 tracking-wide text-[#111111]">
+                Smart Q-Commerce Platform
               </span>
             </motion.div>
 
             {/* Heading */}
             <motion.h2
-              initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
+              initial={{ opacity: 0, y: 28, filter: "blur(10px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-7 font-heading font-800 text-white tracking-[-0.02em]"
+              transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-8 font-800 text-[#111111] tracking-[-0.035em]"
               style={{
-                fontSize: "clamp(2.75rem, 6vw, 4.5rem)",
+                fontSize: "clamp(2.75rem, 6.2vw, 4.5rem)",
                 lineHeight: 0.95,
+                letterSpacing: "-0.035em",
               }}
             >
               Q-Commerce{" "}
               <span
                 className="text-[#FF7A00]"
-                style={{ textShadow: "0 0 60px rgba(255,122,0,0.45)" }}
+                style={{ textShadow: "0 8px 40px rgba(255,122,0,0.25)" }}
               >
                 Solutions
-              </span>
-              <br />
-              That Deliver
-              <br />
-              in Minutes.
+              </span>{" "}
+              for Instant Retail Growth
             </motion.h2>
 
-            {/* Supporting */}
+            {/* Description */}
             <motion.p
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-7 text-[18px] md:text-[20px] leading-relaxed text-white/65 max-w-xl font-400"
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="mt-7 text-[18px] md:text-[20px] leading-[1.55] text-[#6B7280] max-w-[560px] font-500"
             >
-              Deliver faster. Manage inventory smarter. Scale your grocery
-              business with real-time commerce.
+              Build your grocery business with real-time inventory, lightning-fast deliveries, and seamless marketplace integrations.
             </motion.p>
+
+            {/* Checklist */}
+            <motion.ul
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={{ show: { transition: { staggerChildren: 0.08, delayChildren: 0.4 } } }}
+              className="mt-9 relative space-y-5"
+            >
+              {/* connecting vertical line */}
+              <div className="absolute left-[15px] top-2 bottom-2 w-px bg-gradient-to-b from-[#FF7A00]/40 via-[#FF7A00]/25 to-transparent" />
+              {checklistItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <motion.li
+                    key={item.label}
+                    variants={{
+                      hidden: { opacity: 0, x: -12 },
+                      show: { opacity: 1, x: 0 },
+                    }}
+                    whileHover={{ x: 4 }}
+                    className="relative flex items-center gap-4 group cursor-default"
+                  >
+                    <div className="relative w-[32px] h-[32px] shrink-0">
+                      <div className="absolute inset-0 rounded-full bg-[#FF7A00] shadow-[0_8px_20px_-4px_rgba(255,122,0,0.55)] group-hover:shadow-[0_12px_28px_-4px_rgba(255,122,0,0.75)] transition-shadow" />
+                      <CheckCircle2 className="relative w-full h-full text-white p-1.5" strokeWidth={2.5} />
+                    </div>
+                    <div className="flex items-center gap-2.5">
+                      <Icon className="w-4 h-4 text-[#FF7A00]/80" strokeWidth={2.2} />
+                      <span className="text-[15px] font-600 text-[#111111]">{item.label}</span>
+                    </div>
+                  </motion.li>
+                );
+              })}
+            </motion.ul>
 
             {/* CTAs */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.45 }}
-              className="mt-9 flex flex-wrap items-center gap-3"
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="mt-10 flex flex-wrap items-center gap-3.5"
             >
               <motion.a
                 href="#contact"
-                whileHover={{ y: -3, scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
+                whileHover={{ y: -3, scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 320, damping: 18 }}
-                className="group relative inline-flex items-center gap-2 rounded-full bg-[#FF7A00] px-6 py-3.5 text-[14px] font-600 text-white shadow-[0_10px_40px_-8px_rgba(255,122,0,0.7)] overflow-hidden"
+                className="group relative inline-flex items-center gap-2.5 bg-[#FF7A00] px-7 py-4 text-[16px] font-600 text-white overflow-hidden"
+                style={{
+                  borderRadius: "18px",
+                  boxShadow: "0 20px 50px -10px rgba(255,122,0,0.55), 0 8px 20px -6px rgba(255,122,0,0.4)",
+                }}
               >
                 <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-full transition-transform duration-700" />
                 <span className="relative">Get Started</span>
@@ -737,135 +807,158 @@ const QCommerceScene = () => {
               </motion.a>
 
               <motion.a
-                href="#portfolio"
-                whileHover={{ y: -3, scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
+                href="#demo"
+                whileHover={{ y: -3, scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 320, damping: 18 }}
-                className="group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-6 py-3.5 text-[14px] font-600 text-white backdrop-blur-xl hover:bg-white/[0.1] hover:border-white/25 transition-colors"
+                className="group inline-flex items-center gap-2.5 border border-[#ECECEC] bg-white/70 px-7 py-4 text-[16px] font-600 text-[#111111] backdrop-blur-xl hover:bg-white hover:border-[#FF7A00]/40 transition-colors"
+                style={{
+                  borderRadius: "18px",
+                  boxShadow: "0 12px 30px -10px rgba(0,0,0,0.08)",
+                }}
               >
-                <Play className="w-4 h-4 fill-white" />
-                Watch Demo
+                <div className="w-6 h-6 rounded-full bg-[#FF7A00]/10 flex items-center justify-center">
+                  <Play className="w-3 h-3 fill-[#FF7A00] text-[#FF7A00]" />
+                </div>
+                Book Demo
               </motion.a>
             </motion.div>
 
-            {/* Trust */}
+            {/* Marketplace cards */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 0.85 }}
               className="mt-12"
             >
-              <div className="text-[11px] uppercase tracking-[0.18em] text-white/40 font-600">
-                Trusted by 500+ Grocery Stores
+              <div className="text-[11px] uppercase tracking-[0.2em] text-[#6B7280] font-600">
+                Integrated with leading marketplaces
               </div>
-              <div className="mt-4 flex flex-wrap gap-2.5">
-                {trustLogos.map((l, i) => (
+              <div className="mt-4 flex flex-wrap gap-3">
+                {marketplaceLogos.map((l, i) => (
                   <motion.div
-                    key={l}
-                    initial={{ opacity: 0, y: 10 }}
+                    key={l.name}
+                    initial={{ opacity: 0, y: 14 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.7 + i * 0.07 }}
-                    whileHover={{ y: -3, scale: 1.05 }}
-                    className="rounded-xl border border-white/10 bg-white/[0.04] px-3.5 py-2 text-[12px] font-600 text-white/70 backdrop-blur-md hover:border-[#FF7A00]/40 hover:text-white transition-all"
+                    transition={{ duration: 0.55, delay: 0.95 + i * 0.08 }}
+                    whileHover={{ y: -5, scale: 1.05 }}
+                    className="relative rounded-2xl border border-[#ECECEC] bg-white/80 backdrop-blur-md px-4 py-2.5 text-[13px] font-700 text-[#111111] transition-all hover:border-[#FF7A00]/40"
+                    style={{
+                      boxShadow: `0 12px 30px -12px rgba(0,0,0,0.08), 0 0 0 0 ${l.color}00`,
+                      transform: `translateY(${(i % 2) * -4}px)`,
+                    }}
                   >
-                    {l}
+                    <span
+                      className="absolute -inset-px rounded-2xl opacity-0 hover:opacity-100 transition-opacity pointer-events-none"
+                      style={{ boxShadow: `0 12px 30px -8px ${l.color}55` }}
+                    />
+                    <span className="flex items-center gap-2">
+                      <span
+                        className="w-2 h-2 rounded-full"
+                        style={{ background: l.color, boxShadow: `0 0 10px ${l.color}` }}
+                      />
+                      {l.name}
+                    </span>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
           </div>
 
-          {/* ---------- RIGHT — illustration ---------- */}
-          <div className="relative h-[560px] md:h-[640px] flex items-center justify-center">
+          {/* ---------- RIGHT — premium phone composition ---------- */}
+          <div className="relative h-[640px] md:h-[760px] flex items-center justify-center">
             {/* radial backdrop behind phone */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-[420px] h-[420px] rounded-full bg-gradient-to-br from-[#FF7A00]/40 via-[#FF7A00]/15 to-transparent blur-3xl" />
+              <div className="w-[480px] h-[480px] rounded-full bg-gradient-to-br from-[#FF7A00]/35 via-[#FF7A00]/12 to-transparent blur-3xl" />
             </div>
 
-            {/* dotted orbit / delivery path */}
+            {/* large arcing dotted delivery path */}
             <svg
               className="absolute inset-0 w-full h-full pointer-events-none"
-              viewBox="0 0 500 600"
+              viewBox="0 0 500 700"
               fill="none"
             >
               <motion.path
-                d="M 60 480 Q 180 360, 260 380 T 460 140"
+                d="M 40 580 Q 200 420, 280 460 T 480 140"
                 stroke="#FF7A00"
                 strokeWidth="2"
-                strokeDasharray="4 8"
+                strokeDasharray="3 8"
                 strokeLinecap="round"
                 initial={{ pathLength: 0, opacity: 0 }}
-                whileInView={{ pathLength: 1, opacity: 0.7 }}
+                whileInView={{ pathLength: 1, opacity: 0.85 }}
                 viewport={{ once: true }}
                 transition={{ duration: 2.4, ease: "easeInOut" }}
-                style={{ filter: "drop-shadow(0 0 6px rgba(255,122,0,0.7))" }}
+                style={{ filter: "drop-shadow(0 0 8px rgba(255,122,0,0.55))" }}
               />
             </svg>
 
-            {/* moving delivery dot along path approx */}
             <motion.div
-              className="absolute w-3 h-3 rounded-full bg-[#FF7A00] shadow-[0_0_20px_rgba(255,122,0,0.9)]"
-              animate={{
-                offsetDistance: ["0%", "100%"],
-              }}
+              className="absolute w-3.5 h-3.5 rounded-full bg-[#FF7A00] shadow-[0_0_22px_rgba(255,122,0,0.95)]"
+              animate={{ offsetDistance: ["0%", "100%"] }}
               transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
               style={{
-                offsetPath:
-                  "path('M 60 480 Q 180 360, 260 380 T 460 140')",
+                offsetPath: "path('M 40 580 Q 200 420, 280 460 T 480 140')",
                 top: 0,
                 left: 0,
               }}
             />
 
-            {/* Phone */}
+            {/* Phone — perspective floating */}
             <motion.div
-              initial={{ opacity: 0, y: 40, rotate: -4 }}
-              whileInView={{ opacity: 1, y: 0, rotate: -2 }}
+              initial={{ opacity: 0, y: 50, rotateY: 30 }}
+              whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
               className="relative z-10"
+              style={{ perspective: 1200 }}
             >
               <motion.div
-                animate={{ y: [0, -12, 0], rotate: [-2, 0, -2] }}
+                animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="relative w-[280px] md:w-[320px] aspect-[9/19] rounded-[2.6rem] p-[3px] bg-gradient-to-b from-white/20 via-white/[0.04] to-white/10 shadow-[0_50px_120px_-20px_rgba(255,122,0,0.55),0_30px_80px_-30px_rgba(0,0,0,0.9)]"
+                className="relative w-[300px] md:w-[340px] aspect-[9/19] rounded-[2.8rem] p-[3px]"
+                style={{
+                  transform: "rotateY(-12deg) rotateX(6deg) rotateZ(-3deg)",
+                  background: "linear-gradient(160deg, rgba(255,255,255,0.95), rgba(255,255,255,0.4) 40%, rgba(255,122,0,0.15))",
+                  boxShadow:
+                    "0 60px 120px -20px rgba(255,122,0,0.4), 0 40px 80px -30px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.6)",
+                }}
               >
-                <div className="relative w-full h-full rounded-[2.4rem] bg-[#0A0A0A] p-2 overflow-hidden">
-                  {/* notch */}
-                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-b-2xl z-20" />
+                <div className="relative w-full h-full rounded-[2.6rem] bg-[#0A0A0A] p-2 overflow-hidden">
+                  {/* dynamic island */}
+                  <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-full z-20" />
 
-                  <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-gradient-to-b from-[#111] to-[#1a1a1a] flex flex-col">
-                    {/* status */}
-                    <div className="flex items-center justify-between px-4 pt-6 pb-3 text-white">
+                  <div className="relative w-full h-full rounded-[2.2rem] overflow-hidden bg-gradient-to-b from-[#0F0F0F] via-[#161616] to-[#1c1c1c] flex flex-col">
+                    {/* status header */}
+                    <div className="flex items-center justify-between px-4 pt-7 pb-3 text-white">
                       <div>
-                        <div className="text-[8px] text-white/40 leading-none">
-                          Live Dashboard
+                        <div className="text-[8px] text-white/40 leading-none uppercase tracking-wider">
+                          Live Tracking
                         </div>
-                        <div className="text-[11px] font-700 flex items-center gap-1 mt-0.5">
+                        <div className="text-[12px] font-700 flex items-center gap-1.5 mt-1">
                           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                          342 Riders Online
+                          Order #A8421
                         </div>
                       </div>
-                      <Bell className="w-3.5 h-3.5 text-white/60" />
+                      <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center">
+                        <Bell className="w-3.5 h-3.5 text-white/80" />
+                      </div>
                     </div>
 
-                    {/* Map area */}
-                    <div className="mx-3 rounded-2xl relative overflow-hidden h-[180px] bg-gradient-to-br from-[#1c1c1c] to-[#0f0f0f] border border-white/5">
-                      {/* grid lines as map */}
+                    {/* Map */}
+                    <div className="mx-3 rounded-2xl relative overflow-hidden h-[200px] bg-gradient-to-br from-[#1c1c1c] to-[#0f0f0f] border border-white/5">
                       <div
                         className="absolute inset-0 opacity-30"
                         style={{
                           backgroundImage:
-                            "linear-gradient(rgba(255,122,0,0.25) 1px,transparent 1px),linear-gradient(90deg,rgba(255,122,0,0.25) 1px,transparent 1px)",
+                            "linear-gradient(rgba(255,122,0,0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(255,122,0,0.3) 1px,transparent 1px)",
                           backgroundSize: "22px 22px",
                         }}
                       />
-                      {/* route */}
-                      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 180" fill="none">
+                      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 200" fill="none">
                         <motion.path
-                          d="M 20 150 Q 70 90, 110 100 T 180 30"
+                          d="M 20 170 Q 70 100, 110 110 T 180 30"
                           stroke="#FF7A00"
                           strokeWidth="2.5"
                           strokeLinecap="round"
@@ -875,17 +968,16 @@ const QCommerceScene = () => {
                           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                         />
                       </svg>
-                      {/* pins */}
                       <motion.div
-                        animate={{ scale: [1, 1.4, 1], opacity: [0.9, 0.4, 0.9] }}
+                        animate={{ scale: [1, 1.6, 1], opacity: [0.9, 0.3, 0.9] }}
                         transition={{ duration: 1.8, repeat: Infinity }}
-                        className="absolute bottom-4 left-3 w-3 h-3 rounded-full bg-[#FF7A00] shadow-[0_0_12px_rgba(255,122,0,0.9)]"
+                        className="absolute bottom-4 left-3 w-3 h-3 rounded-full bg-[#FF7A00] shadow-[0_0_14px_rgba(255,122,0,0.95)]"
                       />
                       <div className="absolute top-3 right-4">
-                        <MapPin className="w-5 h-5 text-[#FF7A00]" fill="#FF7A00" />
+                        <Navigation className="w-5 h-5 text-[#FF7A00]" fill="#FF7A00" />
                       </div>
-                      {/* ETA chip */}
-                      <div className="absolute top-2 left-2 rounded-md bg-black/60 backdrop-blur-md border border-white/10 px-2 py-1 text-[8px] text-white font-600">
+                      <div className="absolute top-2 left-2 rounded-md bg-black/60 backdrop-blur-md border border-white/10 px-2 py-1 text-[8px] text-white font-700 flex items-center gap-1">
+                        <Truck className="w-2.5 h-2.5 text-[#FF7A00]" />
                         ETA · 8 min
                       </div>
                     </div>
@@ -900,13 +992,15 @@ const QCommerceScene = () => {
                         return (
                           <div
                             key={w.label}
-                            className="rounded-xl bg-white/[0.04] border border-white/10 p-2"
+                            className="rounded-xl bg-white/[0.05] border border-white/10 p-2.5"
                           >
                             <div className="flex items-center gap-1.5">
                               <Icon className="w-3 h-3 text-[#FF7A00]" />
-                              <span className="text-[8px] text-white/50">{w.label}</span>
+                              <span className="text-[8px] text-white/50 uppercase tracking-wider">
+                                {w.label}
+                              </span>
                             </div>
-                            <div className="text-[13px] font-700 text-white mt-0.5">
+                            <div className="text-[14px] font-700 text-white mt-1">
                               {w.value}
                             </div>
                           </div>
@@ -915,20 +1009,17 @@ const QCommerceScene = () => {
                     </div>
 
                     {/* live activity */}
-                    <div className="mx-3 mt-3 rounded-xl bg-gradient-to-r from-[#FF7A00]/20 to-transparent border border-[#FF7A00]/30 p-2.5">
+                    <div className="mx-3 mt-3 rounded-xl bg-gradient-to-r from-[#FF7A00]/25 to-transparent border border-[#FF7A00]/30 p-2.5">
                       <div className="flex items-center gap-2">
                         <Activity className="w-3.5 h-3.5 text-[#FF7A00]" />
-                        <div className="text-[9px] text-white font-600">
-                          Order #A8421 dispatched
+                        <div className="text-[9px] text-white font-700">
+                          Rider Arjun · 1.2 km away
                         </div>
-                      </div>
-                      <div className="text-[8px] text-white/50 mt-0.5 ml-5">
-                        Rider Arjun · 1.2 km away
                       </div>
                     </div>
 
                     {/* CTA bar */}
-                    <div className="mx-3 mt-auto mb-4 rounded-full bg-[#FF7A00] text-white text-[10px] font-700 py-2 text-center shadow-[0_8px_24px_-6px_rgba(255,122,0,0.7)]">
+                    <div className="mx-3 mt-auto mb-4 rounded-full bg-[#FF7A00] text-white text-[10px] font-700 py-2.5 text-center shadow-[0_10px_28px_-6px_rgba(255,122,0,0.7)]">
                       Track Live →
                     </div>
                   </div>
@@ -936,65 +1027,74 @@ const QCommerceScene = () => {
               </motion.div>
             </motion.div>
 
-            {/* Scooter — bottom left */}
+            {/* Scooter rider chip — bottom left */}
             <motion.div
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, delay: 0.5 }}
-              className="absolute bottom-6 left-2 md:left-6 z-20"
+              className="absolute bottom-8 left-2 md:left-0 z-20"
             >
               <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+                animate={{ x: [0, 4, 0], y: [0, -4, 0] }}
+                transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
                 className="relative"
               >
-                {/* speed trail */}
-                <div className="absolute right-full top-1/2 -translate-y-1/2 mr-1 w-16 h-[2px] bg-gradient-to-l from-[#FF7A00] to-transparent blur-[1px]" />
-                <div className="absolute right-full top-1/2 -translate-y-1/2 mr-1 mt-2 w-10 h-[2px] bg-gradient-to-l from-[#FF7A00]/60 to-transparent" />
-                <div className="relative flex items-center gap-2 rounded-2xl bg-white/[0.06] backdrop-blur-xl border border-white/10 px-3 py-2.5 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.7)]">
-                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#FF7A00] to-[#d85812] flex items-center justify-center shadow-[0_8px_20px_-4px_rgba(255,122,0,0.7)]">
-                    <Bike className="w-5 h-5 text-white" strokeWidth={2.2} />
-                  </div>
+                <div className="absolute right-full top-1/2 -translate-y-1/2 mr-1 w-20 h-[2px] bg-gradient-to-l from-[#FF7A00] to-transparent blur-[1px]" />
+                <div className="absolute right-full top-1/2 -translate-y-1/2 mr-1 mt-2 w-12 h-[2px] bg-gradient-to-l from-[#FF7A00]/60 to-transparent" />
+                <div
+                  className="relative flex items-center gap-3 rounded-2xl bg-white/80 backdrop-blur-xl border border-white/60 px-4 py-3"
+                  style={{ boxShadow: "0 20px 60px -10px rgba(0,0,0,0.15)" }}
+                >
+                  <motion.div
+                    animate={{ rotate: [0, 6, -6, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#FF7A00] to-[#d85812] flex items-center justify-center shadow-[0_10px_24px_-4px_rgba(255,122,0,0.7)]"
+                  >
+                    <Bike className="w-6 h-6 text-white" strokeWidth={2.2} />
+                  </motion.div>
                   <div>
-                    <div className="text-[9px] text-white/50 leading-none">En route</div>
-                    <div className="text-[11px] font-700 text-white mt-0.5">Arjun · 2.4 km</div>
+                    <div className="text-[9px] text-[#6B7280] leading-none uppercase tracking-wider font-600">
+                      En route
+                    </div>
+                    <div className="text-[12px] font-700 text-[#111111] mt-1">Arjun · 2.4 km</div>
                   </div>
                 </div>
               </motion.div>
             </motion.div>
 
-            {/* Floating UI cards */}
-            {floatingCards.map((c) => {
+            {/* Floating dashboard widget cards */}
+            {widgetCards.map((c) => {
               const Icon = c.icon;
               return (
                 <motion.div
                   key={c.label}
-                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                  initial={{ opacity: 0, y: 24, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.7, delay: 0.6 + c.delay * 0.2, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 0.7, delay: 0.6 + c.delay * 0.15, ease: [0.22, 1, 0.36, 1] }}
                   className={`hidden md:block absolute ${c.pos} z-20`}
                 >
                   <motion.div
-                    animate={{ y: [0, -10, 0] }}
+                    animate={{ y: [0, -12, 0] }}
                     transition={{
-                      duration: 4 + c.delay,
+                      duration: 4.5 + c.delay,
                       repeat: Infinity,
                       ease: "easeInOut",
                       delay: c.delay,
                     }}
-                    whileHover={{ scale: 1.06, y: -6 }}
-                    className="flex items-center gap-2.5 rounded-[20px] border border-[#FF7A00]/25 bg-white/[0.05] backdrop-blur-2xl px-3.5 py-2.5 shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
+                    whileHover={{ scale: 1.08, y: -6, rotate: 1 }}
+                    className="flex items-center gap-3 rounded-[20px] border border-[#FF7A00]/20 bg-white/75 backdrop-blur-2xl px-4 py-3"
+                    style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.5) inset" }}
                   >
-                    <div className="w-8 h-8 rounded-xl bg-[#FF7A00]/20 border border-[#FF7A00]/40 flex items-center justify-center">
+                    <div className="w-9 h-9 rounded-xl bg-[#FF7A00]/12 border border-[#FF7A00]/30 flex items-center justify-center">
                       <Icon className="w-4 h-4 text-[#FF7A00]" strokeWidth={2.2} />
                     </div>
                     <div className="pr-1">
-                      <div className="text-[9px] text-white/50 leading-none font-500">
+                      <div className="text-[9px] text-[#6B7280] leading-none font-600 uppercase tracking-wider">
                         {c.label}
                       </div>
-                      <div className="text-[12px] text-white font-700 mt-1 leading-none">
+                      <div className="text-[14px] text-[#111111] font-700 mt-1 leading-none">
                         {c.value}
                       </div>
                     </div>
@@ -1005,37 +1105,40 @@ const QCommerceScene = () => {
           </div>
         </div>
 
-        {/* ===== Feature cards ===== */}
-        <div className="mt-20 md:mt-28 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* ===== Bottom benefits — premium glass cards ===== */}
+        <div className="mt-24 md:mt-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {qcFeatures.map((f, i) => {
             const Icon = f.icon;
             return (
               <motion.div
                 key={f.title}
-                initial={{ opacity: 0, y: 28 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ y: -8 }}
-                className="group relative rounded-[24px] border border-white/10 bg-white/[0.04] backdrop-blur-xl p-6 overflow-hidden transition-colors hover:border-[#FF7A00]/50"
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="group relative border border-[#ECECEC] bg-white/70 backdrop-blur-xl p-7 overflow-hidden transition-colors hover:border-[#FF7A00]/50"
+                style={{
+                  borderRadius: "24px",
+                  boxShadow: "0 20px 60px rgba(0,0,0,0.06)",
+                }}
               >
-                {/* hover glow */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute -top-20 -right-10 w-60 h-60 rounded-full bg-[#FF7A00]/20 blur-3xl" />
+                  <div className="absolute -top-20 -right-10 w-60 h-60 rounded-full bg-[#FF7A00]/15 blur-3xl" />
                 </div>
 
                 <div className="relative">
                   <div className="relative w-14 h-14 rounded-full flex items-center justify-center">
-                    <div className="absolute inset-0 rounded-full bg-[#FF7A00]/15 border border-[#FF7A00]/40 shadow-[0_0_30px_-5px_rgba(255,122,0,0.6)]" />
+                    <div className="absolute inset-0 rounded-full bg-[#FF7A00]/12 border border-[#FF7A00]/40 shadow-[0_0_30px_-4px_rgba(255,122,0,0.5)]" />
                     <Icon className="relative w-6 h-6 text-[#FF7A00]" strokeWidth={2} />
                   </div>
-                  <h4 className="mt-5 text-[18px] font-700 text-white tracking-tight">
+                  <h4 className="mt-5 text-[20px] font-700 text-[#111111] tracking-[-0.02em]">
                     {f.title}
                   </h4>
-                  <p className="mt-2 text-[13px] leading-relaxed text-white/55 font-400">
+                  <p className="mt-2 text-[14px] leading-relaxed text-[#6B7280] font-500">
                     {f.desc}
                   </p>
-                  <div className="mt-5 inline-flex items-center gap-1.5 text-[12px] font-600 text-[#FF7A00]/90 group-hover:text-[#FF7A00] transition-colors">
+                  <div className="mt-5 inline-flex items-center gap-1.5 text-[12px] font-600 text-[#FF7A00] uppercase tracking-wider">
                     Learn more
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                   </div>
