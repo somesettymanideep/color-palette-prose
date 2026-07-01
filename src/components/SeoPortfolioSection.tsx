@@ -269,7 +269,7 @@ const SeoPortfolioSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="lg:col-span-5 order-1 lg:order-2"
+            className="lg:col-span-5 order-1 lg:order-2 min-w-0 w-full"
           >
             <p className="font-body text-sm uppercase tracking-[0.2em] text-off-white/40 mb-4">
               SEO Portfolio · Websites
