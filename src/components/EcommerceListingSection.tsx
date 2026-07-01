@@ -53,7 +53,7 @@ const stats = [
 const EcommerceListingSection = () => {
   return (
     <section
-      className="relative left-1/2 -translate-x-1/2 w-[100vw] max-w-[100vw] overflow-hidden py-16 md:py-20"
+      className="relative left-1/2 -translate-x-1/2 w-[100vw] max-w-[100vw] overflow-hidden py-10 md:py-14"
       style={{ backgroundColor: "#0A0A0A" }}
     >
       {/* Background layers */}
@@ -85,7 +85,7 @@ const EcommerceListingSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <div className="max-w-3xl mb-10 md:mb-14">
+        <div className="max-w-3xl mb-8 md:mb-10">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
