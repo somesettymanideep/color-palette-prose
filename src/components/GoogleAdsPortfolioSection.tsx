@@ -118,7 +118,7 @@ const GoogleAdsPortfolioSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="lg:col-span-5"
+              className="lg:col-span-5 min-w-0 w-full"
             >
               <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 mb-4 font-700">
                 Search Campaign · Blossoms Hospital
@@ -178,7 +178,7 @@ const GoogleAdsPortfolioSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="lg:col-span-7 relative"
+              className="lg:col-span-7 relative min-w-0 w-full"
             >
               <div className="absolute -inset-12 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
 
@@ -323,7 +323,7 @@ const GoogleAdsPortfolioSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="lg:col-span-7 relative order-2 lg:order-1"
+              className="lg:col-span-7 relative order-2 lg:order-1 min-w-0 w-full"
             >
               <div className="absolute -inset-12 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
 
@@ -372,7 +372,7 @@ const GoogleAdsPortfolioSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="lg:col-span-5 order-1 lg:order-2"
+              className="lg:col-span-5 order-1 lg:order-2 min-w-0 w-full"
             >
               <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 mb-4 font-700">
                 Shopping Campaign · Rasrin
@@ -434,7 +434,7 @@ const GoogleAdsPortfolioSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="lg:col-span-5"
+              className="lg:col-span-5 min-w-0 w-full"
             >
               <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 mb-4 font-700">
                 YouTube Campaign · Rasrin
@@ -495,7 +495,7 @@ const GoogleAdsPortfolioSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="lg:col-span-7 relative"
+              className="lg:col-span-7 relative min-w-0 w-full"
             >
               <div className="absolute -inset-12 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
 

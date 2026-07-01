@@ -35,7 +35,7 @@ const SeoPortfolioSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-5"
+            className="lg:col-span-5 min-w-0 w-full"
           >
             <p className="font-body text-sm uppercase tracking-[0.2em] text-off-white/40 mb-4">
               SEO Portfolio · GMB
@@ -84,11 +84,11 @@ const SeoPortfolioSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="lg:col-span-7 relative"
+            className="lg:col-span-7 relative min-w-0 w-full"
           >
             <div className="absolute -inset-12 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
 
-            <div className="relative mx-auto" style={{ maxWidth: "440px" }}>
+            <div className="relative mx-auto w-full" style={{ maxWidth: "440px" }}>
               <div
                 className="absolute inset-0 rounded-3xl opacity-40"
                 style={{
@@ -106,7 +106,7 @@ const SeoPortfolioSection = () => {
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative mx-auto"
+                className="relative mx-auto w-full"
                 style={{ maxWidth: "340px" }}
               >
                 <img
@@ -139,11 +139,11 @@ const SeoPortfolioSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-7 relative order-2 lg:order-1"
+            className="lg:col-span-7 relative order-2 lg:order-1 min-w-0 w-full"
           >
             <div className="absolute -inset-12 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
 
-            <div className="relative mx-auto" style={{ maxWidth: "560px" }}>
+            <div className="relative mx-auto w-full" style={{ maxWidth: "560px" }}>
               {/* Browser frame */}
               <motion.div
                 initial={{ y: 20 }}
@@ -269,7 +269,7 @@ const SeoPortfolioSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="lg:col-span-5 order-1 lg:order-2"
+            className="lg:col-span-5 order-1 lg:order-2 min-w-0 w-full"
           >
             <p className="font-body text-sm uppercase tracking-[0.2em] text-off-white/40 mb-4">
               SEO Portfolio · Websites
