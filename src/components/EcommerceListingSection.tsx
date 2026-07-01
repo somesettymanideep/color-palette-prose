@@ -8,6 +8,10 @@ import {
   BarChart3,
   Eye,
   ShoppingCart,
+  Users,
+  IndianRupee,
+  LineChart,
+  ShoppingBag,
 } from "lucide-react";
 import ecommerceHeroAsset from "@/assets/ecommerce-listing-hero.webp.asset.json";
 
