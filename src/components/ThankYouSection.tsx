@@ -38,7 +38,7 @@ const ThankYouSection = () => {
 
             {/* Logo area */}
             <div className="flex items-center justify-center mb-10">
-              <img
+              <img loading="lazy" decoding="async"
                 src={adsLogoFull}
                 alt="ADS - Ayron Digital Solutions"
                 className="h-16 md:h-20 w-auto object-contain"

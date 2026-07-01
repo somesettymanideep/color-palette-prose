@@ -83,7 +83,7 @@ const ValuesSection = () => {
                 {/* Icon */}
                 <div className="w-20 h-20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-400">
                   {v.image ? (
-                    <img src={v.image} alt={v.title} className="w-16 h-16 object-contain" />
+                    <img loading="lazy" decoding="async" src={v.image} alt={v.title} className="w-16 h-16 object-contain" />
                   ) : (
                     Icon && <Icon className="w-10 h-10 text-primary-foreground" />
                   )}

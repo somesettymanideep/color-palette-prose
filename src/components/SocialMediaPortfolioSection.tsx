@@ -227,7 +227,7 @@ const InstagramMockup = ({ client }: { client: Client }) => {
             <div className="flex items-center gap-5">
               <div className={`w-16 h-16 rounded-full p-[2px] bg-gradient-to-tr ${client.accent}`}>
                 <div className="w-full h-full rounded-full p-[2px] bg-white">
-                  <img src={client.cover} alt={client.name} className="w-full h-full rounded-full object-cover" />
+                  <img loading="lazy" decoding="async" src={client.cover} alt={client.name} className="w-full h-full rounded-full object-cover" />
                 </div>
               </div>
               <div className="flex-1 grid grid-cols-3 text-center">
@@ -300,7 +300,7 @@ const FacebookMockup = ({ client }: { client: Client }) => (
     </div>
     {/* Cover */}
     <div className="relative h-32 md:h-40 bg-gray-200 overflow-hidden">
-      <img src={client.cover} alt="" className="w-full h-full object-cover" />
+      <img loading="lazy" decoding="async" src={client.cover} alt="" className="w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
     </div>
     {/* Profile header */}
@@ -308,7 +308,7 @@ const FacebookMockup = ({ client }: { client: Client }) => (
       <div className="flex items-end gap-3 -mt-10">
         <div className={`w-20 h-20 rounded-full p-[3px] bg-gradient-to-tr ${client.accent} shrink-0`}>
           <div className="w-full h-full rounded-full p-[2px] bg-white">
-            <img src={client.cover} alt="" className="w-full h-full rounded-full object-cover" />
+            <img loading="lazy" decoding="async" src={client.cover} alt="" className="w-full h-full rounded-full object-cover" />
           </div>
         </div>
         <div className="flex-1 pb-1">
@@ -335,7 +335,7 @@ const FacebookMockup = ({ client }: { client: Client }) => (
       {client.fbPosts.map((post, i) => (
         <div key={i} className="bg-white rounded-lg p-3 shadow-sm">
           <div className="flex items-center gap-2 mb-2">
-            <img src={client.cover} alt="" className="w-8 h-8 rounded-full object-cover" />
+            <img loading="lazy" decoding="async" src={client.cover} alt="" className="w-8 h-8 rounded-full object-cover" />
             <div>
               <div className="text-[12px] font-700 text-black leading-tight">{client.fbName}</div>
               <div className="text-[10px] text-gray-500 flex items-center gap-1">
@@ -429,7 +429,7 @@ const HeroPhoneMockup = () => (
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-primary to-amber-500">
               <div className="w-full h-full rounded-full bg-white p-[2px]">
-                <img src={portfolioJewellery} alt="" className="w-full h-full rounded-full object-cover" />
+                <img loading="lazy" decoding="async" src={portfolioJewellery} alt="" className="w-full h-full rounded-full object-cover" />
               </div>
             </div>
             <div className="flex-1 grid grid-cols-3 text-center text-black">

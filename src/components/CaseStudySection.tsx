@@ -181,7 +181,7 @@ const CaseStudySection = () => {
                 <div className="relative">
                   <div className="absolute -inset-4 bg-primary/20 rounded-3xl blur-2xl" />
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={study.image}
                       alt={`${study.client} case study`}
                       className="w-full h-auto object-cover"

@@ -28,7 +28,7 @@ const FounderSection = () => {
           >
             <motion.div className="relative" style={{ y: imageY }}>
               <div className="absolute -inset-4 bg-primary/10 rounded-2xl -rotate-3" />
-              <img
+              <img loading="lazy" decoding="async"
                 src={founderImg}
                 alt="Aziz Rehman - Founder & CEO"
                 className="relative w-full max-w-sm rounded-2xl shadow-2xl object-cover"

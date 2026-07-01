@@ -106,7 +106,7 @@ const ClientsSection = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <img
+          <img loading="lazy" decoding="async"
             src={clientsLogos}
             alt="Our valuable clients logos"
             className="w-full h-auto object-contain"
