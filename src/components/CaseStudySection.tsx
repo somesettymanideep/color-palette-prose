@@ -1,13 +1,20 @@
 import { motion } from "framer-motion";
-import caseStudyBlossoms from "@/assets/case-study-blossoms.png";
-import caseStudyPrashanth from "@/assets/case-study-prashanth.png";
-import caseStudyCrest from "@/assets/case-study-crest.png";
-import caseStudyVignesh from "@/assets/case-study-vignesh.png";
-import caseStudyVidhata from "@/assets/case-study-vidhata.png";
-import caseStudyBombay from "@/assets/case-study-bombay-jewellers.png";
-import caseStudySanghvi from "@/assets/case-study-sanghvi-car.png";
-import caseStudyAther from "@/assets/case-study-ather.png";
-
+import caseStudyBlossomsAsset from "@/assets/case-study-blossoms.png.asset.json";
+const caseStudyBlossoms = caseStudyBlossomsAsset.url;
+import caseStudyPrashanthAsset from "@/assets/case-study-prashanth.png.asset.json";
+const caseStudyPrashanth = caseStudyPrashanthAsset.url;
+import caseStudyCrestAsset from "@/assets/case-study-crest.png.asset.json";
+const caseStudyCrest = caseStudyCrestAsset.url;
+import caseStudyVigneshAsset from "@/assets/case-study-vignesh.png.asset.json";
+const caseStudyVignesh = caseStudyVigneshAsset.url;
+import caseStudyVidhataAsset from "@/assets/case-study-vidhata.png.asset.json";
+const caseStudyVidhata = caseStudyVidhataAsset.url;
+import caseStudyBombayAsset from "@/assets/case-study-bombay-jewellers.png.asset.json";
+const caseStudyBombay = caseStudyBombayAsset.url;
+import caseStudySanghviAsset from "@/assets/case-study-sanghvi-car.png.asset.json";
+const caseStudySanghvi = caseStudySanghviAsset.url;
+import caseStudyAtherAsset from "@/assets/case-study-ather.png.asset.json";
+const caseStudyAther = caseStudyAtherAsset.url;
 const caseStudies = [
   {
     image: caseStudyBlossoms,

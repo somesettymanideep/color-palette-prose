@@ -1,14 +1,21 @@
 import { motion } from "framer-motion";
 import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Search, Home, PlusSquare, Film, User, ThumbsUp, Share2, Globe } from "lucide-react";
-import portfolioBlossoms from "@/assets/portfolio-blossoms.jpg";
-import portfolioJewellery from "@/assets/portfolio-bsp-jewellery.jpg";
-import vijayaMockup from "@/assets/vijaya-mockup.png";
-import sanghviMockup from "@/assets/sanghvi-mockup.png";
-import metroCarsMockup from "@/assets/metro-cars-mockup.png";
-import bombayJewellersMockup from "@/assets/bombay-jewellers-mockup.png";
-import sairajendraMockup from "@/assets/sairajendra-mockup.png";
-import socialMediaHeroMockup from "@/assets/social-media-hero-mockup.png";
-
+import portfolioBlossomsAsset from "@/assets/portfolio-blossoms.jpg.asset.json";
+const portfolioBlossoms = portfolioBlossomsAsset.url;
+import portfolioJewelleryAsset from "@/assets/portfolio-bsp-jewellery.jpg.asset.json";
+const portfolioJewellery = portfolioJewelleryAsset.url;
+import vijayaMockupAsset from "@/assets/vijaya-mockup.png.asset.json";
+const vijayaMockup = vijayaMockupAsset.url;
+import sanghviMockupAsset from "@/assets/sanghvi-mockup.png.asset.json";
+const sanghviMockup = sanghviMockupAsset.url;
+import metroCarsMockupAsset from "@/assets/metro-cars-mockup.png.asset.json";
+const metroCarsMockup = metroCarsMockupAsset.url;
+import bombayJewellersMockupAsset from "@/assets/bombay-jewellers-mockup.png.asset.json";
+const bombayJewellersMockup = bombayJewellersMockupAsset.url;
+import sairajendraMockupAsset from "@/assets/sairajendra-mockup.png.asset.json";
+const sairajendraMockup = sairajendraMockupAsset.url;
+import socialMediaHeroMockupAsset from "@/assets/social-media-hero-mockup.png.asset.json";
+const socialMediaHeroMockup = socialMediaHeroMockupAsset.url;
 type Client = {
   name: string;
   industry: string;

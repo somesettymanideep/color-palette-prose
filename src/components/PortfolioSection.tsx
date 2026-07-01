@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import portfolioBlossoms from "@/assets/portfolio-blossoms.jpg";
+import portfolioBlossomsAsset from "@/assets/portfolio-blossoms.jpg.asset.json";
+const portfolioBlossoms = portfolioBlossomsAsset.url;
 import portfolioPrimeSolutions from "@/assets/portfolio-prime-solutions.png.asset.json";
 import portfolioDurgaHardware from "@/assets/portfolio-durga-hardware.png.asset.json";
-import portfolioInteriorsNew from "@/assets/portfolio-interiors-new.png";
-import portfolioJVEngineers from "@/assets/portfolio-jvengineers.png";
+import portfolioInteriorsNewAsset from "@/assets/portfolio-interiors-new.png.asset.json";
+const portfolioInteriorsNew = portfolioInteriorsNewAsset.url;
+import portfolioJVEngineersAsset from "@/assets/portfolio-jvengineers.png.asset.json";
+const portfolioJVEngineers = portfolioJVEngineersAsset.url;
 import portfolioPixelStories from "@/assets/portfolio-pixel-stories.jpg";
 
 

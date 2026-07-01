@@ -1,14 +1,20 @@
 import { motion } from "framer-motion";
 import { Volume2, VolumeX } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import reel1 from "@/assets/content-reel-1.mp4";
-import reel2 from "@/assets/content-reel-2.mp4";
-import reel3 from "@/assets/content-reel-3.mp4";
-import reel4 from "@/assets/content-reel-4.mp4";
-import reelJewellery from "@/assets/reel-jewellery.mp4";
-import reelMetroCars from "@/assets/reel-metro-cars.mp4";
-import reelJewellery2 from "@/assets/reel-jewellery-2.mp4";
-
+import reel1Asset from "@/assets/content-reel-1.mp4.asset.json";
+const reel1 = reel1Asset.url;
+import reel2Asset from "@/assets/content-reel-2.mp4.asset.json";
+const reel2 = reel2Asset.url;
+import reel3Asset from "@/assets/content-reel-3.mp4.asset.json";
+const reel3 = reel3Asset.url;
+import reel4Asset from "@/assets/content-reel-4.mp4.asset.json";
+const reel4 = reel4Asset.url;
+import reelJewelleryAsset from "@/assets/reel-jewellery.mp4.asset.json";
+const reelJewellery = reelJewelleryAsset.url;
+import reelMetroCarsAsset from "@/assets/reel-metro-cars.mp4.asset.json";
+const reelMetroCars = reelMetroCarsAsset.url;
+import reelJewellery2Asset from "@/assets/reel-jewellery-2.mp4.asset.json";
+const reelJewellery2 = reelJewellery2Asset.url;
 const reels = [
   { src: reel1, label: "Brand Story", category: "Reel" },
   { src: reelJewellery, label: "Jewellery Brand", category: "Reel" },

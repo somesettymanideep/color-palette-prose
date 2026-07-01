@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Search, TrendingUp, Globe, Shield, Users } from "lucide-react";
 import seoCharacter from "@/assets/seo-character.png";
-import seoLaptop from "@/assets/seo-laptop.png";
-
+import seoLaptopAsset from "@/assets/seo-laptop.png.asset.json";
+const seoLaptop = seoLaptopAsset.url;
 const benefits = [
   { icon: TrendingUp, text: "Increase Traffic" },
   { icon: Globe, text: "Grow Site Conversion" },
