@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Search, TrendingUp, Globe, Shield, Users } from "lucide-react";
 import seoCharacter from "@/assets/seo-character.png";
-import seoLaptop from "@/assets/seo-laptop.png";
-
+import seoLaptopAsset from "@/assets/seo-laptop.png.asset.json";
+const seoLaptop = seoLaptopAsset.url;
 const benefits = [
   { icon: TrendingUp, text: "Increase Traffic" },
   { icon: Globe, text: "Grow Site Conversion" },
@@ -86,7 +86,7 @@ const SeoSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <img
+            <img loading="lazy" decoding="async"
               src={seoCharacter}
               alt="SEO specialist illustration"
               className="w-64 md:w-80 h-auto drop-shadow-2xl"
@@ -101,7 +101,7 @@ const SeoSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.5 }}
           >
-            <img
+            <img loading="lazy" decoding="async"
               src={seoLaptop}
               alt="SEO analytics on laptop"
               className="w-72 md:w-96 h-auto drop-shadow-2xl scale-x-[-1]"

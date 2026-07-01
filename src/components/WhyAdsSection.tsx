@@ -69,7 +69,7 @@ const WhyAdsSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <img
+            <img loading="lazy" decoding="async"
               src={whyAdsCharacter}
               alt="Thinking character - Why choose ADS"
               className="w-72 md:w-96 lg:w-[28rem] object-contain drop-shadow-2xl"

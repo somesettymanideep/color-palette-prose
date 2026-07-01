@@ -24,7 +24,7 @@ const SplashScreen = ({ onComplete, isVisible }: SplashScreenProps) => {
             animate={{ scale: 1, opacity: 0.15 }}
             transition={{ duration: 1.4, ease: "easeOut" }}
           >
-            <img
+            <img decoding="async"
               src={adsBoothImage}
               alt=""
               className="w-full h-full object-cover"
@@ -40,7 +40,7 @@ const SplashScreen = ({ onComplete, isVisible }: SplashScreenProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
             >
-              <img
+              <img decoding="async"
                 src={adsLogoNew}
                 alt="ADS - Ayron Digital Solutions"
                 className="h-64 md:h-96 w-auto object-contain"

@@ -30,7 +30,7 @@ const GoogleAdsSection = () => {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-4 mb-6"
         >
-          <img
+          <img loading="lazy" decoding="async"
             src={googleAdsIcon}
             alt="Google Ads"
             className="w-12 h-12 md:w-16 md:h-16 object-contain"

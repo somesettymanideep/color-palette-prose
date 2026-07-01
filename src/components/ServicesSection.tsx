@@ -154,7 +154,7 @@ const ServicesSection = () => {
                       />
                     </div>
                   ) : (
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={service.image}
                       alt={service.title}
                       className="w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110"

@@ -41,7 +41,7 @@ const MissionSection = () => {
 
             <div className="relative z-10">
               <div className="mb-8">
-                <img src={iconMission} alt="Mission" className="w-16 h-16" />
+                <img loading="lazy" decoding="async" src={iconMission} alt="Mission" className="w-16 h-16" />
               </div>
               <h3 className="font-heading text-3xl md:text-4xl font-semibold text-foreground mb-6 leading-tight">
                 Our <span className="text-primary italic">Mission</span>
@@ -67,7 +67,7 @@ const MissionSection = () => {
 
             <div className="relative z-10">
               <div className="mb-8">
-                <img src={iconVision} alt="Vision" className="w-16 h-16" />
+                <img loading="lazy" decoding="async" src={iconVision} alt="Vision" className="w-16 h-16" />
               </div>
               <h3 className="font-heading text-3xl md:text-4xl font-semibold mb-6 leading-tight">
                 Our <span className="text-primary italic">Vision</span>
