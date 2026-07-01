@@ -29,7 +29,9 @@ const REEL_UNMUTE_EVENT = "ads-reel-unmute";
 
 const PhoneReelComponent = ({ src, label, category, id }: { src: string; label: string; category: string; id: number }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [muted, setMuted] = useState(true);
+  const [inView, setInView] = useState(false);
 
   useEffect(() => {
     const handler = (e: Event) => {
@@ -46,6 +48,26 @@ const PhoneReelComponent = ({ src, label, category, id }: { src: string; label: 
     return () => window.removeEventListener(REEL_UNMUTE_EVENT, handler);
   }, [id]);
 
+  // Only load/play video when scrolled into view; pause when out.
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        const v = videoRef.current;
+        if (entry.isIntersecting) {
+          setInView(true);
+          v?.play().catch(() => {});
+        } else {
+          v?.pause();
+        }
+      },
+      { rootMargin: "200px 0px", threshold: 0.1 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
   const toggleMute = () => {
     const v = videoRef.current;
     if (!v) return;
@@ -59,19 +81,19 @@ const PhoneReelComponent = ({ src, label, category, id }: { src: string; label: 
   };
 
   return (
-  <div className="relative mx-auto w-full max-w-[240px]">
+  <div ref={containerRef} className="relative mx-auto w-full max-w-[240px]">
     <div className="relative bg-[#0d0d0d] rounded-[2.2rem] p-2 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)] ring-1 ring-off-white/10">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-[#0d0d0d] rounded-b-2xl z-10" />
       <div className="absolute -right-[2px] top-20 w-[3px] h-12 bg-[#1a1a1a] rounded-l" />
       <div className="relative rounded-[1.7rem] overflow-hidden bg-black aspect-[9/16]">
         <video
           ref={videoRef}
-          src={src}
+          src={inView ? src : undefined}
           autoPlay
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="none"
           className="w-full h-full object-cover"
         />
         <button
