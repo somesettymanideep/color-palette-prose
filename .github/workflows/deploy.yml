@@ -26,6 +26,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Fetch Lovable CDN assets into dist
+        run: node scripts/fetch-assets.mjs
       - name: SPA fallback (404.html)
         run: cp dist/index.html dist/404.html
       - name: CNAME
