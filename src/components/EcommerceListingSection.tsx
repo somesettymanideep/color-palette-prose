@@ -130,7 +130,7 @@ const EcommerceListingSection = () => {
           </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start lg:-mt-24">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* LEFT — Pillars */}
           <div className="lg:col-span-6 space-y-4">
             {pillars.map((p, i) => (
