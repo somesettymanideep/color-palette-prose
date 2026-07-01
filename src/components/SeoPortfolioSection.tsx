@@ -106,7 +106,7 @@ const SeoPortfolioSection = () => {
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative mx-auto"
+                className="relative mx-auto w-full"
                 style={{ maxWidth: "340px" }}
               >
                 <img
