@@ -205,7 +205,7 @@ const EcommerceListingSection = () => {
           </div>
 
           {/* RIGHT — Hero illustration */}
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-6 lg:-mt-32">
             <div className="relative mx-auto max-w-[560px]">
               <div
                 className="absolute -inset-10 rounded-[60px] blur-3xl pointer-events-none"
