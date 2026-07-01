@@ -478,8 +478,12 @@ const SocialMediaPortfolioSection = () => {
             <motion.img
               src={socialMediaHeroMockup}
               alt="Social media marketing mockup with phone and platform icons"
+              width={1040}
+              height={1040}
               className="w-full max-w-[520px] h-auto object-contain"
-              loading="lazy"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
