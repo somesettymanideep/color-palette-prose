@@ -139,11 +139,11 @@ const SeoPortfolioSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-7 relative order-2 lg:order-1"
+            className="lg:col-span-7 relative order-2 lg:order-1 min-w-0 w-full"
           >
             <div className="absolute -inset-12 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
 
-            <div className="relative mx-auto" style={{ maxWidth: "560px" }}>
+            <div className="relative mx-auto w-full" style={{ maxWidth: "560px" }}>
               {/* Browser frame */}
               <motion.div
                 initial={{ y: 20 }}
