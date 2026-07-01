@@ -675,7 +675,7 @@ const QCommerceScene = () => {
         className="absolute bottom-[10%] left-[35%] w-56 h-56 rounded-full bg-[#FF7A00]/10 blur-3xl pointer-events-none"
       />
 
-      <div className="relative z-10 mx-auto max-w-[1320px] px-6 md:px-10 py-[80px] md:py-[110px]" style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
+      <div className="relative z-10 mx-auto max-w-[1320px] px-6 md:px-10 pt-[80px] md:pt-[110px] pb-10 md:pb-14" style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
         {/* ===== Two-column hero ===== */}
         <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
           {/* ---------- LEFT ---------- */}
