@@ -8,6 +8,10 @@ import {
   BarChart3,
   Eye,
   ShoppingCart,
+  Users,
+  IndianRupee,
+  LineChart,
+  ShoppingBag,
 } from "lucide-react";
 import ecommerceHeroAsset from "@/assets/ecommerce-listing-hero.webp.asset.json";
 
@@ -234,8 +238,88 @@ const EcommerceListingSection = () => {
 
         </div>
 
+        {/* Performance Highlights */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-16 md:mt-20"
+        >
+          <div className="text-center mb-8">
+            <h3
+              className="font-heading text-3xl md:text-5xl font-700 tracking-tight uppercase"
+              style={{ color: ORANGE }}
+            >
+              Performance Highlights
+            </h3>
+          </div>
+
+          <div
+            className="mx-auto max-w-4xl overflow-hidden rounded-2xl backdrop-blur-xl"
+            style={{
+              backgroundColor: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.10)",
+              boxShadow: "0 30px 80px rgba(0,0,0,0.45)",
+            }}
+          >
+            {/* Header row */}
+            <div className="grid grid-cols-2">
+              <div
+                className="px-5 md:px-8 py-4 md:py-5 font-heading font-700 text-white uppercase tracking-[0.18em] text-sm md:text-base"
+                style={{ backgroundColor: ORANGE }}
+              >
+                Metric
+              </div>
+              <div
+                className="px-5 md:px-8 py-4 md:py-5 font-heading font-700 text-white uppercase tracking-[0.18em] text-sm md:text-base text-center"
+                style={{ backgroundColor: "#0F1116" }}
+              >
+                Achievement
+              </div>
+            </div>
+
+            {[
+              { icon: Users, label: "Brands Managed", value: "5+" },
+              { icon: ShoppingBag, label: "Product Listings", value: "350+" },
+              { icon: IndianRupee, label: "Revenue Generated", value: "₹5+ Crore" },
+              { icon: LineChart, label: "Average ROAS", value: "4x – 6x" },
+              { icon: ShoppingCart, label: "Marketplace", value: "Amazon India" },
+            ].map((row, i) => (
+              <motion.div
+                key={row.label}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
+                className="grid grid-cols-2 items-center border-t"
+                style={{ borderColor: "rgba(255,255,255,0.08)" }}
+              >
+                <div className="flex items-center gap-3 md:gap-4 px-5 md:px-8 py-4 md:py-5">
+                  <div
+                    className="shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-lg flex items-center justify-center"
+                    style={{
+                      backgroundColor: "rgba(243,110,43,0.14)",
+                      border: "1px solid rgba(243,110,43,0.35)",
+                    }}
+                  >
+                    <row.icon className="w-4 h-4 md:w-5 md:h-5" style={{ color: ORANGE }} strokeWidth={2} />
+                  </div>
+                  <span className="font-body text-white/85 text-sm md:text-base font-500">
+                    {row.label}
+                  </span>
+                </div>
+                <div className="px-5 md:px-8 py-4 md:py-5 text-center font-heading font-700 text-white text-lg md:text-2xl">
+                  {row.value}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
       </div>
     </section>
+
   );
 };
 
