@@ -159,7 +159,7 @@ const PortfolioSection = () => {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.7, delay: 0.4 }}
                   >
-                    <span className="inline-flex items-center font-body text-[11px] md:text-xs font-700 uppercase tracking-[0.2em] text-[#1a1a1a] bg-white px-space-4 py-1.5 rounded-full shadow-sm mb-space-4">
+                    <span className="inline-flex items-center font-body text-[11px] md:text-xs font-700 uppercase tracking-[0.2em] text-black bg-primary px-space-4 py-1.5 rounded-full shadow-sm mb-space-4">
                       {client.industry}
                     </span>
                     <h3 className="font-heading text-3xl md:text-4xl font-600 text-white mb-3 leading-tight">
