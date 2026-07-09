@@ -8,7 +8,7 @@ const WorkTogetherSection = () => {
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
   return (
-    <section ref={ref} className="relative section-padding bg-charcoal overflow-hidden">
+    <section ref={ref} className="relative pt-space-6 md:pt-space-7 pb-space-8 md:pb-space-9 bg-charcoal overflow-hidden">
       {/* Decorative arc lines */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.svg
