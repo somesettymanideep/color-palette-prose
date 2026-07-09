@@ -38,36 +38,25 @@ const IndustriesSection = () => {
   return (
     <section className="section-padding bg-background overflow-hidden">
       <div className="container-wide">
-        <motion.div
-          className="section-rule mb-space-8"
-          initial={{ scaleX: 0, originX: 0.5 }}
-          whileInView={{ scaleX: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-        />
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-space-7 mb-space-8">
-          <motion.div
-            className="md:col-span-4"
+        <div className="mb-space-8 text-center">
+          <motion.p
+            className="font-body text-sm uppercase tracking-[0.2em] text-muted-foreground mb-space-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="font-body text-sm uppercase tracking-[0.2em] text-muted-foreground">
-              Industries
-            </p>
-          </motion.div>
-          <motion.div
-            className="md:col-span-8"
+            Industries
+          </motion.p>
+          <motion.h2
+            className="font-heading text-4xl md:text-5xl font-600 text-foreground leading-tight"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <h2 className="font-heading text-4xl md:text-5xl font-600 text-foreground leading-tight">
-              Industries We Have Our <span className="text-primary">Mark</span> In
-            </h2>
-          </motion.div>
+            Industries We Have Our <span className="text-primary">Mark</span> In
+          </motion.h2>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-space-4 md:gap-space-5">
           {industries.map(({ name, icon: Icon }, i) => (
