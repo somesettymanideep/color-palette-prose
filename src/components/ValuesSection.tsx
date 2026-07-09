@@ -33,7 +33,7 @@ const values = [
 
 const ValuesSection = () => {
   return (
-    <section id="values" className="relative py-32 md:py-40 bg-primary overflow-hidden">
+    <section id="values" className="relative section-padding bg-primary overflow-hidden">
       {/* Subtle pattern */}
       <div className="absolute inset-0 opacity-10" style={{
         backgroundImage: "radial-gradient(circle, hsl(var(--primary-foreground)) 1px, transparent 1px)",

@@ -20,7 +20,7 @@ const adTypes = [
 
 const GoogleAdsSection = () => {
   return (
-    <section className="relative overflow-hidden bg-foreground py-20 md:py-28">
+    <section className="relative overflow-hidden bg-foreground section-padding">
       <div className="container mx-auto px-6">
         {/* Title with Icon */}
         <motion.div

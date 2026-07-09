@@ -36,7 +36,7 @@ const industries: Industry[] = [
 
 const IndustriesSection = () => {
   return (
-    <section className="py-32 bg-background overflow-hidden">
+    <section className="section-padding bg-background overflow-hidden">
       <div className="container-wide">
         <motion.div
           className="section-rule mb-16"

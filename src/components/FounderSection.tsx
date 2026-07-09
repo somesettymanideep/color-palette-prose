@@ -15,7 +15,7 @@ const FounderSection = () => {
   const textY = useTransform(scrollYProgress, [0, 1], [40, -40]);
 
   return (
-    <section ref={ref} className="py-32 bg-foreground overflow-hidden">
+    <section ref={ref} className="section-padding bg-foreground overflow-hidden">
       <div className="container-wide">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Photo Side */}

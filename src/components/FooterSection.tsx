@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const FooterSection = () => {
   return (
-    <footer id="contact" className="py-20 bg-charcoal overflow-hidden">
+    <footer id="contact" className="section-padding bg-charcoal overflow-hidden">
       <div className="container-wide">
         <motion.div
           className="section-rule mb-16 opacity-20"

@@ -92,7 +92,7 @@ const caseStudies = [
 
 const CaseStudySection = () => {
   return (
-    <section id="case-studies" className="relative py-28 md:py-36 overflow-hidden bg-foreground">
+    <section id="case-studies" className="relative section-padding overflow-hidden bg-foreground">
       {/* Orange diagonal accent */}
       <div
         className="absolute inset-0 bg-primary hidden md:block"

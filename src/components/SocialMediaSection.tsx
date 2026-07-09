@@ -92,7 +92,7 @@ const PhoneMockup = ({ image, name }: { image: string; name: string }) => (
 
 const SocialMediaSection = () => {
   return (
-    <section className="py-32 relative overflow-hidden bg-primary">
+    <section className="section-padding relative overflow-hidden bg-primary">
 
 
 

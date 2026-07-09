@@ -4,7 +4,7 @@ import iconVision from "@/assets/icon-vision.png";
 
 const MissionSection = () => {
   return (
-    <section className="py-32 bg-background overflow-hidden">
+    <section className="section-padding bg-background overflow-hidden">
       <div className="container-wide">
         {/* Section label */}
         <motion.p
