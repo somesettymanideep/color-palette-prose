@@ -516,7 +516,7 @@ const SocialMediaPortfolioSection = () => {
               <span className="text-primary">Designs</span> for Your <span className="italic">Brand</span>
             </motion.h2>
             <motion.p
-              className="font-body text-base md:text-lg text-charcoal/70 leading-relaxed mt-space-5 max-w-xl"
+              className="font-body text-base md:text-lg text-charcoal/70 leading-relaxed mt-space-4 max-w-xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
