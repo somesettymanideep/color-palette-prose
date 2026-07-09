@@ -455,7 +455,7 @@ const HeroPhoneMockup = () => (
 
 const SocialMediaPortfolioSection = () => {
   return (
-    <section id="social-portfolio" className="section-padding bg-off-white relative overflow-hidden">
+    <section id="social-portfolio" className="section-padding pb-space-4 md:pb-space-5 bg-off-white relative overflow-hidden">
       {/* Bg accents */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 -right-32 w-96 h-96 rounded-full bg-primary/15 blur-3xl" />
