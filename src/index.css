@@ -140,17 +140,84 @@
     @apply w-full h-px bg-mid-gray/30;
   }
 
+  /* Vertical rhythm for every top-level <section>. */
   .section-padding {
-    @apply py-20 md:py-28 lg:py-32;
+    padding-top: var(--space-section-y-sm);
+    padding-bottom: var(--space-section-y-sm);
+  }
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: var(--space-section-y-md);
+      padding-bottom: var(--space-section-y-md);
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: var(--space-section-y-lg);
+      padding-bottom: var(--space-section-y-lg);
+    }
   }
 
   .container-narrow {
-    @apply mx-auto px-6 md:px-12 lg:px-0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-container-x-sm);
+    padding-right: var(--space-container-x-sm);
     max-width: 800px;
+  }
+  @media (min-width: 768px) {
+    .container-narrow {
+      padding-left: var(--space-container-x-md);
+      padding-right: var(--space-container-x-md);
+    }
+  }
+  @media (min-width: 1024px) {
+    .container-narrow {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   .container-wide {
-    @apply mx-auto px-6 md:px-12;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-container-x-sm);
+    padding-right: var(--space-container-x-sm);
     max-width: 1200px;
   }
+  @media (min-width: 768px) {
+    .container-wide {
+      padding-left: var(--space-container-x-md);
+      padding-right: var(--space-container-x-md);
+    }
+  }
+
+  /* Shared card padding token. */
+  .card-padding {
+    padding: var(--space-card-p-sm);
+  }
+  @media (min-width: 768px) {
+    .card-padding {
+      padding: var(--space-card-p-md);
+    }
+  }
+
+  /* Section header bottom-margin token. */
+  .header-mb {
+    margin-bottom: var(--space-header-mb);
+  }
+
+  /* Narrative block rhythm (used with > * + *). */
+  .stack-block > * + * {
+    margin-top: var(--space-block-y);
+  }
+
+  /* Shared button / pill padding tokens. */
+  .btn-padding {
+    padding: var(--space-btn-y) var(--space-btn-x);
+  }
+  .pill-padding {
+    padding: var(--space-pill-y) var(--space-pill-x);
+  }
 }
+
