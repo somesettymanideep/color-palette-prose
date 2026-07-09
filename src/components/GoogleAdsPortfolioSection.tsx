@@ -74,11 +74,11 @@ const GoogleAdsPortfolioSection = () => {
         }}
       />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-space-5 relative z-10">
         {/* Header */}
-        <div className="mb-20 max-w-4xl">
+        <div className="mb-space-9 max-w-4xl">
           <motion.div
-            className="flex items-center gap-3 mb-5"
+            className="flex items-center gap-3 mb-space-5"
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -99,7 +99,7 @@ const GoogleAdsPortfolioSection = () => {
             Campaigns That <span className="text-primary">Convert</span>
           </motion.h2>
           <motion.p
-            className="font-body text-base md:text-lg text-off-white/60 leading-relaxed mt-6 max-w-2xl"
+            className="font-body text-base md:text-lg text-off-white/60 leading-relaxed mt-space-5 max-w-2xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -110,9 +110,9 @@ const GoogleAdsPortfolioSection = () => {
           </motion.p>
         </div>
 
-        <div className="space-y-28">
+        <div className="space-y-space-10">
           {/* ============ ROW 1: SEARCH ADS ============ */}
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-12 gap-space-7 lg:gap-space-8 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -120,18 +120,18 @@ const GoogleAdsPortfolioSection = () => {
               transition={{ duration: 0.7 }}
               className="lg:col-span-5 min-w-0 w-full"
             >
-              <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 mb-4 font-700">
+              <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 mb-space-4 font-700">
                 Search Campaign · Blossoms Hospital
               </p>
-              <h3 className="font-heading text-3xl md:text-4xl font-600 text-off-white leading-tight mb-6">
+              <h3 className="font-heading text-3xl md:text-4xl font-600 text-off-white leading-tight mb-space-5">
                 Top of page for every <span className="text-primary">"near me"</span> search
               </h3>
-              <p className="font-body text-base text-off-white/60 leading-relaxed mb-8 max-w-md">
+              <p className="font-body text-base text-off-white/60 leading-relaxed mb-space-6 max-w-md">
                 Hyper-targeted search ads with locked-in #1 ad position for the highest-intent
                 healthcare keywords across Vijayawada.
               </p>
 
-              <div className="grid grid-cols-3 gap-4 mb-8 border-y border-off-white/10 py-5 max-w-md">
+              <div className="grid grid-cols-3 gap-space-4 mb-space-6 border-y border-off-white/10 py-space-5 max-w-md">
                 <div>
                   <div className="font-heading text-2xl md:text-3xl font-600 text-primary leading-none">
                     8.4×
@@ -185,7 +185,7 @@ const GoogleAdsPortfolioSection = () => {
               <div className="relative mx-auto" style={{ maxWidth: "560px" }}>
                 {/* Browser */}
                 <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-off-white/10">
-                  <div className="flex items-center gap-2 px-4 py-3 bg-gray-100 border-b border-gray-200">
+                  <div className="flex items-center gap-2 px-space-4 py-3 bg-gray-100 border-b border-gray-200">
                     <div className="flex gap-1.5">
                       <span className="w-3 h-3 rounded-full bg-[#FF5F57]" />
                       <span className="w-3 h-3 rounded-full bg-[#FEBC2E]" />
@@ -199,8 +199,8 @@ const GoogleAdsPortfolioSection = () => {
                     </div>
                   </div>
 
-                  <div className="p-5 bg-white">
-                    <div className="flex items-center gap-4 pb-4 border-b border-gray-200">
+                  <div className="p-space-5 bg-white">
+                    <div className="flex items-center gap-space-4 pb-space-4 border-b border-gray-200">
                       <span className="font-heading text-xl font-700 tracking-tight">
                         <span style={{ color: "#4285F4" }}>G</span>
                         <span style={{ color: "#EA4335" }}>o</span>
@@ -209,7 +209,7 @@ const GoogleAdsPortfolioSection = () => {
                         <span style={{ color: "#34A853" }}>l</span>
                         <span style={{ color: "#EA4335" }}>e</span>
                       </span>
-                      <div className="flex-1 flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 shadow-sm">
+                      <div className="flex-1 flex items-center gap-2 px-space-4 py-2 rounded-full border border-gray-200 shadow-sm">
                         <span className="text-[11px] text-gray-700 flex-1 truncate">
                           multispeciality hospital near me
                         </span>
@@ -218,7 +218,7 @@ const GoogleAdsPortfolioSection = () => {
                       </div>
                     </div>
 
-                    <div className="flex gap-5 py-2 text-[11px] text-gray-600 border-b border-gray-200">
+                    <div className="flex gap-space-5 py-2 text-[11px] text-gray-600 border-b border-gray-200">
                       <span className="pb-1 border-b-2" style={{ borderColor: "#4285F4", color: "#4285F4" }}>
                         All
                       </span>
@@ -233,7 +233,7 @@ const GoogleAdsPortfolioSection = () => {
                     </div>
 
                     {/* Ad results */}
-                    <div className="space-y-4">
+                    <div className="space-y-space-4">
                       {searchAds.map((ad, i) => (
                         <motion.div
                           key={i}
@@ -290,7 +290,7 @@ const GoogleAdsPortfolioSection = () => {
                   whileInView={{ opacity: 1, scale: 1, rotate: -6 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.6, type: "spring" }}
-                  className="absolute -top-5 -left-3 md:-left-6 bg-primary text-charcoal rounded-2xl px-4 py-3 shadow-2xl flex items-center gap-2"
+                  className="absolute -top-5 -left-3 md:-left-6 bg-primary text-charcoal rounded-2xl px-space-4 py-3 shadow-2xl flex items-center gap-2"
                 >
                   <TrendingUp className="w-5 h-5" />
                   <div>
@@ -304,7 +304,7 @@ const GoogleAdsPortfolioSection = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.7, type: "spring" }}
-                  className="absolute -bottom-5 -right-3 md:-right-6 bg-off-white text-charcoal rounded-2xl px-4 py-3 shadow-2xl flex items-center gap-2"
+                  className="absolute -bottom-5 -right-3 md:-right-6 bg-off-white text-charcoal rounded-2xl px-space-4 py-3 shadow-2xl flex items-center gap-2"
                 >
                   <MousePointerClick className="w-5 h-5 text-primary" />
                   <div>
@@ -317,7 +317,7 @@ const GoogleAdsPortfolioSection = () => {
           </div>
 
           {/* ============ ROW 2: SHOPPING ADS ============ */}
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-12 gap-space-7 lg:gap-space-8 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -329,7 +329,7 @@ const GoogleAdsPortfolioSection = () => {
 
               <div className="relative mx-auto" style={{ maxWidth: "640px" }}>
                 <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-off-white/10">
-                  <div className="flex items-center gap-2 px-4 py-3 bg-gray-100 border-b border-gray-200">
+                  <div className="flex items-center gap-2 px-space-4 py-3 bg-gray-100 border-b border-gray-200">
                     <div className="flex gap-1.5">
                       <span className="w-3 h-3 rounded-full bg-[#FF5F57]" />
                       <span className="w-3 h-3 rounded-full bg-[#FEBC2E]" />
@@ -356,7 +356,7 @@ const GoogleAdsPortfolioSection = () => {
                   whileInView={{ opacity: 1, scale: 1, rotate: 6 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.6, type: "spring" }}
-                  className="absolute -top-5 -right-3 md:-right-6 bg-primary text-charcoal rounded-2xl px-4 py-3 shadow-2xl flex items-center gap-2"
+                  className="absolute -top-5 -right-3 md:-right-6 bg-primary text-charcoal rounded-2xl px-space-4 py-3 shadow-2xl flex items-center gap-2"
                 >
                   <ShoppingBag className="w-5 h-5" />
                   <div>
@@ -374,17 +374,17 @@ const GoogleAdsPortfolioSection = () => {
               transition={{ duration: 0.7, delay: 0.15 }}
               className="lg:col-span-5 order-1 lg:order-2 min-w-0 w-full"
             >
-              <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 mb-4 font-700">
+              <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 mb-space-4 font-700">
                 Shopping Campaign · Rasrin
               </p>
-              <h3 className="font-heading text-3xl md:text-4xl font-600 text-off-white leading-tight mb-6">
+              <h3 className="font-heading text-3xl md:text-4xl font-600 text-off-white leading-tight mb-space-5">
                 Cleaning products that <span className="text-primary">dominate</span> search shelves
               </h3>
-              <p className="font-body text-base text-off-white/60 leading-relaxed mb-8 max-w-md">
+              <p className="font-body text-base text-off-white/60 leading-relaxed mb-space-6 max-w-md">
                 We built a high-converting Google Shopping feed for Rasrin's household cleaning range and ran Performance Max campaigns that scaled revenue to ₹48 Lakhs in ad-driven sales.
               </p>
 
-              <div className="grid grid-cols-3 gap-4 mb-8 border-y border-off-white/10 py-5 max-w-md">
+              <div className="grid grid-cols-3 gap-space-4 mb-space-6 border-y border-off-white/10 py-space-5 max-w-md">
                 <div>
                   <div className="font-heading text-2xl md:text-3xl font-600 text-primary leading-none">
                     ₹48L
@@ -428,7 +428,7 @@ const GoogleAdsPortfolioSection = () => {
           </div>
 
           {/* ============ ROW 3: YOUTUBE / VIDEO ADS ============ */}
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-12 gap-space-7 lg:gap-space-8 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -436,19 +436,19 @@ const GoogleAdsPortfolioSection = () => {
               transition={{ duration: 0.7 }}
               className="lg:col-span-5 min-w-0 w-full"
             >
-              <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 mb-4 font-700">
+              <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 mb-space-4 font-700">
                 YouTube Campaign · Rasrin
               </p>
-              <h3 className="font-heading text-3xl md:text-4xl font-600 text-off-white leading-tight mb-6">
+              <h3 className="font-heading text-3xl md:text-4xl font-600 text-off-white leading-tight mb-space-5">
                 Product-demo video ads that <span className="text-primary">sell while they educate</span>
               </h3>
-              <p className="font-body text-base text-off-white/60 leading-relaxed mb-8 max-w-md">
+              <p className="font-body text-base text-off-white/60 leading-relaxed mb-space-6 max-w-md">
                 A 47-second demo of Rasrin D-Scaler — the washing machine drum cleaner — served as
                 skippable in-stream and bumper ads to households actively searching for laundry
                 and cleaning solutions.
               </p>
 
-              <div className="grid grid-cols-3 gap-4 mb-8 border-y border-off-white/10 py-5 max-w-md">
+              <div className="grid grid-cols-3 gap-space-4 mb-space-6 border-y border-off-white/10 py-space-5 max-w-md">
                 <div>
                   <div className="font-heading text-2xl md:text-3xl font-600 text-primary leading-none">
                     3.1M
@@ -502,7 +502,7 @@ const GoogleAdsPortfolioSection = () => {
               <div className="relative mx-auto" style={{ maxWidth: "560px" }}>
                 <div className="relative bg-[#0f0f0f] rounded-2xl shadow-2xl overflow-hidden border border-off-white/10">
                   {/* YouTube top bar */}
-                  <div className="flex items-center gap-3 px-4 py-3 border-b border-white/5">
+                  <div className="flex items-center gap-3 px-space-4 py-3 border-b border-white/5">
                     <div className="flex items-center gap-1.5">
                       <span className="inline-flex items-center justify-center w-6 h-6 rounded bg-[#FF0000]">
                         <Play className="w-3 h-3 text-white" fill="white" />
@@ -550,7 +550,7 @@ const GoogleAdsPortfolioSection = () => {
                   whileInView={{ opacity: 1, scale: 1, rotate: -6 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.7, type: "spring" }}
-                  className="absolute -bottom-5 -left-3 md:-left-6 bg-off-white text-charcoal rounded-2xl px-4 py-3 shadow-2xl flex items-center gap-2"
+                  className="absolute -bottom-5 -left-3 md:-left-6 bg-off-white text-charcoal rounded-2xl px-space-4 py-3 shadow-2xl flex items-center gap-2"
                 >
                   <ArrowUpRight className="w-5 h-5 text-primary" />
                   <div>
@@ -616,7 +616,7 @@ const qcFeatures = [
 
 const QCommerceScene = () => {
   return (
-    <section className="relative left-1/2 -translate-x-1/2 w-[100vw] max-w-[100vw] my-16 md:my-24 overflow-hidden bg-[#F8F8F8] text-[#111111]">
+    <section className="relative left-1/2 -translate-x-1/2 w-[100vw] max-w-[100vw] my-space-8 md:my-space-10 overflow-hidden bg-[#F8F8F8] text-[#111111]">
       {/* ===== Premium light background layers ===== */}
       {/* soft white-to-cream gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-[#FDFAF6] to-[#F4F1EC]" />
@@ -675,9 +675,9 @@ const QCommerceScene = () => {
         className="absolute bottom-[10%] left-[35%] w-56 h-56 rounded-full bg-[#FF7A00]/10 blur-3xl pointer-events-none"
       />
 
-      <div className="relative z-10 mx-auto max-w-[1320px] px-6 md:px-10 pt-[80px] md:pt-[110px] pb-10 md:pb-14" style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
+      <div className="relative z-10 mx-auto max-w-[1320px] px-space-5 md:px-space-6 pt-[80px] md:pt-[110px] pb-space-6 md:pb-space-7" style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
         {/* ===== Two-column hero ===== */}
-        <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-[1fr_1fr] gap-space-7 lg:gap-space-9 items-center">
           {/* ---------- LEFT ---------- */}
           <div className="relative">
             {/* Badge */}
@@ -686,7 +686,7 @@ const QCommerceScene = () => {
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-flex items-center gap-2 rounded-full border border-[#FF7A00]/40 bg-[#FF7A00]/[0.08] px-4 py-2 backdrop-blur-md shadow-[0_8px_24px_-8px_rgba(255,122,0,0.35)]"
+              className="inline-flex items-center gap-2 rounded-full border border-[#FF7A00]/40 bg-[#FF7A00]/[0.08] px-space-4 py-2 backdrop-blur-md shadow-[0_8px_24px_-8px_rgba(255,122,0,0.35)]"
             >
               <span className="text-base leading-none">🛵</span>
               <span className="text-[12px] font-600 tracking-wide text-[#111111]">
@@ -700,7 +700,7 @@ const QCommerceScene = () => {
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-8 font-800 text-[#111111] tracking-[-0.035em]"
+              className="mt-space-6 font-800 text-[#111111] tracking-[-0.035em]"
               style={{
                 fontSize: "clamp(2.75rem, 6.2vw, 4.5rem)",
                 lineHeight: 0.95,
@@ -723,7 +723,7 @@ const QCommerceScene = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="mt-7 text-[18px] md:text-[20px] leading-[1.55] text-[#6B7280] max-w-[560px] font-500"
+              className="mt-space-5 text-[18px] md:text-[20px] leading-[1.55] text-[#6B7280] max-w-[560px] font-500"
             >
               Build your grocery business with real-time inventory, lightning-fast deliveries, and seamless marketplace integrations.
             </motion.p>
@@ -734,7 +734,7 @@ const QCommerceScene = () => {
               whileInView="show"
               viewport={{ once: true }}
               variants={{ show: { transition: { staggerChildren: 0.08, delayChildren: 0.4 } } }}
-              className="mt-9 relative space-y-5"
+              className="mt-space-6 relative space-y-space-5"
             >
               {/* connecting vertical line */}
               <div className="absolute left-[15px] top-2 bottom-2 w-px bg-gradient-to-b from-[#FF7A00]/40 via-[#FF7A00]/25 to-transparent" />
@@ -748,7 +748,7 @@ const QCommerceScene = () => {
                       show: { opacity: 1, x: 0 },
                     }}
                     whileHover={{ x: 4 }}
-                    className="relative flex items-center gap-4 group cursor-default"
+                    className="relative flex items-center gap-space-4 group cursor-default"
                   >
                     <div className="relative w-[32px] h-[32px] shrink-0">
                       <div className="absolute inset-0 rounded-full bg-[#FF7A00] shadow-[0_8px_20px_-4px_rgba(255,122,0,0.55)] group-hover:shadow-[0_12px_28px_-4px_rgba(255,122,0,0.75)] transition-shadow" />
@@ -770,12 +770,12 @@ const QCommerceScene = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.85 }}
-              className="mt-12"
+              className="mt-space-7"
             >
               <div className="text-[11px] uppercase tracking-[0.2em] text-[#6B7280] font-600">
                 Integrated with leading marketplaces
               </div>
-              <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+              <div className="mt-space-4 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-space-4">
                 {marketplaceLogos.map((l, i) => (
                   <motion.div
                     key={l.name}
@@ -847,13 +847,13 @@ const QCommerceScene = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-20 md:mt-28"
+          className="mt-space-9 md:mt-space-10"
         >
-          <div className="text-center mb-8 md:mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF7A00]/10 border border-[#FF7A00]/30 text-[#FF7A00] text-xs font-600 uppercase tracking-wider">
+          <div className="text-center mb-space-6 md:mb-space-6">
+            <div className="inline-flex items-center gap-2 px-space-4 py-1.5 rounded-full bg-[#FF7A00]/10 border border-[#FF7A00]/30 text-[#FF7A00] text-xs font-600 uppercase tracking-wider">
               Client Result
             </div>
-            <h3 className="mt-4 text-3xl md:text-4xl font-800 text-[#111111] tracking-[-0.02em]">
+            <h3 className="mt-space-4 text-3xl md:text-4xl font-800 text-[#111111] tracking-[-0.02em]">
               Real Q-Commerce Performance
             </h3>
           </div>

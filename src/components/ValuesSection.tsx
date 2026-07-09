@@ -42,9 +42,9 @@ const ValuesSection = () => {
 
       <div className="container-wide relative z-10">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-space-9">
           <motion.span
-            className="font-body text-xs tracking-[0.4em] text-primary-foreground/70 uppercase mb-6 block"
+            className="font-body text-xs tracking-[0.4em] text-primary-foreground/70 uppercase mb-space-5 block"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -64,13 +64,13 @@ const ValuesSection = () => {
         </div>
 
         {/* Values grid — 2x2 cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-5">
           {values.map((v, i) => {
             const Icon = v.icon;
             return (
               <motion.div
                 key={v.title}
-                className="group relative p-8 md:p-10 rounded-3xl bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/15 transition-all duration-500 hover:bg-primary-foreground/20 hover:border-primary-foreground/30"
+                className="group relative p-space-6 md:p-space-6 rounded-3xl bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/15 transition-all duration-500 hover:bg-primary-foreground/20 hover:border-primary-foreground/30"
                 initial={{ opacity: 0, y: 50, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -81,7 +81,7 @@ const ValuesSection = () => {
                 }}
               >
                 {/* Icon */}
-                <div className="w-20 h-20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-400">
+                <div className="w-20 h-20 flex items-center justify-center mb-space-5 group-hover:scale-110 transition-transform duration-400">
                   {v.image ? (
                     <img loading="lazy" decoding="async" src={v.image} alt={v.title} className="w-16 h-16 object-contain" />
                   ) : (

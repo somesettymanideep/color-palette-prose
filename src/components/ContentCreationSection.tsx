@@ -106,7 +106,7 @@ const PhoneReelComponent = ({ src, label, category, id }: { src: string; label: 
         </button>
       </div>
     </div>
-    <div className="mt-5 text-center">
+    <div className="mt-space-5 text-center">
       <span className="font-body text-[10px] uppercase tracking-[0.25em] text-primary font-700">
         {category}
       </span>
@@ -135,9 +135,9 @@ const ContentCreationSection = () => {
 
       <div className="container-wide relative z-10">
         {/* Header */}
-        <div className="mb-20 max-w-4xl">
+        <div className="mb-space-9 max-w-4xl">
           <motion.div
-            className="flex items-center gap-3 mb-5"
+            className="flex items-center gap-3 mb-space-5"
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -158,7 +158,7 @@ const ContentCreationSection = () => {
             Reels That <span className="text-primary">Stop The Scroll</span>
           </motion.h2>
           <motion.p
-            className="font-body text-base md:text-lg text-off-white/60 leading-relaxed mt-6 max-w-2xl"
+            className="font-body text-base md:text-lg text-off-white/60 leading-relaxed mt-space-5 max-w-2xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -169,7 +169,7 @@ const ContentCreationSection = () => {
         </div>
 
         {/* Phone grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-space-6 md:gap-space-6">
           {reels.map((reel, i) => (
             <motion.div
               key={i}
@@ -192,7 +192,7 @@ const ContentCreationSection = () => {
 
         {/* Bottom highlights */}
         <motion.div
-          className="mt-28 pt-12 border-t border-off-white/10 grid grid-cols-2 md:grid-cols-4 gap-8"
+          className="mt-space-10 pt-space-7 border-t border-off-white/10 grid grid-cols-2 md:grid-cols-4 gap-space-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

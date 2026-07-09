@@ -91,13 +91,13 @@ const ServicesSection = () => {
     <section id="services" className="section-padding bg-background overflow-hidden">
       <div className="container-wide">
         <motion.div
-          className="section-rule mb-16"
+          className="section-rule mb-space-8"
           initial={{ scaleX: 0, originX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 1, ease: "easeOut" }}
         />
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-space-7 mb-space-9">
           <motion.div
             className="md:col-span-4"
             initial={{ opacity: 0, x: -30 }}
@@ -122,11 +122,11 @@ const ServicesSection = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-6">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
-              className="group relative bg-card border border-border rounded-xl p-8 hover:border-primary hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer overflow-hidden"
+              className="group relative bg-card border border-border rounded-xl p-space-6 hover:border-primary hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer overflow-hidden"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -145,7 +145,7 @@ const ServicesSection = () => {
               <div className={`absolute inset-0 ${service.overlayClass ?? "bg-primary/85"} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
               <div className="relative z-10">
-                <div className="w-20 h-20 rounded-lg flex items-center justify-center mb-6 transition-all duration-500">
+                <div className="w-20 h-20 rounded-lg flex items-center justify-center mb-space-5 transition-all duration-500">
                   {service.icon ? (
                     <div className="w-14 h-14 rounded-lg bg-primary/10 group-hover:bg-primary-foreground/15 flex items-center justify-center transition-all duration-500 group-hover:scale-110">
                       <service.icon

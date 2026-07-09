@@ -39,13 +39,13 @@ const IndustriesSection = () => {
     <section className="section-padding bg-background overflow-hidden">
       <div className="container-wide">
         <motion.div
-          className="section-rule mb-16"
+          className="section-rule mb-space-8"
           initial={{ scaleX: 0, originX: 0.5 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         />
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-space-7 mb-space-8">
           <motion.div
             className="md:col-span-4"
             initial={{ opacity: 0 }}
@@ -69,11 +69,11 @@ const IndustriesSection = () => {
             </h2>
           </motion.div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-space-4 md:gap-space-5">
           {industries.map(({ name, icon: Icon }, i) => (
             <motion.div
               key={name}
-              className="group relative flex flex-col items-center justify-center gap-3 border border-border bg-card px-4 py-6 md:py-8 hover:border-primary hover:-translate-y-1 transition-all duration-300 cursor-default overflow-hidden"
+              className="group relative flex flex-col items-center justify-center gap-3 border border-border bg-card px-space-4 py-space-5 md:py-space-6 hover:border-primary hover:-translate-y-1 transition-all duration-300 cursor-default overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}

@@ -17,7 +17,7 @@ const FounderSection = () => {
   return (
     <section ref={ref} className="section-padding bg-foreground overflow-hidden">
       <div className="container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-space-9 items-center">
           {/* Photo Side */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -39,7 +39,7 @@ const FounderSection = () => {
           {/* Bio Side */}
           <motion.div style={{ y: textY }}>
             <motion.p
-              className="font-body text-xs font-500 tracking-[0.3em] uppercase text-primary mb-4"
+              className="font-body text-xs font-500 tracking-[0.3em] uppercase text-primary mb-space-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -48,7 +48,7 @@ const FounderSection = () => {
               Meet The Founder
             </motion.p>
             <motion.h2
-              className="font-heading text-4xl md:text-5xl font-700 text-background leading-[1.1] mb-6"
+              className="font-heading text-4xl md:text-5xl font-700 text-background leading-[1.1] mb-space-5"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -57,7 +57,7 @@ const FounderSection = () => {
               Aziz Rehman
             </motion.h2>
             <motion.p
-              className="font-body text-sm font-500 tracking-wider uppercase text-primary mb-8"
+              className="font-body text-sm font-500 tracking-wider uppercase text-primary mb-space-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -67,7 +67,7 @@ const FounderSection = () => {
             </motion.p>
 
             <motion.blockquote
-              className="relative mb-10"
+              className="relative mb-space-6"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -76,12 +76,12 @@ const FounderSection = () => {
               <span className="absolute -top-6 -left-2 font-heading text-7xl text-primary/20 leading-none select-none">
                 "
               </span>
-              <p className="font-heading text-xl md:text-2xl font-400 text-background/80 leading-relaxed italic pl-6">
+              <p className="font-heading text-xl md:text-2xl font-400 text-background/80 leading-relaxed italic pl-space-5">
                 Great marketing should be accessible to every brand, not just the ones with massive budgets.
               </p>
             </motion.blockquote>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-space-4 mb-space-6">
               <motion.p
                 className="font-body text-base font-300 text-background/60 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
@@ -107,7 +107,7 @@ const FounderSection = () => {
 
             {/* Stats */}
             <motion.div
-              className="flex gap-8 pt-8 border-t border-background/10"
+              className="flex gap-space-6 pt-space-6 border-t border-background/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

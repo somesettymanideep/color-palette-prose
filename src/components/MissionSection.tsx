@@ -8,7 +8,7 @@ const MissionSection = () => {
       <div className="container-wide">
         {/* Section label */}
         <motion.p
-          className="font-body text-sm uppercase tracking-[0.3em] text-primary mb-4"
+          className="font-body text-sm uppercase tracking-[0.3em] text-primary mb-space-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -17,7 +17,7 @@ const MissionSection = () => {
           Purpose & Direction
         </motion.p>
         <motion.div
-          className="w-16 h-1 bg-primary mb-16"
+          className="w-16 h-1 bg-primary mb-space-8"
           initial={{ scaleX: 0, originX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
@@ -25,10 +25,10 @@ const MissionSection = () => {
         />
 
         {/* Two large cards side by side */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-space-5">
           {/* Mission Card */}
           <motion.div
-            className="relative group p-10 md:p-14 border border-border bg-card rounded-3xl overflow-hidden transition-all duration-500 hover:border-primary/40 hover:shadow-[0_8px_40px_-12px_hsl(var(--primary)/0.15)]"
+            className="relative group p-space-6 md:p-space-7 border border-border bg-card rounded-3xl overflow-hidden transition-all duration-500 hover:border-primary/40 hover:shadow-[0_8px_40px_-12px_hsl(var(--primary)/0.15)]"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -40,10 +40,10 @@ const MissionSection = () => {
             </span>
 
             <div className="relative z-10">
-              <div className="mb-8">
+              <div className="mb-space-6">
                 <img loading="lazy" decoding="async" src={iconMission} alt="Mission" className="w-16 h-16" />
               </div>
-              <h3 className="font-heading text-3xl md:text-4xl font-semibold text-foreground mb-6 leading-tight">
+              <h3 className="font-heading text-3xl md:text-4xl font-semibold text-foreground mb-space-5 leading-tight">
                 Our <span className="text-primary italic">Mission</span>
               </h3>
               <p className="font-body text-lg font-light text-muted-foreground leading-relaxed">
@@ -54,7 +54,7 @@ const MissionSection = () => {
 
           {/* Vision Card */}
           <motion.div
-            className="relative group p-10 md:p-14 border border-primary/20 bg-foreground text-primary-foreground rounded-3xl overflow-hidden transition-all duration-500 hover:border-primary/60 hover:shadow-[0_8px_40px_-12px_hsl(var(--primary)/0.3)]"
+            className="relative group p-space-6 md:p-space-7 border border-primary/20 bg-foreground text-primary-foreground rounded-3xl overflow-hidden transition-all duration-500 hover:border-primary/60 hover:shadow-[0_8px_40px_-12px_hsl(var(--primary)/0.3)]"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -66,10 +66,10 @@ const MissionSection = () => {
             </span>
 
             <div className="relative z-10">
-              <div className="mb-8">
+              <div className="mb-space-6">
                 <img loading="lazy" decoding="async" src={iconVision} alt="Vision" className="w-16 h-16" />
               </div>
-              <h3 className="font-heading text-3xl md:text-4xl font-semibold mb-6 leading-tight">
+              <h3 className="font-heading text-3xl md:text-4xl font-semibold mb-space-5 leading-tight">
                 Our <span className="text-primary italic">Vision</span>
               </h3>
               <p className="font-body text-lg font-light text-primary-foreground/70 leading-relaxed">

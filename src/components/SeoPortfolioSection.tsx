@@ -26,9 +26,9 @@ const SeoPortfolioSection = () => {
         }}
       />
 
-      <div className="container mx-auto px-6 relative z-10 space-y-24">
+      <div className="container mx-auto px-space-5 relative z-10 space-y-space-10">
         {/* ============ ROW 1: GMB ============ */}
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-space-7 lg:gap-space-8 items-center">
           {/* Left: Content */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -37,18 +37,18 @@ const SeoPortfolioSection = () => {
             transition={{ duration: 0.7 }}
             className="lg:col-span-5 min-w-0 w-full"
           >
-            <p className="font-body text-sm uppercase tracking-[0.2em] text-off-white/40 mb-4">
+            <p className="font-body text-sm uppercase tracking-[0.2em] text-off-white/40 mb-space-4">
               SEO Portfolio · GMB
             </p>
-            <h2 className="font-heading text-4xl md:text-5xl font-600 text-off-white leading-tight mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl font-600 text-off-white leading-tight mb-space-5">
               GMB optimised to rank on the <span className="text-primary">local 3-pack</span>
             </h2>
-            <p className="font-body text-base text-off-white/60 leading-relaxed mb-8 max-w-md">
+            <p className="font-body text-base text-off-white/60 leading-relaxed mb-space-6 max-w-md">
               We optimise Google My Business profiles so our clients dominate "near me" searches
               and show up in the top 3 map listings.
             </p>
 
-            <div className="grid grid-cols-3 gap-4 mb-8 border-y border-off-white/10 py-5 max-w-md">
+            <div className="grid grid-cols-3 gap-space-4 mb-space-6 border-y border-off-white/10 py-space-5 max-w-md">
               <div>
                 <div className="font-heading text-2xl md:text-3xl font-600 text-primary leading-none">#1</div>
                 <div className="font-body text-[10px] uppercase tracking-wider text-off-white/40 mt-2">Local Rank</div>
@@ -122,7 +122,7 @@ const SeoPortfolioSection = () => {
                 whileInView={{ opacity: 1, scale: 1, rotate: -6 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5, type: "spring" }}
-                className="absolute -top-4 -right-2 md:-right-6 bg-primary text-charcoal rounded-2xl px-4 py-3 shadow-2xl"
+                className="absolute -top-4 -right-2 md:-right-6 bg-primary text-charcoal rounded-2xl px-space-4 py-3 shadow-2xl"
               >
                 <div className="font-heading text-2xl font-700 leading-none">#1</div>
                 <div className="font-body text-[9px] uppercase tracking-wider mt-1">Local Pack</div>
@@ -132,7 +132,7 @@ const SeoPortfolioSection = () => {
         </div>
 
         {/* ============ ROW 2: Website Rankings ============ */}
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-space-7 lg:gap-space-8 items-center">
           {/* Left: Browser Mockup */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -153,7 +153,7 @@ const SeoPortfolioSection = () => {
                 className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-off-white/10"
               >
                 {/* Browser chrome */}
-                <div className="flex items-center gap-2 px-4 py-3 bg-gray-100 border-b border-gray-200">
+                <div className="flex items-center gap-2 px-space-4 py-3 bg-gray-100 border-b border-gray-200">
                   <div className="flex gap-1.5">
                     <span className="w-3 h-3 rounded-full bg-[#FF5F57]" />
                     <span className="w-3 h-3 rounded-full bg-[#FEBC2E]" />
@@ -168,9 +168,9 @@ const SeoPortfolioSection = () => {
                 </div>
 
                 {/* Google SERP page */}
-                <div className="p-5 bg-white">
+                <div className="p-space-5 bg-white">
                   {/* Google logo + search bar */}
-                  <div className="flex items-center gap-4 pb-4 border-b border-gray-200">
+                  <div className="flex items-center gap-space-4 pb-space-4 border-b border-gray-200">
                     <span className="font-heading text-xl font-700 tracking-tight">
                       <span style={{ color: "#4285F4" }}>G</span>
                       <span style={{ color: "#EA4335" }}>o</span>
@@ -179,14 +179,14 @@ const SeoPortfolioSection = () => {
                       <span style={{ color: "#34A853" }}>l</span>
                       <span style={{ color: "#EA4335" }}>e</span>
                     </span>
-                    <div className="flex-1 flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 shadow-sm">
+                    <div className="flex-1 flex items-center gap-2 px-space-4 py-2 rounded-full border border-gray-200 shadow-sm">
                       <span className="text-[11px] text-gray-700 flex-1 truncate">modular interior designers</span>
                       <Search className="w-3.5 h-3.5" style={{ color: "#4285F4" }} />
                     </div>
                   </div>
 
                   {/* Tabs */}
-                  <div className="flex gap-5 py-2 text-[11px] text-gray-600 border-b border-gray-200">
+                  <div className="flex gap-space-5 py-2 text-[11px] text-gray-600 border-b border-gray-200">
                     <span className="pb-1 border-b-2" style={{ borderColor: "#4285F4", color: "#4285F4" }}>All</span>
                     <span>Maps</span>
                     <span>Images</span>
@@ -197,7 +197,7 @@ const SeoPortfolioSection = () => {
                   <div className="text-[10px] text-gray-500 py-2">About 24,80,000 results (0.42 seconds)</div>
 
                   {/* Results */}
-                  <div className="space-y-4">
+                  <div className="space-y-space-4">
                     {serpResults.map((r, i) => (
                       <motion.div
                         key={r.url}
@@ -237,7 +237,7 @@ const SeoPortfolioSection = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6, type: "spring" }}
-                className="absolute -bottom-5 -right-3 md:-right-6 bg-primary text-charcoal rounded-2xl px-4 py-3 shadow-2xl flex items-center gap-2"
+                className="absolute -bottom-5 -right-3 md:-right-6 bg-primary text-charcoal rounded-2xl px-space-4 py-3 shadow-2xl flex items-center gap-2"
               >
                 <TrendingUp className="w-5 h-5" />
                 <div>
@@ -252,7 +252,7 @@ const SeoPortfolioSection = () => {
                 whileInView={{ opacity: 1, scale: 1, rotate: 6 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5, type: "spring" }}
-                className="absolute -top-5 -left-3 md:-left-6 bg-off-white text-charcoal rounded-2xl px-4 py-3 shadow-2xl flex items-center gap-2"
+                className="absolute -top-5 -left-3 md:-left-6 bg-off-white text-charcoal rounded-2xl px-space-4 py-3 shadow-2xl flex items-center gap-2"
               >
                 <BarChart3 className="w-5 h-5 text-primary" />
                 <div>
@@ -271,18 +271,18 @@ const SeoPortfolioSection = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="lg:col-span-5 order-1 lg:order-2 min-w-0 w-full"
           >
-            <p className="font-body text-sm uppercase tracking-[0.2em] text-off-white/40 mb-4">
+            <p className="font-body text-sm uppercase tracking-[0.2em] text-off-white/40 mb-space-4">
               SEO Portfolio · Websites
             </p>
-            <h2 className="font-heading text-4xl md:text-5xl font-600 text-off-white leading-tight mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl font-600 text-off-white leading-tight mb-space-5">
               Client websites on <span className="text-primary">Google page 1</span>
             </h2>
-            <p className="font-body text-base text-off-white/60 leading-relaxed mb-8 max-w-md">
+            <p className="font-body text-base text-off-white/60 leading-relaxed mb-space-6 max-w-md">
               Organic, white-hat SEO that pushes our client websites to the top of Google for
               the keywords that drive real business.
             </p>
 
-            <div className="grid grid-cols-3 gap-4 mb-8 border-y border-off-white/10 py-5 max-w-md">
+            <div className="grid grid-cols-3 gap-space-4 mb-space-6 border-y border-off-white/10 py-space-5 max-w-md">
               <div>
                 <div className="font-heading text-2xl md:text-3xl font-600 text-primary leading-none">50+</div>
                 <div className="font-body text-[10px] uppercase tracking-wider text-off-white/40 mt-2">Page 1 Keywords</div>
@@ -297,7 +297,7 @@ const SeoPortfolioSection = () => {
               </div>
             </div>
 
-            <ul className="space-y-3 mb-8">
+            <ul className="space-y-3 mb-space-6">
               {[
                 "On-page SEO, schema & technical fixes",
                 "High-authority backlink building",

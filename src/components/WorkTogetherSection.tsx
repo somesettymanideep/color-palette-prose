@@ -26,7 +26,7 @@ const WorkTogetherSection = () => {
       </div>
 
       <div className="container-wide relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-7 lg:gap-space-6 items-start">
           {/* Left: Big heading */}
           <div className="lg:col-span-7">
             <motion.h2
@@ -42,7 +42,7 @@ const WorkTogetherSection = () => {
               <span>Together</span>
             </motion.h2>
             <motion.div
-              className="w-24 h-[2px] bg-primary mt-6"
+              className="w-24 h-[2px] bg-primary mt-space-5"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
@@ -52,7 +52,7 @@ const WorkTogetherSection = () => {
           </div>
 
           {/* Right: CTA button + email */}
-          <div className="lg:col-span-5 flex flex-col items-start lg:items-end gap-8">
+          <div className="lg:col-span-5 flex flex-col items-start lg:items-end gap-space-6">
             <motion.a
               href="tel:+919550860545"
               className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-heading font-700 text-sm md:text-base uppercase tracking-wider hover:scale-105 transition-transform cursor-pointer"

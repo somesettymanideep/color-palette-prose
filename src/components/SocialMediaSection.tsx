@@ -100,9 +100,9 @@ const SocialMediaSection = () => {
 
       <div className="container-wide relative z-10">
         {/* Header */}
-        <div className="mb-24">
+        <div className="mb-space-10">
           <motion.p
-            className="font-body text-sm uppercase tracking-[0.2em] text-off-white/40 mb-4"
+            className="font-body text-sm uppercase tracking-[0.2em] text-off-white/40 mb-space-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -123,7 +123,7 @@ const SocialMediaSection = () => {
         </div>
 
         {/* Service cards */}
-        <div className="space-y-32">
+        <div className="space-y-space-11">
           {services.map((service, i) => {
             const isEven = i % 2 === 0;
             const Icon = service.icon;
@@ -131,7 +131,7 @@ const SocialMediaSection = () => {
             return (
               <motion.div
                 key={service.title}
-                className={`grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-center ${
+                className={`grid grid-cols-1 md:grid-cols-12 gap-space-7 md:gap-space-8 items-center ${
                   isEven ? "" : "md:[direction:rtl]"
                 }`}
                 initial={{ opacity: 0 }}
@@ -164,7 +164,7 @@ const SocialMediaSection = () => {
                     transition={{ duration: 0.7, delay: 0.3 }}
                   >
                     {/* Icon + title */}
-                    <div className="flex items-center gap-4 mb-6">
+                    <div className="flex items-center gap-space-4 mb-space-5">
                       <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
                         <Icon className="w-6 h-6 text-primary" />
                       </div>
@@ -173,12 +173,12 @@ const SocialMediaSection = () => {
                       </h3>
                     </div>
 
-                    <p className="font-body text-base md:text-lg font-300 text-off-white/60 leading-relaxed mb-8 max-w-xl">
+                    <p className="font-body text-base md:text-lg font-300 text-off-white/60 leading-relaxed mb-space-6 max-w-xl">
                       {service.description}
                     </p>
 
                     {/* Stat highlight */}
-                    <div className="flex items-baseline gap-3 mb-6">
+                    <div className="flex items-baseline gap-3 mb-space-5">
                       <span className="font-heading text-5xl md:text-6xl font-600 text-primary">
                         {service.stat}
                       </span>
@@ -189,7 +189,7 @@ const SocialMediaSection = () => {
 
                     {/* Extra metrics strip */}
                     {service.extraStats && (
-                      <div className="grid grid-cols-3 gap-4 mb-8 border-y border-off-white/10 py-5 max-w-xl">
+                      <div className="grid grid-cols-3 gap-space-4 mb-space-6 border-y border-off-white/10 py-space-5 max-w-xl">
                         {service.extraStats.map((m, mi) => (
                           <motion.div
                             key={m.label}
@@ -214,7 +214,7 @@ const SocialMediaSection = () => {
                       {service.features.map((feature, fi) => (
                         <motion.span
                           key={feature}
-                          className="font-body text-xs uppercase tracking-wider text-off-white/50 border border-off-white/10 px-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
+                          className="font-body text-xs uppercase tracking-wider text-off-white/50 border border-off-white/10 px-space-4 py-2 hover:border-primary/40 hover:text-primary transition-colors"
                           initial={{ opacity: 0, y: 10 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
