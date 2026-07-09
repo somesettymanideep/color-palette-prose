@@ -57,7 +57,7 @@ const stats = [
 const EcommerceListingSection = () => {
   return (
     <section
-      className="relative left-1/2 -translate-x-1/2 w-[100vw] max-w-[100vw] overflow-hidden pt-4 md:pt-6 pb-10 md:pb-14"
+      className="relative left-1/2 -translate-x-1/2 w-[100vw] max-w-[100vw] overflow-hidden section-padding"
       style={{ backgroundColor: "#0A0A0A" }}
     >
       {/* Background layers */}
