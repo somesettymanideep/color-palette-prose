@@ -89,7 +89,7 @@ const EcommerceListingSection = () => {
 
       <div className="container mx-auto px-space-5 relative z-10">
         {/* Header */}
-        <div className="max-w-3xl mb-space-6 md:mb-space-6">
+        <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
