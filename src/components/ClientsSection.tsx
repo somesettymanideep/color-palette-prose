@@ -15,7 +15,7 @@ const clients = [
 
 const ClientsSection = () => {
   return (
-    <section id="clients" className="relative py-28 md:py-36 bg-foreground overflow-hidden">
+    <section id="clients" className="relative section-padding bg-foreground overflow-hidden">
       {/* Diagonal accent */}
       <div
         className="absolute inset-0 bg-primary/10"

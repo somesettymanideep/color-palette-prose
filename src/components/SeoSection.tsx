@@ -13,7 +13,7 @@ const benefits = [
 
 const SeoSection = () => {
   return (
-    <section className="relative overflow-hidden py-20 md:py-28">
+    <section className="relative overflow-hidden section-padding">
       {/* Orange diagonal background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-background" />

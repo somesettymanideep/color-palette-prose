@@ -8,7 +8,7 @@ const milestones = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-32 bg-foreground text-primary-foreground overflow-hidden">
+    <section id="about" className="section-padding bg-foreground text-primary-foreground overflow-hidden">
       <div className="container-wide">
         {/* Top label */}
         <motion.p

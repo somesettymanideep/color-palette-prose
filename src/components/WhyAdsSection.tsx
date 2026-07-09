@@ -14,7 +14,7 @@ const reasons = [
 
 const WhyAdsSection = () => {
   return (
-    <section id="why-ads" className="relative py-32 overflow-hidden bg-off-white">
+    <section id="why-ads" className="relative section-padding overflow-hidden bg-off-white">
       {/* Diagonal orange background */}
       <div
         className="absolute inset-0 bg-primary hidden md:block"

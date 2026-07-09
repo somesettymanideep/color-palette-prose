@@ -7,7 +7,7 @@ const ThankYouSection = () => {
   const isMobile = useIsMobile();
 
   return (
-    <section className="relative py-28 md:py-36 bg-primary overflow-hidden">
+    <section className="relative section-padding bg-primary overflow-hidden">
       {/* Hexagon shape */}
       <div className="container-wide relative z-10 flex flex-col items-center">
         <motion.div

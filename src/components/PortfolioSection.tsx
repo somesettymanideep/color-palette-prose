@@ -89,7 +89,7 @@ const LaptopMockup = ({ image, name }: { image: string; name: string }) => (
 
 const PortfolioSection = () => {
   return (
-    <section id="portfolio" className="py-32 relative overflow-hidden" style={{ backgroundColor: "#f36e2b" }}>
+    <section id="portfolio" className="section-padding relative overflow-hidden" style={{ backgroundColor: "#f36e2b" }}>
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-black/10 to-transparent" />

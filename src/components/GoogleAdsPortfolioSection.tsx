@@ -64,7 +64,7 @@ const shoppingAds = [
 
 const GoogleAdsPortfolioSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-charcoal relative overflow-hidden">
+    <section className="section-padding bg-charcoal relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{

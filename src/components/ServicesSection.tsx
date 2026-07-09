@@ -88,7 +88,7 @@ const services: Service[] = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-32 bg-background overflow-hidden">
+    <section id="services" className="section-padding bg-background overflow-hidden">
       <div className="container-wide">
         <motion.div
           className="section-rule mb-16"

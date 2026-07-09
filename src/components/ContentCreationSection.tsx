@@ -118,7 +118,7 @@ const PhoneReelComponent = ({ src, label, category, id }: { src: string; label: 
 
 const ContentCreationSection = () => {
   return (
-    <section id="content-creation" className="py-32 bg-charcoal relative overflow-hidden">
+    <section id="content-creation" className="section-padding bg-charcoal relative overflow-hidden">
       {/* Background accents */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-3xl" />
