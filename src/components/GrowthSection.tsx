@@ -74,7 +74,7 @@ const GrowthSection = () => {
   const FeaturedIcon = featured.icon;
 
   return (
-    <section className="relative section-padding bg-foreground overflow-hidden">
+    <section className="relative section-padding pt-space-6 md:pt-space-7 bg-foreground overflow-hidden">
       <div className="absolute top-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[150px]" />
 
