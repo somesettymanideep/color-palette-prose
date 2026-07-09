@@ -472,7 +472,7 @@ const SocialMediaPortfolioSection = () => {
 
       <div className="container-wide relative z-10">
         {/* Hero composition */}
-        <div className="mb-space-10 grid grid-cols-1 lg:grid-cols-2 gap-space-7 lg:gap-space-6 items-center">
+        <div className="mb-space-8 grid grid-cols-1 lg:grid-cols-2 gap-space-5 lg:gap-space-5 items-center">
           {/* Left: phone + floating creative cards */}
           <div className="relative order-2 lg:order-1 flex items-center justify-center">
             <motion.img
@@ -492,9 +492,9 @@ const SocialMediaPortfolioSection = () => {
           </div>
 
           {/* Right: headline */}
-          <div className="order-1 lg:order-2 lg:pl-space-6">
+          <div className="order-1 lg:order-2 lg:pl-space-5">
             <motion.div
-              className="flex items-center gap-3 mb-space-5"
+              className="flex items-center gap-3 mb-space-4"
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -516,7 +516,7 @@ const SocialMediaPortfolioSection = () => {
               <span className="text-primary">Designs</span> for Your <span className="italic">Brand</span>
             </motion.h2>
             <motion.p
-              className="font-body text-base md:text-lg text-charcoal/70 leading-relaxed mt-space-5 max-w-xl"
+              className="font-body text-base md:text-lg text-charcoal/70 leading-relaxed mt-space-4 max-w-xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
