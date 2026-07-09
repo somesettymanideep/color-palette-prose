@@ -80,29 +80,29 @@ const GrowthSection = () => {
 
       <div className="container-wide relative z-10">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-space-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="inline-flex items-center gap-2 font-body text-xs tracking-[0.3em] uppercase text-primary mb-4 border border-primary/30 bg-primary/5 px-4 py-1.5 rounded-full">
+          <span className="inline-flex items-center gap-2 font-body text-xs tracking-[0.3em] uppercase text-primary mb-space-4 border border-primary/30 bg-primary/5 px-space-4 py-1.5 rounded-full">
             <Sparkles className="w-3 h-3" />
             Our Impact
           </span>
-          <h2 className="font-heading text-4xl md:text-6xl font-700 text-background uppercase tracking-tight mt-4">
+          <h2 className="font-heading text-4xl md:text-6xl font-700 text-background uppercase tracking-tight mt-space-4">
             Growth In <span className="text-primary">Numbers</span>
           </h2>
-          <p className="font-body text-sm text-background/50 mt-4 max-w-md mx-auto">
+          <p className="font-body text-sm text-background/50 mt-space-4 max-w-md mx-auto">
             Real results that speak louder than words — here's what we've achieved for our clients.
           </p>
         </motion.div>
 
         {/* Refined bento grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 md:auto-rows-[200px] gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-12 md:auto-rows-[200px] gap-space-4">
           {/* Featured */}
           <motion.div
-            className="md:col-span-6 md:row-span-2 group relative overflow-hidden rounded-3xl border border-background/5 bg-background/[0.04] p-8 md:p-10 flex flex-col justify-between"
+            className="md:col-span-6 md:row-span-2 group relative overflow-hidden rounded-3xl border border-background/5 bg-background/[0.04] p-space-6 md:p-space-6 flex flex-col justify-between"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -139,7 +139,7 @@ const GrowthSection = () => {
               </p>
             </div>
 
-            <div className="relative z-10 flex items-end gap-1.5 mt-8 h-12">
+            <div className="relative z-10 flex items-end gap-1.5 mt-space-6 h-12">
               {featuredBars.map((h, idx) => (
                 <motion.div
                   key={idx}
@@ -160,7 +160,7 @@ const GrowthSection = () => {
             return (
               <motion.div
                 key={stat.label}
-                className="md:col-span-3 group relative overflow-hidden rounded-3xl border border-background/5 bg-background/[0.04] hover:border-primary/40 hover:bg-background/[0.06] transition-colors duration-500 p-6 flex flex-col justify-between"
+                className="md:col-span-3 group relative overflow-hidden rounded-3xl border border-background/5 bg-background/[0.04] hover:border-primary/40 hover:bg-background/[0.06] transition-colors duration-500 p-space-5 flex flex-col justify-between"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

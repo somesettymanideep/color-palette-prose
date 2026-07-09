@@ -5,13 +5,13 @@ const FooterSection = () => {
     <footer id="contact" className="section-padding bg-charcoal overflow-hidden">
       <div className="container-wide">
         <motion.div
-          className="section-rule mb-16 opacity-20"
+          className="section-rule mb-space-8 opacity-20"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeOut" }}
         />
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-space-7">
           <motion.div
             className="md:col-span-6"
             initial={{ opacity: 0, y: 30 }}
@@ -19,7 +19,7 @@ const FooterSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <h2 className="font-heading text-3xl md:text-4xl font-600 text-off-white mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl font-600 text-off-white mb-space-4">
               <span className="text-primary">A</span>yron{" "}
               <span className="text-primary">D</span>igital{" "}
               <span className="text-primary">S</span>olutions
@@ -35,7 +35,7 @@ const FooterSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            <p className="font-body text-sm uppercase tracking-[0.2em] text-off-white/40 mb-4">
+            <p className="font-body text-sm uppercase tracking-[0.2em] text-off-white/40 mb-space-4">
               Services
             </p>
             <ul className="space-y-2">
@@ -53,7 +53,7 @@ const FooterSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.6 }}
           >
-            <p className="font-body text-sm uppercase tracking-[0.2em] text-off-white/40 mb-4">
+            <p className="font-body text-sm uppercase tracking-[0.2em] text-off-white/40 mb-space-4">
               Contact
             </p>
             <p className="font-body text-sm font-300 text-off-white/60 mb-2">
@@ -68,7 +68,7 @@ const FooterSection = () => {
           </motion.div>
         </div>
         <motion.div
-          className="section-rule mt-16 mb-8 opacity-20"
+          className="section-rule mt-space-8 mb-space-6 opacity-20"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}

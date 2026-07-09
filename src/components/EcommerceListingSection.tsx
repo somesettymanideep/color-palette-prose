@@ -87,15 +87,15 @@ const EcommerceListingSection = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-space-5 relative z-10">
         {/* Header */}
-        <div className="max-w-3xl mb-8 md:mb-10">
+        <div className="max-w-3xl mb-space-6 md:mb-space-6">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 backdrop-blur-md"
+            className="inline-flex items-center gap-2 px-space-4 py-2 rounded-full mb-space-5 backdrop-blur-md"
             style={{
               backgroundColor: "rgba(243,110,43,0.12)",
               border: "1px solid rgba(243,110,43,0.35)",
@@ -126,7 +126,7 @@ const EcommerceListingSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="font-body text-lg md:text-xl text-white/65 leading-relaxed mt-6 max-w-2xl"
+            className="font-body text-lg md:text-xl text-white/65 leading-relaxed mt-space-5 max-w-2xl"
           >
             Amazon, Flipkart, Myntra &amp; D2C — high-converting listings, A+
             content, and catalog hygiene that compound into ranking, traffic
@@ -134,9 +134,9 @@ const EcommerceListingSection = () => {
           </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-12 gap-space-6 lg:gap-space-8 items-start">
           {/* LEFT — Pillars */}
-          <div className="lg:col-span-6 space-y-4">
+          <div className="lg:col-span-6 space-y-space-4">
             {pillars.map((p, i) => (
               <motion.div
                 key={p.title}
@@ -145,13 +145,13 @@ const EcommerceListingSection = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 whileHover={{ y: -3 }}
-                className="group relative rounded-2xl p-6 backdrop-blur-xl transition-all duration-300"
+                className="group relative rounded-2xl p-space-5 backdrop-blur-xl transition-all duration-300"
                 style={{
                   backgroundColor: "rgba(255,255,255,0.04)",
                   border: "1px solid rgba(255,255,255,0.08)",
                 }}
               >
-                <div className="flex items-start gap-5">
+                <div className="flex items-start gap-space-5">
                   <div
                     className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
                     style={{
@@ -181,7 +181,7 @@ const EcommerceListingSection = () => {
             ))}
 
             {/* Marketplace chips */}
-            <div className="flex flex-wrap items-center gap-2.5 pt-4">
+            <div className="flex flex-wrap items-center gap-2.5 pt-space-4">
               <span className="text-xs uppercase tracking-[0.2em] text-white/40 font-700 mr-2">
                 Live on
               </span>
@@ -244,9 +244,9 @@ const EcommerceListingSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-16 md:mt-20"
+          className="mt-space-8 md:mt-space-9"
         >
-          <div className="text-center mb-8">
+          <div className="text-center mb-space-6">
             <h3
               className="font-heading text-3xl md:text-5xl font-700 tracking-tight uppercase"
               style={{ color: ORANGE }}
@@ -266,13 +266,13 @@ const EcommerceListingSection = () => {
             {/* Header row */}
             <div className="grid grid-cols-2">
               <div
-                className="px-5 md:px-8 py-4 md:py-5 font-heading font-700 text-white uppercase tracking-[0.18em] text-sm md:text-base"
+                className="px-space-5 md:px-space-6 py-space-4 md:py-space-5 font-heading font-700 text-white uppercase tracking-[0.18em] text-sm md:text-base"
                 style={{ backgroundColor: ORANGE }}
               >
                 Metric
               </div>
               <div
-                className="px-5 md:px-8 py-4 md:py-5 font-heading font-700 text-white uppercase tracking-[0.18em] text-sm md:text-base text-center"
+                className="px-space-5 md:px-space-6 py-space-4 md:py-space-5 font-heading font-700 text-white uppercase tracking-[0.18em] text-sm md:text-base text-center"
                 style={{ backgroundColor: "#0F1116" }}
               >
                 Achievement
@@ -295,7 +295,7 @@ const EcommerceListingSection = () => {
                 className="grid grid-cols-2 items-center border-t"
                 style={{ borderColor: "rgba(255,255,255,0.08)" }}
               >
-                <div className="flex items-center gap-3 md:gap-4 px-5 md:px-8 py-4 md:py-5">
+                <div className="flex items-center gap-3 md:gap-space-4 px-space-5 md:px-space-6 py-space-4 md:py-space-5">
                   <div
                     className="shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-lg flex items-center justify-center"
                     style={{
@@ -309,7 +309,7 @@ const EcommerceListingSection = () => {
                     {row.label}
                   </span>
                 </div>
-                <div className="px-5 md:px-8 py-4 md:py-5 text-center font-heading font-700 text-white text-lg md:text-2xl">
+                <div className="px-space-5 md:px-space-6 py-space-4 md:py-space-5 text-center font-heading font-700 text-white text-lg md:text-2xl">
                   {row.value}
                 </div>
               </motion.div>

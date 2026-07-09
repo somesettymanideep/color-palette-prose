@@ -105,15 +105,15 @@ const CaseStudySection = () => {
         backgroundSize: "24px 24px",
       }} />
 
-      <div className="container-wide relative z-10 space-y-32">
+      <div className="container-wide relative z-10 space-y-space-11">
         {caseStudies.map((study, i) => {
           const isEven = i % 2 === 0;
           return (
-            <div key={i} className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center`}>
+            <div key={i} className={`grid grid-cols-1 lg:grid-cols-12 gap-space-7 lg:gap-space-8 items-center`}>
               {/* Content */}
-              <div className={`lg:col-span-5 relative z-20 ${isEven ? "lg:order-1 lg:pr-8" : "lg:order-2 lg:pl-8"}`}>
+              <div className={`lg:col-span-5 relative z-20 ${isEven ? "lg:order-1 lg:pr-space-6" : "lg:order-2 lg:pl-space-6"}`}>
                 <motion.span
-                  className="font-body text-xs tracking-[0.3em] text-primary uppercase mb-4 block"
+                  className="font-body text-xs tracking-[0.3em] text-primary uppercase mb-space-4 block"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -123,7 +123,7 @@ const CaseStudySection = () => {
                 </motion.span>
 
                 <motion.h2
-                  className="font-heading text-4xl md:text-5xl font-700 text-primary-foreground leading-[0.95] mb-6"
+                  className="font-heading text-4xl md:text-5xl font-700 text-primary-foreground leading-[0.95] mb-space-5"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -133,7 +133,7 @@ const CaseStudySection = () => {
                 </motion.h2>
 
                 <motion.p
-                  className="font-body text-sm text-primary-foreground/40 italic mb-8"
+                  className="font-body text-sm text-primary-foreground/40 italic mb-space-6"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -143,7 +143,7 @@ const CaseStudySection = () => {
                 </motion.p>
 
                 <motion.div
-                  className="flex flex-wrap gap-3 mb-10"
+                  className="flex flex-wrap gap-3 mb-space-6"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -152,7 +152,7 @@ const CaseStudySection = () => {
                   {study.services.map((s) => (
                     <span
                       key={s}
-                      className="px-4 py-1.5 rounded-full text-[10px] font-body tracking-[0.2em] uppercase border border-primary-foreground/20 text-primary-foreground/70"
+                      className="px-space-4 py-1.5 rounded-full text-[10px] font-body tracking-[0.2em] uppercase border border-primary-foreground/20 text-primary-foreground/70"
                     >
                       {s}
                     </span>
@@ -160,7 +160,7 @@ const CaseStudySection = () => {
                 </motion.div>
 
                 <motion.blockquote
-                  className="font-heading text-xl md:text-2xl font-500 text-primary-foreground/80 leading-snug border-l-2 border-primary pl-6"
+                  className="font-heading text-xl md:text-2xl font-500 text-primary-foreground/80 leading-snug border-l-2 border-primary pl-space-5"
                   initial={{ opacity: 0, x: isEven ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -172,7 +172,7 @@ const CaseStudySection = () => {
 
               {/* Image */}
               <motion.div
-                className={`lg:col-span-7 relative z-10 ${isEven ? "lg:order-2 lg:pl-8" : "lg:order-1 lg:pr-8"}`}
+                className={`lg:col-span-7 relative z-10 ${isEven ? "lg:order-2 lg:pl-space-6" : "lg:order-1 lg:pr-space-6"}`}
                 initial={{ opacity: 0, x: isEven ? 60 : -60, scale: 0.95 }}
                 whileInView={{ opacity: 1, x: 0, scale: 1 }}
                 viewport={{ once: true, amount: 0.2 }}

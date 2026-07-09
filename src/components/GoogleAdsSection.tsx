@@ -21,14 +21,14 @@ const adTypes = [
 const GoogleAdsSection = () => {
   return (
     <section className="relative overflow-hidden bg-foreground section-padding">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-space-5">
         {/* Title with Icon */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-4 mb-6"
+          className="flex items-center gap-space-4 mb-space-5"
         >
           <img loading="lazy" decoding="async"
             src={googleAdsIcon}
@@ -46,14 +46,14 @@ const GoogleAdsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-sm md:text-base uppercase tracking-widest text-primary-foreground/70 max-w-3xl leading-relaxed mb-14"
+          className="text-sm md:text-base uppercase tracking-widest text-primary-foreground/70 max-w-3xl leading-relaxed mb-space-7"
         >
           Google Ads has more potential customers. With our customized audience
           option suitable for the product, targets are chosen to hit the right
           spot of the audience.
         </motion.p>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-space-7 items-center">
           {/* Left: Ad types ladder */}
           <div>
             <motion.h3
@@ -61,13 +61,13 @@ const GoogleAdsSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="font-display text-lg md:text-xl font-bold text-primary uppercase tracking-wide mb-10"
+              className="font-display text-lg md:text-xl font-bold text-primary uppercase tracking-wide mb-space-6"
             >
               Different Types of Ads on Google &amp; YouTube
             </motion.h3>
 
             {/* Ladder visual */}
-            <div className="relative pl-4">
+            <div className="relative pl-space-4">
               {/* Vertical line */}
               <motion.div
                 className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-primary-foreground/30"
@@ -78,7 +78,7 @@ const GoogleAdsSection = () => {
                 style={{ transformOrigin: "top" }}
               />
 
-              <div className="space-y-6">
+              <div className="space-y-space-5">
                 {adTypes.map((ad, index) => (
                   <motion.div
                     key={ad.label}
@@ -86,7 +86,7 @@ const GoogleAdsSection = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: 0.4 + index * 0.12 }}
-                    className={`relative flex items-center pl-8 md:pl-0 ${
+                    className={`relative flex items-center pl-space-6 md:pl-0 ${
                       ad.align === "left" ? "md:justify-start" : "md:justify-end"
                     }`}
                   >
@@ -128,9 +128,9 @@ const GoogleAdsSection = () => {
             {/* Glow accents */}
             <div aria-hidden className="absolute -inset-6 bg-primary/20 blur-3xl rounded-full pointer-events-none" />
 
-            <div className="relative bg-background/95 backdrop-blur-sm border border-primary/20 rounded-2xl p-6 md:p-7 shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
+            <div className="relative bg-background/95 backdrop-blur-sm border border-primary/20 rounded-2xl p-space-5 md:p-space-5 shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
               {/* Header */}
-              <div className="flex items-center justify-between mb-6 pb-5 border-b border-border">
+              <div className="flex items-center justify-between mb-space-5 pb-space-5 border-b border-border">
                 <div>
                   <p className="font-body text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-1">
                     Campaign Performance
@@ -144,7 +144,7 @@ const GoogleAdsSection = () => {
               </div>
 
               {/* Metric grid */}
-              <div className="grid grid-cols-2 gap-3 md:gap-4 mb-6">
+              <div className="grid grid-cols-2 gap-3 md:gap-space-4 mb-space-5">
                 {metrics.map((m, i) => (
                   <motion.div
                     key={m.label}
@@ -152,7 +152,7 @@ const GoogleAdsSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.45, delay: 0.4 + i * 0.08 }}
-                    className="group relative bg-muted/50 border border-border rounded-xl p-4 hover:border-primary transition-colors"
+                    className="group relative bg-muted/50 border border-border rounded-xl p-space-4 hover:border-primary transition-colors"
                   >
                     <div className="flex items-center justify-between mb-3">
                       <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">

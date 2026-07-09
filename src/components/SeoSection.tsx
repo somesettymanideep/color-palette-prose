@@ -23,14 +23,14 @@ const SeoSection = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-space-5 relative z-10">
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-heading text-4xl md:text-5xl font-bold text-foreground tracking-tight mb-8"
+          className="font-heading text-4xl md:text-5xl font-bold text-foreground tracking-tight mb-space-6"
         >
           SEO
         </motion.h2>
@@ -41,12 +41,12 @@ const SeoSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xs md:text-sm uppercase tracking-widest text-foreground/80 max-w-full whitespace-nowrap overflow-hidden text-ellipsis leading-relaxed mb-12"
+          className="text-xs md:text-sm uppercase tracking-widest text-foreground/80 max-w-full whitespace-nowrap overflow-hidden text-ellipsis leading-relaxed mb-space-7"
         >
           Organic, white-hat SEO that ranks your site in the top ten.
         </motion.p>
 
-        <div className="grid md:grid-cols-12 gap-8 items-center">
+        <div className="grid md:grid-cols-12 gap-space-6 items-center">
           {/* Left: Benefits */}
           <div className="md:col-span-4">
             <motion.h3
@@ -54,12 +54,12 @@ const SeoSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="font-display text-xl md:text-2xl font-bold text-primary uppercase tracking-wide mb-6"
+              className="font-display text-xl md:text-2xl font-bold text-primary uppercase tracking-wide mb-space-5"
             >
               Benefits You Get From The SEO
             </motion.h3>
 
-            <div className="space-y-4">
+            <div className="space-y-space-4">
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.text}
@@ -115,7 +115,7 @@ const SeoSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="mt-space-8 grid grid-cols-2 md:grid-cols-4 gap-space-5"
         >
           {[
             { value: "Top 10", label: "Google Rankings" },
@@ -129,7 +129,7 @@ const SeoSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.8 + i * 0.1 }}
-              className="text-center p-4 bg-card/80 backdrop-blur-sm border border-border rounded-sm"
+              className="text-center p-space-4 bg-card/80 backdrop-blur-sm border border-border rounded-sm"
             >
               <div className="font-display text-2xl md:text-3xl font-bold text-primary">
                 {stat.value}

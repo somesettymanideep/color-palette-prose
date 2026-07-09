@@ -24,11 +24,11 @@ const WhyAdsSection = () => {
       />
 
       <div className="container-wide relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-space-6 items-center">
           {/* Left content */}
           <div className="md:col-span-6 lg:col-span-7">
             <motion.h2
-              className="font-heading text-4xl md:text-5xl font-700 text-charcoal leading-tight mb-12"
+              className="font-heading text-4xl md:text-5xl font-700 text-charcoal leading-tight mb-space-7"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -38,11 +38,11 @@ const WhyAdsSection = () => {
               <span className="text-primary">A.D.S</span> ?
             </motion.h2>
 
-            <ul className="space-y-5">
+            <ul className="space-y-space-5">
               {reasons.map((reason, i) => (
                 <motion.li
                   key={i}
-                  className="flex items-center gap-4"
+                  className="flex items-center gap-space-4"
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.5 }}

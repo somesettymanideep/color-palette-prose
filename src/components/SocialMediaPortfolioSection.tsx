@@ -184,7 +184,7 @@ const InstagramMockup = ({ client }: { client: Client }) => {
     );
   }
   return (
-  <div className="relative mx-auto w-full max-w-[420px] pb-24">
+  <div className="relative mx-auto w-full max-w-[420px] pb-space-10">
     {/* Podium (two stacked discs: orange middle, off-white base) */}
     <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[110%] pointer-events-none">
       {/* Outer base disc */}
@@ -210,7 +210,7 @@ const InstagramMockup = ({ client }: { client: Client }) => {
         <div className="absolute top-2 left-1/2 -translate-x-1/2 w-28 h-6 bg-[#0d0d0d] rounded-b-2xl z-20" />
         <div className="relative rounded-[2rem] overflow-hidden bg-white aspect-[9/19]">
           {/* Status bar */}
-          <div className="flex items-center justify-between px-6 pt-3 pb-1 text-[10px] font-600 text-black">
+          <div className="flex items-center justify-between px-space-5 pt-3 pb-1 text-[10px] font-600 text-black">
             <span>9:41</span>
             <span className="flex gap-1 items-center">
               <span className="w-3 h-2 bg-black rounded-sm" />
@@ -218,13 +218,13 @@ const InstagramMockup = ({ client }: { client: Client }) => {
             </span>
           </div>
           {/* IG header */}
-          <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200">
+          <div className="flex items-center justify-between px-space-4 py-2 border-b border-gray-200">
             <span className="font-700 text-sm text-black">{client.handle}</span>
             <MoreHorizontal className="w-4 h-4 text-black" />
           </div>
           {/* Profile row */}
-          <div className="px-4 pt-4">
-            <div className="flex items-center gap-5">
+          <div className="px-space-4 pt-space-4">
+            <div className="flex items-center gap-space-5">
               <div className={`w-16 h-16 rounded-full p-[2px] bg-gradient-to-tr ${client.accent}`}>
                 <div className="w-full h-full rounded-full p-[2px] bg-white">
                   <img loading="lazy" decoding="async" src={client.cover} alt={client.name} className="w-full h-full rounded-full object-cover" />
@@ -264,7 +264,7 @@ const InstagramMockup = ({ client }: { client: Client }) => {
             </div>
           </div>
           {/* Featured creative (large) */}
-          <div className="mt-4 mx-0">
+          <div className="mt-space-4 mx-0">
             <div className="relative aspect-square overflow-hidden">
               <img src={client.grid[0]} alt="" className="w-full h-full object-cover" loading="lazy" />
             </div>
@@ -304,7 +304,7 @@ const FacebookMockup = ({ client }: { client: Client }) => (
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
     </div>
     {/* Profile header */}
-    <div className="relative px-4 pb-3">
+    <div className="relative px-space-4 pb-3">
       <div className="flex items-end gap-3 -mt-10">
         <div className={`w-20 h-20 rounded-full p-[3px] bg-gradient-to-tr ${client.accent} shrink-0`}>
           <div className="w-full h-full rounded-full p-[2px] bg-white">
@@ -421,12 +421,12 @@ const HeroPhoneMockup = () => (
     <div className="bg-[#0d0d0d] rounded-[2.5rem] p-2 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.55)] ring-1 ring-black/10">
       <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-5 bg-[#0d0d0d] rounded-b-2xl z-20" />
       <div className="relative rounded-[2rem] overflow-hidden bg-white aspect-[9/19]">
-        <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200">
+        <div className="flex items-center justify-between px-space-4 py-2 border-b border-gray-200">
           <span className="font-700 text-[12px] text-black">bisaurabrand</span>
           <MoreHorizontal className="w-4 h-4 text-black" />
         </div>
-        <div className="px-4 pt-4">
-          <div className="flex items-center gap-4">
+        <div className="px-space-4 pt-space-4">
+          <div className="flex items-center gap-space-4">
             <div className="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-primary to-amber-500">
               <div className="w-full h-full rounded-full bg-white p-[2px]">
                 <img loading="lazy" decoding="async" src={portfolioJewellery} alt="" className="w-full h-full rounded-full object-cover" />
@@ -472,7 +472,7 @@ const SocialMediaPortfolioSection = () => {
 
       <div className="container-wide relative z-10">
         {/* Hero composition */}
-        <div className="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <div className="mb-space-10 grid grid-cols-1 lg:grid-cols-2 gap-space-7 lg:gap-space-6 items-center">
           {/* Left: phone + floating creative cards */}
           <div className="relative order-2 lg:order-1 flex items-center justify-center">
             <motion.img
@@ -492,9 +492,9 @@ const SocialMediaPortfolioSection = () => {
           </div>
 
           {/* Right: headline */}
-          <div className="order-1 lg:order-2 lg:pl-8">
+          <div className="order-1 lg:order-2 lg:pl-space-6">
             <motion.div
-              className="flex items-center gap-3 mb-5"
+              className="flex items-center gap-3 mb-space-5"
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -516,7 +516,7 @@ const SocialMediaPortfolioSection = () => {
               <span className="text-primary">Designs</span> for Your <span className="italic">Brand</span>
             </motion.h2>
             <motion.p
-              className="font-body text-base md:text-lg text-charcoal/70 leading-relaxed mt-6 max-w-xl"
+              className="font-body text-base md:text-lg text-charcoal/70 leading-relaxed mt-space-5 max-w-xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -528,7 +528,7 @@ const SocialMediaPortfolioSection = () => {
         </div>
 
         {/* Per-client side-by-side mockups */}
-        <div className="space-y-32">
+        <div className="space-y-space-11">
           {clients.map((client, i) => (
             <motion.div
               key={client.name}
@@ -536,7 +536,7 @@ const SocialMediaPortfolioSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-space-7 lg:gap-space-8 items-center"
             >
               {/* Phone mockup (left on desktop, alternates) */}
               <motion.div
@@ -550,17 +550,17 @@ const SocialMediaPortfolioSection = () => {
               </motion.div>
 
               {/* Right: brand name + industry badge + stats */}
-              <div className={`${i % 2 === 1 ? "lg:order-1 lg:pr-8" : "lg:pl-8"}`}>
-                <span className="inline-flex items-center font-body text-[11px] font-700 uppercase tracking-[0.2em] text-charcoal bg-primary px-4 py-1.5 rounded-full mb-5">
+              <div className={`${i % 2 === 1 ? "lg:order-1 lg:pr-space-6" : "lg:pl-space-6"}`}>
+                <span className="inline-flex items-center font-body text-[11px] font-700 uppercase tracking-[0.2em] text-charcoal bg-primary px-space-4 py-1.5 rounded-full mb-space-5">
                   {client.industry}
                 </span>
-                <h3 className="font-heading text-4xl md:text-5xl lg:text-6xl font-600 text-charcoal leading-[1.05] mb-4">
+                <h3 className="font-heading text-4xl md:text-5xl lg:text-6xl font-600 text-charcoal leading-[1.05] mb-space-4">
                   {client.name}
                 </h3>
-                <p className="font-body text-base text-charcoal/70 leading-relaxed whitespace-pre-line mb-8 max-w-md">
+                <p className="font-body text-base text-charcoal/70 leading-relaxed whitespace-pre-line mb-space-6 max-w-md">
                   {client.bio}
                 </p>
-                <div className="grid grid-cols-3 gap-6 pt-6 border-t border-charcoal/15 max-w-md">
+                <div className="grid grid-cols-3 gap-space-5 pt-space-5 border-t border-charcoal/15 max-w-md">
                   {client.results.map((r) => (
                     <div key={r.label}>
                       <div className="font-heading text-2xl md:text-3xl font-600 text-primary leading-none">
@@ -579,7 +579,7 @@ const SocialMediaPortfolioSection = () => {
 
         {/* Bottom summary */}
         <motion.div
-          className="mt-28 pt-12 border-t border-charcoal/15 grid grid-cols-2 md:grid-cols-4 gap-8"
+          className="mt-space-10 pt-space-7 border-t border-charcoal/15 grid grid-cols-2 md:grid-cols-4 gap-space-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

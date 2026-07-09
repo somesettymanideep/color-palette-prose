@@ -24,7 +24,7 @@ const ClientsSection = () => {
 
       <div className="container-wide relative z-10">
         {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-6 items-end mb-space-9">
           <motion.div
             className="lg:col-span-7"
             initial={{ opacity: 0, y: 30 }}
@@ -32,7 +32,7 @@ const ClientsSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="font-body text-xs tracking-[0.3em] text-primary uppercase mb-4 block">
+            <span className="font-body text-xs tracking-[0.3em] text-primary uppercase mb-space-4 block">
               Our Valuable Clients
             </span>
             <h2 className="font-heading text-4xl md:text-5xl font-700 text-primary-foreground leading-[0.95]">
@@ -56,7 +56,7 @@ const ClientsSection = () => {
               retail, automotive, hospitality, and more — building lasting relationships
               through impactful digital strategies.
             </p>
-            <div className="flex items-center gap-6 mt-6">
+            <div className="flex items-center gap-space-5 mt-space-5">
               <div>
                 <span className="font-heading text-4xl font-700 text-primary">100+</span>
                 <p className="font-body text-xs text-primary-foreground/40 uppercase tracking-wider mt-1">Clients</p>
@@ -71,7 +71,7 @@ const ClientsSection = () => {
         </div>
 
         {/* Scrolling marquee rows */}
-        <div className="space-y-4 mb-16">
+        <div className="space-y-space-4 mb-space-8">
           {[0, 1, 2].map((row) => {
             const rowClients = clients.slice(row * 13, row * 13 + 13);
             const isReverse = row % 2 === 1;
@@ -85,7 +85,7 @@ const ClientsSection = () => {
                   {[...rowClients, ...rowClients].map((name, j) => (
                     <div
                       key={`${name}-${j}`}
-                      className="flex-shrink-0 px-6 py-3 rounded-lg border border-primary-foreground/10 bg-primary-foreground/[0.03] hover:border-primary/40 hover:bg-primary/10 transition-all duration-300 group cursor-default"
+                      className="flex-shrink-0 px-space-5 py-3 rounded-lg border border-primary-foreground/10 bg-primary-foreground/[0.03] hover:border-primary/40 hover:bg-primary/10 transition-all duration-300 group cursor-default"
                     >
                       <span className="font-body text-sm text-primary-foreground/60 group-hover:text-primary transition-colors duration-300">
                         {name}

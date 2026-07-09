@@ -32,7 +32,7 @@ const SplashScreen = ({ onComplete, isVisible }: SplashScreenProps) => {
           </motion.div>
 
           {/* Content overlay */}
-          <div className="relative z-10 flex flex-col items-center text-center px-6">
+          <div className="relative z-10 flex flex-col items-center text-center px-space-5">
             {/* Logo mark */}
             <motion.div
               className="mb-2"
@@ -71,7 +71,7 @@ const SplashScreen = ({ onComplete, isVisible }: SplashScreenProps) => {
 
             {/* Enter CTA */}
             <motion.p
-              className="mt-16 font-body text-xs uppercase tracking-[0.3em] text-off-white/30"
+              className="mt-space-8 font-body text-xs uppercase tracking-[0.3em] text-off-white/30"
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1, 0.4, 1] }}
               transition={{ delay: 2.2, duration: 2, repeat: Infinity, repeatDelay: 1 }}

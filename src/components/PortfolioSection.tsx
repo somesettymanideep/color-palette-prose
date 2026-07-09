@@ -98,9 +98,9 @@ const PortfolioSection = () => {
 
       <div className="container-wide relative z-10">
         {/* Header */}
-        <div className="mb-20">
+        <div className="mb-space-9">
           <motion.div
-            className="flex items-center gap-3 mb-5"
+            className="flex items-center gap-3 mb-space-5"
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -124,13 +124,13 @@ const PortfolioSection = () => {
         </div>
 
         {/* Portfolio items */}
-        <div className="space-y-24 md:space-y-32">
+        <div className="space-y-space-10 md:space-y-space-11">
           {clients.map((client, i) => {
             const isEven = i % 2 === 0;
             return (
               <motion.div
                 key={client.name}
-                className={`grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center ${
+                className={`grid grid-cols-1 md:grid-cols-12 gap-space-6 md:gap-space-7 items-center ${
                   isEven ? "" : "md:[direction:rtl]"
                 }`}
                 initial={{ opacity: 0, y: 60 }}
@@ -158,13 +158,13 @@ const PortfolioSection = () => {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.7, delay: 0.4 }}
                   >
-                    <span className="inline-flex items-center font-body text-[11px] md:text-xs font-700 uppercase tracking-[0.2em] text-[#1a1a1a] bg-white px-4 py-1.5 rounded-full shadow-sm mb-4">
+                    <span className="inline-flex items-center font-body text-[11px] md:text-xs font-700 uppercase tracking-[0.2em] text-[#1a1a1a] bg-white px-space-4 py-1.5 rounded-full shadow-sm mb-space-4">
                       {client.industry}
                     </span>
                     <h3 className="font-heading text-3xl md:text-4xl font-600 text-white mb-3 leading-tight">
                       {client.name}
                     </h3>
-                    <p className="font-body text-sm md:text-base font-400 text-white/95 leading-relaxed mb-6">
+                    <p className="font-body text-sm md:text-base font-400 text-white/95 leading-relaxed mb-space-5">
                       {client.result}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -186,13 +186,13 @@ const PortfolioSection = () => {
 
         {/* Bottom highlights */}
         <motion.div
-          className="mt-24 pt-16 border-t border-white/30"
+          className="mt-space-10 pt-space-8 border-t border-white/30"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-space-5">
             {[
               "Creative Designing",
               "High Quality Building",

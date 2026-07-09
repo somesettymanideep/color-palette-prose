@@ -11,7 +11,7 @@ const HeroSection = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center bg-foreground pt-20 overflow-hidden">
+    <section ref={ref} className="relative min-h-screen flex items-center bg-foreground pt-space-9 overflow-hidden">
       {/* Decorative background elements */}
       <motion.div className="absolute inset-0" style={{ y: useTransform(scrollYProgress, [0, 1], [0, 80]) }}>
         <div className="absolute top-0 right-0 w-[60%] h-full bg-gradient-to-l from-primary/10 to-transparent" />
@@ -29,7 +29,7 @@ const HeroSection = () => {
       <motion.div className="container-wide relative z-10" style={{ y, opacity, scale }}>
         <div className="max-w-3xl">
           <motion.p
-            className="font-body text-sm uppercase tracking-[0.2em] text-off-white/60 mb-8"
+            className="font-body text-sm uppercase tracking-[0.2em] text-off-white/60 mb-space-6"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -38,7 +38,7 @@ const HeroSection = () => {
           </motion.p>
 
           <motion.h1
-            className="font-heading text-5xl md:text-7xl lg:text-8xl font-600 text-off-white leading-[0.95] mb-8"
+            className="font-heading text-5xl md:text-7xl lg:text-8xl font-600 text-off-white leading-[0.95] mb-space-6"
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
@@ -73,7 +73,7 @@ const HeroSection = () => {
           </motion.h1>
 
           <motion.div
-            className="section-rule max-w-xs mb-8"
+            className="section-rule max-w-xs mb-space-6"
             initial={{ scaleX: 0, originX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
@@ -90,7 +90,7 @@ const HeroSection = () => {
 
           {/* Scroll indicator */}
           <motion.div
-            className="mt-16 flex flex-col items-center gap-2"
+            className="mt-space-8 flex flex-col items-center gap-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2, duration: 0.8 }}

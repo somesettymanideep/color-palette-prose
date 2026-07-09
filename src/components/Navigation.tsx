@@ -44,7 +44,7 @@ const Navigation = () => {
         </motion.div>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-10">
+        <ul className="hidden md:flex items-center gap-space-6">
           {navItems.map((item, i) => (
             <motion.li
               key={item}
@@ -82,7 +82,7 @@ const Navigation = () => {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <ul className="container-wide py-6 flex flex-col gap-4">
+            <ul className="container-wide py-space-5 flex flex-col gap-space-4">
               {navItems.map((item, i) => (
                 <motion.li
                   key={item}

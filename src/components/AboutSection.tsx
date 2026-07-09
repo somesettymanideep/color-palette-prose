@@ -12,7 +12,7 @@ const AboutSection = () => {
       <div className="container-wide">
         {/* Top label */}
         <motion.p
-          className="font-body text-sm uppercase tracking-[0.3em] text-primary mb-6"
+          className="font-body text-sm uppercase tracking-[0.3em] text-primary mb-space-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -23,7 +23,7 @@ const AboutSection = () => {
 
         {/* Accent line */}
         <motion.div
-          className="w-16 h-1 bg-primary mb-12"
+          className="w-16 h-1 bg-primary mb-space-7"
           initial={{ scaleX: 0, originX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -32,7 +32,7 @@ const AboutSection = () => {
 
         {/* Main heading */}
         <motion.h2
-          className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] mb-16 max-w-4xl"
+          className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] mb-space-8 max-w-4xl"
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -44,7 +44,7 @@ const AboutSection = () => {
         </motion.h2>
 
         {/* Two-column content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-space-7 md:gap-space-9 mb-space-9">
           <motion.p
             className="font-body text-lg font-light leading-relaxed text-primary-foreground/70"
             initial={{ opacity: 0, y: 30 }}
@@ -66,11 +66,11 @@ const AboutSection = () => {
         </div>
 
         {/* Timeline milestones */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-space-6">
           {milestones.map((item, i) => (
             <motion.div
               key={item.year}
-              className="relative border-t border-primary/30 pt-8"
+              className="relative border-t border-primary/30 pt-space-6"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
