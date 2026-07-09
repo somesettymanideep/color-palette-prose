@@ -85,6 +85,7 @@
     --space-btn-y: var(--space-3);
     --space-pill-x: var(--space-4);
     --space-pill-y: 0.375rem;                 /* 6px */
+  }
 
   .dark {
     --background: 0 0% 16.5%;
