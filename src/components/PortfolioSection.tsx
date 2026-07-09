@@ -89,11 +89,11 @@ const LaptopMockup = ({ image, name }: { image: string; name: string }) => (
 
 const PortfolioSection = () => {
   return (
-    <section id="portfolio" className="section-padding relative overflow-hidden" style={{ backgroundColor: "#f36e2b" }}>
+    <section id="portfolio" className="section-padding relative overflow-hidden" style={{ backgroundColor: "#0a0a0a" }}>
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-black/10 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-black/10 to-transparent" />
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/15 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-primary/10 to-transparent" />
       </div>
 
       <div className="container-wide relative z-10">
@@ -106,8 +106,8 @@ const PortfolioSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span aria-hidden className="h-px w-10 bg-white/90" />
-            <p className="font-body text-xs md:text-sm uppercase tracking-[0.25em] text-white font-600">
+            <span aria-hidden className="h-px w-10 bg-primary" />
+            <p className="font-body text-xs md:text-sm uppercase tracking-[0.25em] text-primary font-600">
               Our Portfolio
             </p>
           </motion.div>
@@ -119,9 +119,10 @@ const PortfolioSection = () => {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             Web Designs That{" "}
-            <span className="text-[#1a1a1a]">Deliver</span>
+            <span className="text-primary">Deliver</span>
           </motion.h2>
         </div>
+
 
         {/* Portfolio items */}
         <div className="space-y-space-10 md:space-y-space-11">
