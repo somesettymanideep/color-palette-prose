@@ -528,7 +528,7 @@ const SocialMediaPortfolioSection = () => {
         </div>
 
         {/* Per-client side-by-side mockups */}
-        <div className="space-y-space-11">
+        <div className="space-y-space-8">
           {clients.map((client, i) => (
             <motion.div
               key={client.name}
