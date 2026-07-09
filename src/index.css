@@ -142,21 +142,22 @@
 
   /* Vertical rhythm for every top-level <section>. */
   .section-padding {
-    padding-top: var(--space-section-y-sm);
+    padding-top: var(--space-6);
     padding-bottom: var(--space-section-y-sm);
   }
   @media (min-width: 768px) {
     .section-padding {
-      padding-top: var(--space-section-y-md);
+      padding-top: var(--space-7);
       padding-bottom: var(--space-section-y-md);
     }
   }
   @media (min-width: 1024px) {
     .section-padding {
-      padding-top: var(--space-section-y-lg);
+      padding-top: var(--space-7);
       padding-bottom: var(--space-section-y-lg);
     }
   }
+
 
   .container-narrow {
     margin-left: auto;
