@@ -110,9 +110,9 @@ const HeroSection = () => {
 
       {/* Right-side floating chess image */}
       <motion.div
-        className="hidden lg:flex absolute right-4 xl:right-16 top-0 bottom-0 w-[38%] max-w-[520px] items-center justify-center pointer-events-none z-20"
-        initial={{ opacity: 0, x: 80, scale: 0.85 }}
-        animate={{ opacity: 1, x: 0, scale: 1 }}
+        className="hidden lg:flex absolute right-6 xl:right-20 top-0 bottom-0 w-[30%] max-w-[420px] items-center justify-center pointer-events-none z-20"
+        initial={{ opacity: 0, x: 80, scale: 0.75 }}
+        animate={{ opacity: 1, x: 0, scale: 0.9 }}
         transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="relative w-full">
