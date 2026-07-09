@@ -134,7 +134,7 @@ const EcommerceListingSection = () => {
           </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-space-6 lg:gap-space-8 items-start">
+        <div className="grid lg:grid-cols-12 gap-space-6 lg:gap-space-8 items-center">
           {/* LEFT — Pillars */}
           <div className="lg:col-span-6 space-y-space-4">
             {pillars.map((p, i) => (
@@ -209,7 +209,7 @@ const EcommerceListingSection = () => {
           </div>
 
           {/* RIGHT — Hero illustration */}
-          <div className="lg:col-span-6 lg:-mt-64">
+          <div className="lg:col-span-6 lg:self-center">
             <div className="relative mx-auto max-w-[560px]">
               <div
                 className="absolute -inset-10 rounded-[60px] blur-3xl pointer-events-none"
