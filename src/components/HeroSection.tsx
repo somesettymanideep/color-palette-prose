@@ -26,8 +26,8 @@ const HeroSection = () => {
           }}
         />
       </motion.div>
-      <motion.div className="relative z-10 w-full pl-space-5 md:pl-space-7 lg:pl-space-9 pr-space-5" style={{ y, opacity, scale }}>
-        <div className="max-w-3xl">
+      <motion.div className="relative z-10 w-full pl-space-7 md:pl-space-9 lg:pl-space-10 pr-0" style={{ y, opacity, scale }}>
+        <div className="max-w-4xl">
 
           <motion.p
             className="font-body text-sm uppercase tracking-[0.2em] text-off-white/60 mb-space-6"
