@@ -89,11 +89,11 @@ const LaptopMockup = ({ image, name }: { image: string; name: string }) => (
 
 const PortfolioSection = () => {
   return (
-    <section id="portfolio" className="section-padding relative overflow-hidden" style={{ backgroundColor: "#f36e2b" }}>
+    <section id="portfolio" className="section-padding relative overflow-hidden" style={{ backgroundColor: "#0a0a0a" }}>
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-black/10 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-black/10 to-transparent" />
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/15 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-primary/10 to-transparent" />
       </div>
 
       <div className="container-wide relative z-10">
@@ -106,8 +106,8 @@ const PortfolioSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span aria-hidden className="h-px w-10 bg-white/90" />
-            <p className="font-body text-xs md:text-sm uppercase tracking-[0.25em] text-white font-600">
+            <span aria-hidden className="h-px w-10 bg-primary" />
+            <p className="font-body text-xs md:text-sm uppercase tracking-[0.25em] text-primary font-600">
               Our Portfolio
             </p>
           </motion.div>
@@ -119,9 +119,10 @@ const PortfolioSection = () => {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             Web Designs That{" "}
-            <span className="text-[#1a1a1a]">Deliver</span>
+            <span className="text-primary">Deliver</span>
           </motion.h2>
         </div>
+
 
         {/* Portfolio items */}
         <div className="space-y-space-10 md:space-y-space-11">
@@ -158,20 +159,20 @@ const PortfolioSection = () => {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.7, delay: 0.4 }}
                   >
-                    <span className="inline-flex items-center font-body text-[11px] md:text-xs font-700 uppercase tracking-[0.2em] text-[#1a1a1a] bg-white px-space-4 py-1.5 rounded-full shadow-sm mb-space-4">
+                    <span className="inline-flex items-center font-body text-[11px] md:text-xs font-700 uppercase tracking-[0.2em] text-black bg-primary px-space-4 py-1.5 rounded-full shadow-sm mb-space-4">
                       {client.industry}
                     </span>
                     <h3 className="font-heading text-3xl md:text-4xl font-600 text-white mb-3 leading-tight">
                       {client.name}
                     </h3>
-                    <p className="font-body text-sm md:text-base font-400 text-white/95 leading-relaxed mb-space-5">
+                    <p className="font-body text-sm md:text-base font-400 text-white/80 leading-relaxed mb-space-5">
                       {client.result}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {client.services.map((service) => (
                         <span
                           key={service}
-                          className="font-body text-[11px] font-600 uppercase tracking-wider text-white border border-white/70 px-3 py-1 rounded-full"
+                          className="font-body text-[11px] font-600 uppercase tracking-wider text-white/90 border border-white/30 px-3 py-1 rounded-full"
                         >
                           {service}
                         </span>
@@ -186,7 +187,7 @@ const PortfolioSection = () => {
 
         {/* Bottom highlights */}
         <motion.div
-          className="mt-space-10 pt-space-8 border-t border-white/30"
+          className="mt-space-10 pt-space-8 border-t border-white/15"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -208,8 +209,8 @@ const PortfolioSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <span className="w-2.5 h-2.5 rounded-full bg-[#1a1a1a] shrink-0" />
-                <span className="font-body text-sm font-500 uppercase tracking-wider text-white">
+                <span className="w-2.5 h-2.5 rounded-full bg-primary shrink-0" />
+                <span className="font-body text-sm font-500 uppercase tracking-wider text-white/85">
                   {item}
                 </span>
               </motion.div>
