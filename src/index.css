@@ -143,20 +143,21 @@
   /* Vertical rhythm for every top-level <section>. */
   .section-padding {
     padding-top: var(--space-6);
-    padding-bottom: var(--space-section-y-sm);
+    padding-bottom: var(--space-6);
   }
   @media (min-width: 768px) {
     .section-padding {
       padding-top: var(--space-7);
-      padding-bottom: var(--space-section-y-md);
+      padding-bottom: var(--space-7);
     }
   }
   @media (min-width: 1024px) {
     .section-padding {
       padding-top: var(--space-7);
-      padding-bottom: var(--space-section-y-lg);
+      padding-bottom: var(--space-7);
     }
   }
+
 
 
   .container-narrow {
