@@ -492,9 +492,9 @@ const SocialMediaPortfolioSection = () => {
           </div>
 
           {/* Right: headline */}
-          <div className="order-1 lg:order-2 lg:pl-space-6">
+          <div className="order-1 lg:order-2 lg:pl-space-5">
             <motion.div
-              className="flex items-center gap-3 mb-space-5"
+              className="flex items-center gap-3 mb-space-4"
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
