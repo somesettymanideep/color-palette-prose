@@ -91,7 +91,7 @@ const ServicesSection = () => {
     <section id="services" className="section-padding bg-background overflow-hidden">
       <div className="container-wide">
         <motion.p
-          className="font-body text-sm uppercase tracking-[0.2em] text-muted-foreground mb-space-5"
+          className="font-body text-sm uppercase tracking-[0.2em] text-muted-foreground mb-space-5 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -100,7 +100,7 @@ const ServicesSection = () => {
           Our Expertise
         </motion.p>
         <motion.h2
-          className="font-heading text-4xl md:text-5xl font-600 text-foreground leading-tight mb-space-9"
+          className="font-heading text-4xl md:text-5xl font-600 text-foreground leading-tight mb-space-9 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
