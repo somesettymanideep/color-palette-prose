@@ -165,14 +165,14 @@ const PortfolioSection = () => {
                     <h3 className="font-heading text-3xl md:text-4xl font-600 text-white mb-3 leading-tight">
                       {client.name}
                     </h3>
-                    <p className="font-body text-sm md:text-base font-400 text-white/95 leading-relaxed mb-space-5">
+                    <p className="font-body text-sm md:text-base font-400 text-white/80 leading-relaxed mb-space-5">
                       {client.result}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {client.services.map((service) => (
                         <span
                           key={service}
-                          className="font-body text-[11px] font-600 uppercase tracking-wider text-white border border-white/70 px-3 py-1 rounded-full"
+                          className="font-body text-[11px] font-600 uppercase tracking-wider text-white/90 border border-white/30 px-3 py-1 rounded-full"
                         >
                           {service}
                         </span>
