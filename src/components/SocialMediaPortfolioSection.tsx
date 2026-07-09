@@ -472,7 +472,7 @@ const SocialMediaPortfolioSection = () => {
 
       <div className="container-wide relative z-10">
         {/* Hero composition */}
-        <div className="mb-space-10 grid grid-cols-1 lg:grid-cols-2 gap-space-7 lg:gap-space-6 items-center">
+        <div className="mb-space-8 grid grid-cols-1 lg:grid-cols-2 gap-space-5 lg:gap-space-5 items-center">
           {/* Left: phone + floating creative cards */}
           <div className="relative order-2 lg:order-1 flex items-center justify-center">
             <motion.img
