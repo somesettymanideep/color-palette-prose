@@ -616,7 +616,7 @@ const qcFeatures = [
 
 const QCommerceScene = () => {
   return (
-    <section className="relative left-1/2 -translate-x-1/2 w-[100vw] max-w-[100vw] mt-space-8 md:mt-space-10 overflow-hidden bg-[#F8F8F8] text-[#111111]">
+    <section className="relative left-1/2 -translate-x-1/2 w-[100vw] max-w-[100vw] section-padding overflow-hidden bg-[#F8F8F8] text-[#111111]">
       {/* ===== Premium light background layers ===== */}
       {/* soft white-to-cream gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-[#FDFAF6] to-[#F4F1EC]" />
@@ -675,7 +675,7 @@ const QCommerceScene = () => {
         className="absolute bottom-[10%] left-[35%] w-56 h-56 rounded-full bg-[#FF7A00]/10 blur-3xl pointer-events-none"
       />
 
-      <div className="relative z-10 mx-auto max-w-[1320px] px-space-5 md:px-space-6 pt-[80px] md:pt-[110px] pb-space-6 md:pb-space-7" style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
+      <div className="relative z-10 mx-auto max-w-[1320px] px-space-5 md:px-space-6" style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
         {/* ===== Two-column hero ===== */}
         <div className="grid lg:grid-cols-[1fr_1fr] gap-space-7 lg:gap-space-9 items-center">
           {/* ---------- LEFT ---------- */}
