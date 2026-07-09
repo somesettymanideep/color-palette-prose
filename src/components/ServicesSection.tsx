@@ -90,37 +90,25 @@ const ServicesSection = () => {
   return (
     <section id="services" className="section-padding bg-background overflow-hidden">
       <div className="container-wide">
-        <motion.div
-          className="section-rule mb-space-8"
-          initial={{ scaleX: 0, originX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        />
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-space-7 mb-space-9">
-          <motion.div
-            className="md:col-span-4"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <p className="font-body text-sm uppercase tracking-[0.2em] text-muted-foreground">
-              Our Expertise
-            </p>
-          </motion.div>
-          <motion.div
-            className="md:col-span-8"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-          >
-            <h2 className="font-heading text-4xl md:text-5xl font-600 text-foreground leading-tight">
-              What <span className="text-primary">ADS</span> Do
-            </h2>
-          </motion.div>
-        </div>
+        <motion.p
+          className="font-body text-sm uppercase tracking-[0.2em] text-muted-foreground mb-space-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          Our Expertise
+        </motion.p>
+        <motion.h2
+          className="font-heading text-4xl md:text-5xl font-600 text-foreground leading-tight mb-space-9"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          What <span className="text-primary">ADS</span> Do
+        </motion.h2>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-6">
           {services.map((service, i) => (
